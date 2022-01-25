@@ -72,7 +72,6 @@
         "custom_liquid": "<div class=\"product-accordion\"><dl class=\"accordion\">\n\n\n\n <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small>Preparation<\/a><\/dt>\n <dd>Some description text in here.<\/dd>\n\n <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small>Ingredients<\/a><\/dt>\n <dd>Sizing: 1=XS, 2=S, 3=M, 4=L<\/dd>\n\n <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small>Nutrition Table<\/a><\/dt>\n <dd>Dry Clean only.<\/dd>\n\n <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small>Frequently Asked Questions<\/a><\/dt>\n <dd>Some description text in here.<\/dd>\n\n<\/dl>\n\n<div class=\"bottom-guarantee\"><h3 class=\"center\">Our Happy Baby Guarantee<\/h3><p>We want to make sure you have a safe shopping exprience. Which is why we will offer you a store credit for you to try out a different baby formula brand.<\/p><\/div>\n\n\n<\/div>"
       }
     },
-
     "bottomforms": {
       "type": "product-template-bottom-form",
       "blocks": {
@@ -108,7 +107,6 @@
         "enable_thumbnail_slider": false
       }
     },
-
     "recommendations": {
       "type": "product-recommendations",
       "disabled": true,
