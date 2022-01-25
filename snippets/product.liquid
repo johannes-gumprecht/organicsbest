@@ -301,7 +301,7 @@
                       {{ 'collections.general.view_product_details_html' | t }}
                     </a>
                   {% else %}
-                    {{ product.description }}
+                    {{ product.description | split: '<!-- split -->' | first }}
                   {% endif %}
                 {% endif %}
               </div>
