@@ -72,6 +72,43 @@
         "custom_liquid": "<div class=\"product-accordion\"><dl class=\"accordion\">\n\n\n\n <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small>Preparation<\/a><\/dt>\n <dd>Some description text in here.<\/dd>\n\n <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small>Ingredients<\/a><\/dt>\n <dd>Sizing: 1=XS, 2=S, 3=M, 4=L<\/dd>\n\n <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small>Nutrition Table<\/a><\/dt>\n <dd>Dry Clean only.<\/dd>\n\n <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small>Frequently Asked Questions<\/a><\/dt>\n <dd>Some description text in here.<\/dd>\n\n<\/dl>\n\n<div class=\"bottom-guarantee\"><h3 class=\"center\">Our Happy Baby Guarantee<\/h3><p>We want to make sure you have a safe shopping exprience. Which is why we will offer you a store credit for you to try out a different baby formula brand.<\/p><\/div>\n\n\n<\/div>"
       }
     },
+
+    "bottom_form": {
+      "type": "product-template-bottom-form",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "form"
+      ],
+      "settings": {
+        "product_breadcrumb": false,
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 200,
+        "video_looping": false,
+        "product_thumbs": false,
+        "gallery_arrows": false,
+        "enable_product_lightbox": false,
+        "activate_zoom": false,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "bottom",
+        "enable_thumbnail_slider": false
+      }
+    },
+
     "recommendations": {
       "type": "product-recommendations",
       "disabled": true,
@@ -89,6 +126,7 @@
     "main",
     "164310661322577cc4",
     "16431066694cde1fec",
+    "bottom_form",
     "recommendations"
   ]
 }
