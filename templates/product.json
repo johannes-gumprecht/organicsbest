@@ -36,19 +36,13 @@
           "type": "form",
           "settings": {
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "title",
         "price",
         "description",
-        "form",
-        "share"
+        "form"
       ],
       "settings": {
         "product_breadcrumb": false,
