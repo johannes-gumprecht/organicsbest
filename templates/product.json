@@ -73,7 +73,7 @@
       }
     },
 
-    "bottom_form": {
+    "bottomform": {
       "type": "product-template-bottom-form",
       "blocks": {
         "price": {
@@ -126,7 +126,7 @@
     "main",
     "164310661322577cc4",
     "16431066694cde1fec",
-    "bottom_form",
+    "bottomform",
     "recommendations"
   ]
 }
