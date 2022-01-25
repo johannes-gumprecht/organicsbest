@@ -8,6 +8,11 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 {%- assign is_color = false -%}
 {%- assign option_index = 0 -%}
 
+ {% comment %} Special Code {% endcomment %}
+{% if product.tags contains 'multipack' %}
+{% capture firstvariantsprice %} {{ product.variants[0].price | times: 1 }} {% endcapture %}
+{% endif %} 
+
 {% for option in product.options %}
   {% if option == swatch %}
     {%- assign found_option = true -%}
@@ -20,8 +25,8 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
   {% endif %}
 {% endfor %}
 
-<div class="swatch is-flex is-flex-wrap" data-option-index="{{ option_index }}">
-  <div class="option_title">{{ swatch }}</div>
+{% if product.tags contains 'multipack' %}<div class="swatch is-flex is-flex-wrap" data-option-index="{{ option_index }}">{% endif %}
+ {% comment %}<div class="option_title">{{ swatch }}</div>{% endcomment %}
 
   {%- assign values = '' -%}
 
@@ -32,7 +37,17 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
       {%- assign values = values | join: ',' -%}
       {%- assign values = values | append: ',' | append: value -%}
       {%- assign values = values | split: ',' -%}
+  
+ {% comment %} Special Code {% endcomment %}  
+{% if product.tags contains 'multipack' %}
+{% capture getvariantnumber %}{{ value | split: " " | first | times: 1 }}{% endcapture %}
+{% capture boxprice %}{{- variant.price | divided_by: getvariantnumber | times: 1 -}}{% endcapture %}
+{% assign absolutesavings = firstvariantsprice | minus: boxprice | times: 1 %}
+{% endif %}
+  
+  
 
+  
       <input id="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}" type="radio" name="option-{{ option_index }}" aria-label="{{ value | escape }}" tabindex="0" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %} />
 
       <div tabindex="0"  value="{{ value | escape }}" data-value="{{ value | escape }}" data-id="{{ variant.id }}" class="swatch-element {% if is_color %}color{% endif %} {{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
@@ -45,12 +60,92 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
             <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out"/>
           </label>
         {% else %}
+        
+         
+ {% comment %} Special Code {% endcomment %}
+        
+        
+     {% if product.tags contains 'multipack' %} 
+    
+        
+       
+        
+             <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}">
+           
+         <div class="variantname">{{ value }}</div>
+               
+         <div class="boxprice"><span class="money" data-price>{{- variant.price | divided_by: getvariantnumber | money -}}</span> each</div>
+
+               
+               
+            {% if absolutesavings > 0 %}
+               <div class="flexbreak"></div> <!-- break -->
+                <div class="flexitem"></div>
+                  {% comment %}  <div class="swatchsavings">Save {{ firstvariantsprice | minus: boxprice | times: 100 | divided_by: firstvariantsprice }}%</div>{% endcomment %}
+            		<div class="swatchsavings">Save <span class="money" data-price>{{- firstvariantsprice | times: getvariantnumber | minus: variant.price | money -}}</span></div>
+               
+               
+           			{% else %}
+            <div class="flexbreak"></div> <!-- break -->
+                <div class="flexitem"></div>
+             		<div class="swatchsavings">Single pack price</div>
+          
+                    {% endif %}
+            
+                   
+					
+                    
+
+               
+                      {% if variant.price < 19000.00 %}
+        
+        <div class="shippingpolicy">1-5 day express delivery</div>
+        
+        {% else %}
+        
+        <div class="shippingpolicy">We pay express shipping</div> 
+        
+         	{% endif %}
+               
+               
+         			<img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out"/>
+        	 
+                   
+        	</label>
+
+       
+         
+        
+          {% else %}
+
+                    
           <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}">
             {{ value }}
             <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out"/>
           </label>
+        
+
+           {% endif %}   
+        
+         
+ {% comment %} Special Code {% endcomment %}
+        
+          
         {% endif %}
+        
+        
+        
+        
+        
+        
+        
+        
       </div>
     {% endunless %}
   {% endfor %}
 </div>
+
+
+
+
+
