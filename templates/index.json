@@ -473,38 +473,6 @@
         "css_class": "",
         "custom_css": ""
       }
-    },
-    "16431256702510d5e2": {
-      "type": "video",
-      "settings": {
-        "wide_display": false,
-        "aspect_ratio": "16:9",
-        "autoplay": false,
-        "autoloop": false,
-        "mute_video": false,
-        "show_controls": true,
-        "video_dark_overlay": false,
-        "iframe_video": "",
-        "html5_video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/files\/Insert_a_HTML5_video_player_to_your_website_s_simple_video_s_https___plyr.io_Dynamic_Video_Player.mp4?v=1643125627",
-        "display_text_over_video": false,
-        "preheading": "",
-        "heading": "",
-        "subheading": "",
-        "button1_label": "Play Video",
-        "button1_link": "",
-        "button1_style": "global-button--banner",
-        "button2_label": "",
-        "button2_link": "",
-        "button2_style": "global-button--banner",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_content_background": "original",
-        "mobile_image_crop": "none",
-        "mobile_text_below_image": false,
-        "mobile_text_color": "",
-        "css_class": "",
-        "custom_css": ""
-      }
     }
   },
   "order": [
@@ -520,7 +488,6 @@
     "featured-product-1",
     "featured-product-2",
     "newsletter-1",
-    "blog-posts-1",
-    "16431256702510d5e2"
+    "blog-posts-1"
   ]
 }
