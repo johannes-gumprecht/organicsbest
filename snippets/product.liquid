@@ -170,9 +170,9 @@
               {% endif %}
             {% when 'title' %}
               {% if context == 'product' %}
-                <h1 class="product_name">{{ product.title }}</h1>
+                <h1 class="product_name is-hidden-mobile-only">{{ product.title }}</h1>
               {% else %}
-                <h2 class="product_name">
+                <h2 class="product_name is-hidden-mobile-only">
                   <a href="{{ product.url }}">
                     {% if onboarding %}
                       {{ 'homepage.onboarding.product_title' | t }}
