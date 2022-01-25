@@ -1,6 +1,12 @@
 {
   "wrapper": "div.shopify-section-wrapper.section",
   "sections": {
+    "16431085846ebf2c95": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<span class=\"product_name mobile-product-title is-hidden-desktop-only\">{{ product.title }}<\/span>"
+      }
+    },
     "sidebar": {
       "type": "product-sidebar",
       "settings": {
@@ -120,6 +126,7 @@
     }
   },
   "order": [
+    "16431085846ebf2c95",
     "sidebar",
     "main",
     "164310661322577cc4",
