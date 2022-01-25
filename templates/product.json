@@ -117,6 +117,14 @@
         "products_per_row": 3,
         "recommended_products_limit": 4
       }
+    },
+    "164312590452d842c1": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div class=\"plyr__video-wrapper plyr__video-wrapper--fixed-ratio\" style=\"padding-bottom: 56.25%\">\n  <video class=\"video-template--15620596334836__16431256702510d5e2\" data-video-element=\"\" data-html5-video=\"\" data-plyr-video-id=\"2727\">\n    <source src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/files\/Insert_a_HTML5_video_player_to_your_website_s_simple_video_s_https___plyr.io_Dynamic_Video_Player.mp4?v=1643125627\"><\/source>\n  <\/video>\n<\/div>",
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
@@ -126,6 +134,7 @@
     "164310661322577cc4",
     "16431066694cde1fec",
     "bottomforms",
-    "recommendations"
+    "recommendations",
+    "164312590452d842c1"
   ]
 }
