@@ -4,7 +4,7 @@
     "164322492596724564": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<h1 class=\"product_name\">{{ product.title }}<\/h1>"
+        "custom_liquid": "<h1 class=\"product_name center\">{{ product.title }}<\/h1><div class=\"feature_divider\"><\/div>"
       }
     },
     "sidebar": {
