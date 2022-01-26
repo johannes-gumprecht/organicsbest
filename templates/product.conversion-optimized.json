@@ -14,7 +14,7 @@
       }
     },
     "main": {
-      "type": "product-template",
+      "type": "product-template-conversion-optimized",
       "blocks": {
         "title": {
           "type": "title",
