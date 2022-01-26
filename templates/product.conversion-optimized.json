@@ -63,7 +63,7 @@
     "164321041625547195": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"container\">\n    <div class=\"one-half columns small-down--one-whole\">{{ product.metafields.copy.video-1 }}<\/div>\n    <div class=\"one-half columns medium-down--one-whole\">\n        <h1>{{ product.metafields.copy.headline-1 }}<\/h1>\n        <p>{{ product.metafields.copy.text-1 }}<\/p>\n    <\/div>\n<\/div>\n<div class=\"product_page_divider\"><\/div>\n<div class=\"container\">\n    <div class=\"one-half columns small-down--one-whole\">\n        <h1>{{ product.metafields.copy.headline-2 }}<\/h1>\n        <p>{{ product.metafields.copy.text-2 }}<\/p>\n    <\/div>\n    <div class=\"one-half columns medium-down--one-whole\">\n        {{ product.metafields.copy.video-1 }}\n    <\/div>\n<\/div>"
+        "custom_liquid": "<div class=\"container\">\n    <div class=\"one-half columns medium-down--one-whole\">{{ product.metafields.copy.video-1 }}<\/div>\n    <div class=\"one-half columns medium-down--one-whole\">\n        <h1>{{ product.metafields.copy.headline-1 }}<\/h1>\n        <p>{{ product.metafields.copy.text-1 }}<\/p>\n    <\/div>\n<\/div>\n<div class=\"product_page_divider\"><\/div>\n<div class=\"container\">\n    <div class=\"one-half columns medium-down--one-whole\">\n        <h1>{{ product.metafields.copy.headline-2 }}<\/h1>\n        <p>{{ product.metafields.copy.text-2 }}<\/p>\n    <\/div>\n    <div class=\"one-half columns medium-down--one-whole\">\n        {{ product.metafields.copy.video-1 }}\n    <\/div>\n<\/div>"
       }
     },
     "164310661322577cc4": {
