@@ -34,15 +34,15 @@
             "text": "<p>{{ product.metafields.review.name | metafield_tag }}<\/p>"
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
             "display_savings": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "form": {
@@ -54,8 +54,8 @@
       "block_order": [
         "382b33d3-fcb9-40b7-b501-e3467a776989",
         "fb7590be-8bc9-49d3-b176-94181b5045cc",
-        "price",
         "description",
+        "price",
         "form"
       ],
       "settings": {
