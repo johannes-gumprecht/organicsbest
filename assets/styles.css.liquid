@@ -18098,7 +18098,23 @@ border-bottom: 1px solid #333;
 
 /* Product page top review */
 
-.product-text span:nth-of-type(1) {font-family: {{ settings.headline__font.family }}, {{ settings.headline__font.fallback_families }};
+.product-text .metafield-multi_line_text_field {font-family: {{ settings.headline__font.family }}, {{ settings.headline__font.fallback_families }};
+font-weight: {{ settings.headline__font.weight }};
+font-style: {{ settings.headline__font.style }};
+text-transform: {{ settings.headline_font_style }};
+line-height: 1.5;
+color: {{ settings.headline_color }};
+display: block;
+letter-spacing: {{ settings.headline_letter_spacing | append: 'px' }};
+text-rendering: optimizeLegibility;
+font-size: {{ font_size_header | times: 0.5 | append: 'px' }};
+margin: 0 auto 15px;
+clear: both;
+font-weight: {{ settings.headline__font.weight }};
+padding-top: 4px;}
+
+
+.product-block.product-block--first .product-text .metafield-multi_line_text_field {font-family: {{ settings.headline__font.family }}, {{ settings.headline__font.fallback_families }};
 font-weight: {{ settings.headline__font.weight }};
 font-style: {{ settings.headline__font.style }};
 text-transform: {{ settings.headline_font_style }};
