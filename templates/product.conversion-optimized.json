@@ -115,7 +115,6 @@
     },
     "recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "show_product_recommendations": false,
         "product_recommendations_style": "grid",
