@@ -9,6 +9,7 @@
     },
     "sidebar": {
       "type": "product-sidebar",
+      "disabled": true,
       "settings": {
         "toggle": false
       }
