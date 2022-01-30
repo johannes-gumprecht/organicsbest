@@ -124,6 +124,7 @@
     "tos_page": "",
     "go_to_checkout": true,
     "display_special_instructions": true,
+    "display_savings": true,
     "cart_message": "",
     "show_shipping_calculator": true,
     "shipping_calculator_default_country": "United States",
