@@ -35,6 +35,7 @@
     "table_styles_enabled": true,
     "slideshow_arrow_size": "light",
     "arrow_color": "#333333",
+    "slideshow_button_style": false,
     "border_color": "#cccccc",
     "headline_border_color": "#aaaaaa",
     "headline_border": "1",
