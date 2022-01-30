@@ -61,7 +61,7 @@
         "video_looping": false,
         "product_thumbs": true,
         "gallery_arrows": false,
-        "enable_product_lightbox": false,
+        "enable_product_lightbox": true,
         "activate_zoom": true,
         "slideshow_speed": 0,
         "slideshow_animation": "slide",
