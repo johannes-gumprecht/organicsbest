@@ -129,7 +129,7 @@
     "show_shipping_calculator": true,
     "shipping_calculator_default_country": "United States",
     "currency_format": "money_with_currency_format",
-    "show_multiple_currencies": true,
+    "show_multiple_currencies": false,
     "supported_currencies": "USD CAD AUD GBP EUR JPY",
     "default_currency": "USD",
     "mailchimp_link": "",
