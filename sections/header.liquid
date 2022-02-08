@@ -253,12 +253,14 @@
               %}
             </li>
           {% endif %}
-
+{% comment %} remove customer accounts {% endcomment %}
+{% comment %} 
           {% if shop.customer_accounts_enabled %}
             <li>
               <a href="{{ routes.account_url }}" class="icon-user" title="{{ 'layout.customer.my_account' | t }} {% if customer %}({{ customer.email }}){% endif %}"> <span>{% if customer %}{{ 'layout.customer.my_account' | t }}{% else %}{{ 'layout.customer.log_in' | t }}{% endif %}</span></a>
             </li>
           {% endif %}
+          {% endcomment %}
         </ul>
 
         {% if section.settings.show_cart %}
