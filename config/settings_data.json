@@ -195,13 +195,6 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "logo",
-            "settings": {
-              "text_align": "left",
-              "social_icons_footer": false
-            }
-          },
           "footer-1": {
             "type": "link_list",
             "settings": {
@@ -209,12 +202,11 @@
               "social_icons_footer": false
             }
           },
-          "footer-3": {
-            "type": "text",
+          "b97c552d-1e24-4855-8d40-9c59c2b86b4b": {
+            "type": "link_list",
             "settings": {
-              "title": "Title",
-              "content": "<p>Use this text to share information about your brand with your customers.<\/p>",
-              "social_icons_footer": true
+              "menu": "",
+              "social_icons_footer": false
             }
           },
           "footer-2": {
@@ -223,13 +215,30 @@
               "menu": "",
               "social_icons_footer": false
             }
+          },
+          "1d29ed18-3ac7-4a1d-a544-c109a255dae6": {
+            "type": "text",
+            "settings": {
+              "title": "Customer service",
+              "content": "<p>Any questions? We‘re glad to help. Please contact our customer support at:<\/p><p><a href=\"mailto:support@organicsbestshop.com\" title=\"mailto:support@organicsbestshop.com\">support@organicsbestshop.com<\/a><\/p>",
+              "social_icons_footer": false
+            }
+          },
+          "footer-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/LOGO_ORGANIC.png",
+              "text_align": "right",
+              "social_icons_footer": true
+            }
           }
         },
         "block_order": [
-          "footer-0",
           "footer-1",
-          "footer-3",
-          "footer-2"
+          "b97c552d-1e24-4855-8d40-9c59c2b86b4b",
+          "footer-2",
+          "1d29ed18-3ac7-4a1d-a544-c109a255dae6",
+          "footer-0"
         ],
         "settings": {
           "copyright_text": "All rights reserved.",
