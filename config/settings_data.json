@@ -102,6 +102,7 @@
     "footer_heading_font_size": 16,
     "footer_font_size": 16,
     "search_option": "product",
+    "enable_autocomplete": true,
     "product_form_style": "radio",
     "show_dynamic_checkout_button": false,
     "display_product_quantity": true,
@@ -170,7 +171,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "",
+          "promo_text": "<p>WE PAY YOUR EXPRESS SHIPPING<\/p>",
           "social_icons_header": false,
           "phone_number": "",
           "top_bar_menu": "",
@@ -185,7 +186,7 @@
           "vertical_menu": false,
           "dropdown_click": false,
           "search_enabled": true,
-          "fixed_header": true,
+          "fixed_header": false,
           "logo_position": "center",
           "logo_alignment": "center",
           "menu_position": "inline",
