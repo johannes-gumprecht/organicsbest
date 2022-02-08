@@ -171,7 +171,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "<p>WE PAY YOUR EXPRESS SHIPPING<\/p>",
+          "promo_text": "",
           "social_icons_header": false,
           "phone_number": "",
           "top_bar_menu": "",
