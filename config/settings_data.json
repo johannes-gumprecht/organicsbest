@@ -208,13 +208,6 @@
               "social_icons_footer": false
             }
           },
-          "footer-2": {
-            "type": "link_list",
-            "settings": {
-              "menu": "",
-              "social_icons_footer": false
-            }
-          },
           "footer-3": {
             "type": "text",
             "settings": {
@@ -222,13 +215,20 @@
               "content": "<p>Use this text to share information about your brand with your customers.<\/p>",
               "social_icons_footer": true
             }
+          },
+          "footer-2": {
+            "type": "link_list",
+            "settings": {
+              "menu": "",
+              "social_icons_footer": false
+            }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2",
-          "footer-3"
+          "footer-3",
+          "footer-2"
         ],
         "settings": {
           "copyright_text": "All rights reserved.",
