@@ -17,6 +17,11 @@
     "main": {
       "type": "product-template-conversion-optimized",
       "blocks": {
+        "efbc500c-414b-49c4-bdd5-aa2db4f094ab": {
+          "type": "title",
+          "settings": {
+          }
+        },
         "382b33d3-fcb9-40b7-b501-e3467a776989": {
           "type": "text",
           "settings": {
@@ -47,6 +52,7 @@
         }
       },
       "block_order": [
+        "efbc500c-414b-49c4-bdd5-aa2db4f094ab",
         "382b33d3-fcb9-40b7-b501-e3467a776989",
         "fb7590be-8bc9-49d3-b176-94181b5045cc",
         "description",
