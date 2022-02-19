@@ -178,7 +178,7 @@
           "show_cart": true,
           "cart_icon": "cart",
           "show_locale_selector": false,
-          "show_currency_selector": true,
+          "show_currency_selector": false,
           "logo_display_width": 130,
           "logo": "shopify:\/\/shop_images\/LOGO_ORGANIC.png",
           "main_linklist": "main-menu",
