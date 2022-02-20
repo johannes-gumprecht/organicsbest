@@ -151,7 +151,7 @@
   {% capture today_string_date %} {{ today_date }} {% endcapture %}
   
   
-  {% if today_string_date = "Sunday" %}
+  {% if today_string_date = Sunday %}
   
   {% assign earlyarrival = 3 | times: 86400 %}
   {% assign latearrival = 7 | times: 86400 %}
