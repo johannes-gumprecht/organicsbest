@@ -151,11 +151,7 @@
   {% capture today_string_date %} {{ today_date }} {% endcapture %}
   
   {{ today_string_date }}
-  {% if  = Sunday %}
   
-  {% assign earlyarrival = 3 | times: 86400 %}
-  {% assign latearrival = 7 | times: 86400 %}
-  {% endif %}
   
   <p><span style="font-size:24px;">🚚</span> Estimated delivery <span style="font-weight:bold;">{{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %B %d' }}</span>.</p>
 
