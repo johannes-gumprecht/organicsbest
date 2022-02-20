@@ -145,10 +145,8 @@
         {{ form | payment_terms }}
       </div>
     </div>
-  </div>
-  
- 
-  {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
+    
+     {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
 
   {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' %}
   
@@ -162,6 +160,10 @@
   
   <p><span style="font-size:24px;"></span><b>Delivery:<b> <span style="font-weight:normal;">{{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %B %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %B %d' }}</span>.</p>
 
+  </div>
+  
+ 
+ 
   
   
 {% endform %}
