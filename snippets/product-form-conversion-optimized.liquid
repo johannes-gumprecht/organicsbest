@@ -148,7 +148,7 @@
   </div>
   
   
-  {% if "now" | date: "%A" equals 'Sunday' %}
+  {% if {{ "now" | date: "%A" }} equals 'Sunday' %}
   {% assign earlyarrival = 3 | times: 86400 %}
   {% assign latearrival = 7 | times: 86400 %}
   {% endif %}
