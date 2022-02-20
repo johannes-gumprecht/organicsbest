@@ -164,7 +164,7 @@
         </div>
       {{ '//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js' | script_tag }}
           <script>
-            var currentDate = Date.today(+1);
+            var currentDate = Date.tomorrow();
             var fromDate = Date.today().addDays( 7 );
             if (fromDate.is().saturday() || fromDate.is().sunday()) {
                 fromDate = fromDate.next().monday();
