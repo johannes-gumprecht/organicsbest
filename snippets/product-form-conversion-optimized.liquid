@@ -148,6 +148,9 @@
   </div>
   
   {% assign today_date = 'now' | date: '%s' | date: '%A' %}
+  {% capture today_string_date %} {{ today_date }} {% endcapture %}
+  
+  
   {% if today_date = 'Sunday' or 'Saturday'%}
   
   {% assign earlyarrival = 3 | times: 86400 %}
