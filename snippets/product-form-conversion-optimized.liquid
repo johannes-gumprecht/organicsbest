@@ -152,11 +152,13 @@
   
   {{ today_string_date }}
   
-  {% if today_string_date contains 'Sunday' %}
-  YES IT WORKS
+  {% if today_string_date contains 'Sunday' or 'Saturday' %}
+  
   {% assign earlyarrival = 3 | times: 86400 %}
   {% assign latearrival = 7 | times: 86400 %}
-  {% else %} NO IT WONT WORK
+  {% else %}
+  {% assign earlyarrival = 3 | times: 86400 %}
+  {% assign latearrival = 7 | times: 86400 %}
   
   {% endif %}
   
