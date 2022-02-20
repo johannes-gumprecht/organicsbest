@@ -144,7 +144,9 @@
       <div data-payment-terms-reference style="display: none;">
         {{ form | payment_terms }}
       </div>
-      
+    </div>
+  </div>
+        
       
       <div style="display:block;">
       <div class="delivery_estimate">
@@ -170,12 +172,6 @@
             document.getElementById('fromDate').innerHTML = fromDate.toString('d/MM');
             document.getElementById('currentDate').innerHTML = currentDate.toString('d/MM');
           </script>
-      
-      
-      
-      
-    </div>
-  </div>
 {% endform %}
 
   <div class="surface-pick-up surface-pick-up--loading" data-surface-pick-up></div>
