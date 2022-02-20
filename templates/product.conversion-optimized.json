@@ -72,7 +72,7 @@
     "164538234097b42e70": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"container\">This is the container for the USP badges<\/div>"
+        "custom_liquid": "<div class=\"container\"><div class=\"one-fourth columns\">Amazing USP<\/div><div class=\"one-fourth columns\">Amazing USP<\/div><div class=\"one-fourth columns\">Amazing USP<\/div><div class=\"one-fourth columns\">Amazing USP<\/div><\/div>"
       }
     },
     "164321041625547195": {
