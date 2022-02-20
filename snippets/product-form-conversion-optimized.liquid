@@ -148,7 +148,7 @@
   </div>
   
   
-  {% assign today_date = 'now' | date: '%A' %}
+  {% assign today_date = 'now' | date: '%s' %}
 
   {% if today_date = "Sunday" %}
   {% assign earlyarrival = 3 | times: 86400 %}
