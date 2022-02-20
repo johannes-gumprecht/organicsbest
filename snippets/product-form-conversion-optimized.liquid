@@ -147,7 +147,7 @@
     </div>
   </div>
   
-  {% assign today_date = 'now' | date: '%s' %}
+  {% assign today_date = 'now' | date: '%s' | date: '%A' %}
    
   {{ today_date }}
   
