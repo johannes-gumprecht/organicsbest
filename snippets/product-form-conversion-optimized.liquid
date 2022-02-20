@@ -146,10 +146,14 @@
       </div>
     </div>
   </div>
-       {% assign days = 3 | times: 86400 %}
-
   
-  <p><span style="font-size:24px;">🚚</span> Estimated delivery <span style="font-weight:bold;">{{ 'now' | date: '%s' | plus: days | date: '%A, %B %d' }}</span>.</p>
+  
+  {% if "now" | date: "%A" equals 'Sunday' %}
+  {% assign earlyarrival = 3 | times: 86400 %}
+  {% assign latearrival = 7 | times: 86400 %}
+  {% endif %}
+  
+  <p><span style="font-size:24px;">🚚</span> Estimated delivery <span style="font-weight:bold;">{{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %B %d' }}</span>.</p>
 
   
   
