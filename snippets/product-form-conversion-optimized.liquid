@@ -157,6 +157,20 @@
         <p>{{ 'products.variant_price_and_estimate.and' | t }}</p>
         <span id="fromDate"></span>
       </div>
+      {{ '//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js' | script_tag }}
+          <script>
+            var currentDate = Date.today();
+            var fromDate = Date.today().addDays( {{ block.settings.delivery_date }} );
+            if (fromDate.is().saturday() || fromDate.is().sunday()) {
+                fromDate = fromDate.next().monday();
+            }
+            document.getElementById('fromDate').innerHTML = fromDate.toString('d/MM');
+            document.getElementById('currentDate').innerHTML = currentDate.toString('d/MM');
+          </script>
+      
+      
+      
+      
     </div>
   </div>
 {% endform %}
