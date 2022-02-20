@@ -148,12 +148,11 @@
   </div>
   
   {% assign today_date = 'now' | date: '%s' | date: '%A' %}
-   
-  {{ today_date }}
+  {% if today_date = 'Sunday' or today_date = 'Saturday'%}
   
   {% assign earlyarrival = 3 | times: 86400 %}
   {% assign latearrival = 7 | times: 86400 %}
-  
+  {% endif %}
   
   <p><span style="font-size:24px;">🚚</span> Estimated delivery <span style="font-weight:bold;">{{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %B %d' }}</span>.</p>
 
