@@ -148,7 +148,7 @@
   </div>
   
   {% assign today_date = 'now' | date: '%s' | date: '%A' %}
-  {% capture today_string_date %} {{ today_date }} {% endcapture %}
+  {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
   
   {{ today_string_date }}
   
