@@ -161,20 +161,7 @@
       </div>
     </div>
     
-  {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
-
-  {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' %}
   
-  {% assign earlyarrival = 3 | times: 86400 %}
-  {% assign latearrival = 7 | times: 86400 %}
-  {% else %}
-  {% assign earlyarrival = 2 | times: 86400 %}
-  {% assign latearrival = 5 | times: 86400 %}
-  
-  {% endif %}
-  
-    <p style="margin-top:25px;"><span style="font-size:24px;"></span><b>Delivery:</b> <span style="font-weight:normal;">{{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %B %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %B %d' }}</span>.</p>
-
   </div>
   
  
