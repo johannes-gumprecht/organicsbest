@@ -106,7 +106,7 @@
   
   {% endif %}
   
-    <p style="margin-top:25px;"><span style="font-size:24px;"></span><b>Delivery:</b> <span style="font-weight:normal;">{{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
+    <p style="margin-top:25px;"><span style="font-size:24px;"></span><b>Delivery:</b> <span style="font-weight:normal;"> {{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
 
   <div class="purchase-details">
     {% if settings.display_product_quantity %}
