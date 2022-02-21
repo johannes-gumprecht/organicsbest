@@ -94,20 +94,7 @@
   {% endif %}
 
   
-  {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
-
-  {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' %}
-  
-  {% assign earlyarrival = 3 | times: 86400 %}
-  {% assign latearrival = 7 | times: 86400 %}
-  {% else %}
-  {% assign earlyarrival = 2 | times: 86400 %}
-  {% assign latearrival = 5 | times: 86400 %}
-  
-  {% endif %}
-  
-  <p class="deliverytimeestimate"><span class="is-hidden-mobile-only"><b>This item arrives on </b></span><span class="is-hidden-desktop-only"><b>Delivery on </b></span><span style="font-weight:normal;"> {{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
-
+ 
   <div class="purchase-details">
     {% if settings.display_product_quantity %}
       <div class="purchase-details__quantity product-quantity-box">
@@ -161,7 +148,20 @@
       </div>
     </div>
     
+   {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
+
+  {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' %}
   
+  {% assign earlyarrival = 3 | times: 86400 %}
+  {% assign latearrival = 7 | times: 86400 %}
+  {% else %}
+  {% assign earlyarrival = 2 | times: 86400 %}
+  {% assign latearrival = 5 | times: 86400 %}
+  
+  {% endif %}
+  
+  <p class="deliverytimeestimate"><span class="is-hidden-mobile-only"><b>This item arrives on </b></span><span class="is-hidden-desktop-only"><b>Delivery on </b></span><span style="font-weight:normal;"> {{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
+
   </div>
 
   
