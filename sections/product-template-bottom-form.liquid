@@ -60,7 +60,7 @@
     	const new_HTML = currency_symbol + (current_price * (current_quantity))/100 + ' ' + currency_iso;
         setTimeout(function(){
           console.log(new_HTML);
-		  const current_price_elements = document.querySelectorAll('.current_price .money');
+		  const current_price_elements = document.querySelectorAll('.price .money');
           Array.prototype.forEach.call(current_price_elements, (ele) => {
             ele.innerHTML = currency_symbol + (current_price * (current_quantity))/100 + ' ' + currency_iso;
           });
@@ -68,14 +68,14 @@
       });
     });
     document.querySelector('.purchase-details .product-plus').addEventListener('click', function(){
-      const current_price_elements = document.querySelectorAll('.current_price .money');
+      const current_price_elements = document.querySelectorAll('.price .money');
       const current_quantity = parseInt(document.getElementById('quantity').value);
       Array.prototype.forEach.call(current_price_elements, (ele) => {
 		ele.innerHTML = currency_symbol + (current_price * (current_quantity + 1))/100 + ' ' + currency_iso;
       });
     });
   	document.querySelector('.purchase-details .product-minus').addEventListener('click', function(){
-      const current_price_elements = document.querySelectorAll('.current_price .money');
+      const current_price_elements = document.querySelectorAll('.price .money');
       const current_quantity = parseInt(document.getElementById('quantity').value);
       if (current_quantity > 1) {
 		Array.prototype.forEach.call(current_price_elements, (ele) => {
