@@ -165,6 +165,9 @@
   
   <p class="deliverytimeestimate"><span class="is-hidden-mobile-only"><b>This item arrives on </b></span><span class="is-hidden-desktop-only"><b>Delivery on </b></span><span style="font-weight:normal;"> {{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
 
+   <p class="deliverytimeestimate"><svg height="100" width="100" class="blinking"><circle cx="30" cy="30" r="5" fill="green" /></svg></p>
+
+  
   
 {% endform %}
 
