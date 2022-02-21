@@ -44,47 +44,6 @@
   </div>
 </section>
 
-<script>
-  (function(){
-    const swatches = document.getElementsByClassName('swatch-element');
-    const productData = JSON.parse(document.getElementById('product_data').textContent);
-    const currency_iso = "{{currency.iso_code}}" == "" ? "USD" : "{{currency.iso_code}}";
-    const currency_symbol = "{{currency.symbol}}" == "" ? "$" : "{{currency.symbol}}";
-    var current_price = productData["{{product.selected_or_first_available_variant.id}}"];
-    Array.prototype.forEach.call(swatches, (swatch) => {
-      swatch.addEventListener('click', function(){
-        document.getElementById('quantity').value = 1;                            
-        const variant_id = swatch.dataset.id;
-        current_price = productData[variant_id.toString()];
-        const current_quantity = parseInt(document.getElementById('quantity').value);
-    	const new_HTML = currency_symbol + (current_price * (current_quantity))/100 + ' ' + currency_iso;
-        setTimeout(function(){
-          console.log(new_HTML);
-		  const current_price_elements = document.querySelectorAll('.price.money');
-          Array.prototype.forEach.call(current_price_elements, (ele) => {
-            ele.innerHTML = currency_symbol + (current_price * (current_quantity))/100 + ' ' + currency_iso;
-          });
-        }, 5);
-      });
-    });
-    document.querySelector('.purchase-details .product-plus').addEventListener('click', function(){
-      const current_price_elements = document.querySelectorAll('.price.money');
-      const current_quantity = parseInt(document.getElementById('quantity').value);
-      Array.prototype.forEach.call(current_price_elements, (ele) => {
-		ele.innerHTML = currency_symbol + (current_price * (current_quantity + 1))/100 + ' ' + currency_iso;
-      });
-    });
-  	document.querySelector('.purchase-details .product-minus').addEventListener('click', function(){
-      const current_price_elements = document.querySelectorAll('.price.money');
-      const current_quantity = parseInt(document.getElementById('quantity').value);
-      if (current_quantity > 1) {
-		Array.prototype.forEach.call(current_price_elements, (ele) => {
-          ele.innerHTML = currency_symbol + (current_price * (current_quantity - 1))/100 + ' ' + currency_iso;
-        });      
-      }
-    });
-  })();
-</script>
 
 {% schema %}
 {
