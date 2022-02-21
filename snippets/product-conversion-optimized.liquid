@@ -293,7 +293,7 @@
                     <div class="priceperbox"><span class="money" data-price>{{- variant.price | divided_by: getvariantnumber | money -}}</span> each</div>
                     {% endunless %}
                     {% endfor %}
-                    
+                    {{ variant.price }} 
                     
                     <form class="payment-terms-container" data-payment-terms-target style="display: none;"></form>
                   </div>
