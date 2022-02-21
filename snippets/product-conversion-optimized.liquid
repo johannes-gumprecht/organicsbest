@@ -279,11 +279,7 @@
                     
 
                     {% comment %}Inject @pixelunion/shopify-price-ui/price-ui end{% endcomment %}
-                    {% capture getvariantnumber %}{{ value | split: " " | first | times: 1 }}{% endcapture %}
-         
-                    <div class="priceperbox"><span class="money" data-price>{{- variant.price | divided_by: 22 | money -}}</span> each</div>
                     
-                    {{ variant.price }} 
                     
                     <form class="payment-terms-container" data-payment-terms-target style="display: none;"></form>
                   </div>
