@@ -170,6 +170,12 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "1645525524388c6b85": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<h1 class=\"product_name center\">{{ product.title }}<\/h1><div class=\"feature_divider\"><\/div>"
+      }
     }
   },
   "order": [
@@ -183,6 +189,7 @@
     "bottomforms",
     "recommendations",
     "1643229551bb3d3ecf",
-    "16432297203ca0cea6"
+    "16432297203ca0cea6",
+    "1645525524388c6b85"
   ]
 }
