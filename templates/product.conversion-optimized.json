@@ -1,25 +1,6 @@
 {
   "wrapper": "div.shopify-section-wrapper.section",
   "sections": {
-    "1645525459394df5d8": {
-      "type": "featured-text",
-      "settings": {
-        "title": "{{ product.title }}",
-        "content": "",
-        "button_label": "",
-        "button_link": "",
-        "text_size": "featured_text",
-        "text_alignment": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "1645525894861cc3f5": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": ""
-      }
-    },
     "sidebar": {
       "type": "product-sidebar",
       "disabled": true,
@@ -180,8 +161,6 @@
     }
   },
   "order": [
-    "1645525459394df5d8",
-    "1645525894861cc3f5",
     "sidebar",
     "1645525884f97ae1ac",
     "main",
