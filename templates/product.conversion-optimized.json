@@ -8,6 +8,27 @@
         "toggle": false
       }
     },
+    "16455254646f8c202c": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<h1 class=\"product_name center\">test<\/h1><div class=\"feature_divider\"><\/div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1645525459394df5d8": {
+      "type": "featured-text",
+      "settings": {
+        "title": "{{ product.title }}",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "product_name",
+        "custom_css": ""
+      }
+    },
     "main": {
       "type": "product-template-conversion-optimized",
       "blocks": {
@@ -153,6 +174,8 @@
   },
   "order": [
     "sidebar",
+    "16455254646f8c202c",
+    "1645525459394df5d8",
     "main",
     "1645436842743a9f59",
     "164321041625547195",
