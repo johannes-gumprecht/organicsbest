@@ -8,6 +8,12 @@
         "toggle": false
       }
     },
+    "164552618834aed27f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
     "main": {
       "type": "product-template-conversion-optimized",
       "blocks": {
@@ -153,6 +159,7 @@
   },
   "order": [
     "sidebar",
+    "164552618834aed27f",
     "main",
     "1645436842743a9f59",
     "164321041625547195",
