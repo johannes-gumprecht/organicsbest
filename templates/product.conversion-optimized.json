@@ -14,6 +14,12 @@
         "custom_css": ""
       }
     },
+    "1645525894861cc3f5": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
     "sidebar": {
       "type": "product-sidebar",
       "disabled": true,
@@ -175,6 +181,7 @@
   },
   "order": [
     "1645525459394df5d8",
+    "1645525894861cc3f5",
     "sidebar",
     "1645525884f97ae1ac",
     "main",
