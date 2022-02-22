@@ -5,7 +5,7 @@
       "type": "custom-html",
       "settings": {
         "custom_html": "<h1 class=\"product_name center\">test<\/h1><div class=\"feature_divider\"><\/div>",
-        "css_class": "h4",
+        "css_class": "{{ product.title }}",
         "custom_css": ""
       }
     },
@@ -19,13 +19,7 @@
         "text_size": "featured_text",
         "text_alignment": "center",
         "css_class": "product_name",
-        "custom_css": ""
-      }
-    },
-    "1645525524388c6b85": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<h1 class=\"product_name center\">{{ product.title }}<\/h1><div class=\"feature_divider\"><\/div>"
+        "custom_css": ".product_name {font-size:55px;}"
       }
     },
     "sidebar": {
@@ -181,7 +175,6 @@
   "order": [
     "16455254646f8c202c",
     "1645525459394df5d8",
-    "1645525524388c6b85",
     "sidebar",
     "main",
     "1645436842743a9f59",
