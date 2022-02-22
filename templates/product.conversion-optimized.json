@@ -8,15 +8,6 @@
         "toggle": false
       }
     },
-    "1645525884f97ae1ac": {
-      "type": "divider",
-      "settings": {
-        "divider_spacing": 20,
-        "divider_border": false,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "main": {
       "type": "product-template-conversion-optimized",
       "blocks": {
@@ -162,7 +153,6 @@
   },
   "order": [
     "sidebar",
-    "1645525884f97ae1ac",
     "main",
     "1645436842743a9f59",
     "164321041625547195",
