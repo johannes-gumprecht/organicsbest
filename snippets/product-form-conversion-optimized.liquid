@@ -93,9 +93,13 @@
     {% endif %}
   {% endif %}
 
-
+  {% if roduct.variants[0].inventory_management == "shopify" and product.variants[0].inventory_quantity <= 0 and available = true %}
   
-  <p> {{ product.variants[0].inventory_management }} </p>
+
+  <p>This item will be shipped in 5-10 business days.</p>
+  {% endif %}
+  
+  
  
   <div class="purchase-details">
     {% if settings.display_product_quantity %}
