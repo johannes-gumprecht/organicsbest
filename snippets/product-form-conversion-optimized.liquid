@@ -95,7 +95,7 @@
 
   {% if inventory_management contains "shopify" and product.variants[0].inventory_quantity <= 0 and available = true %}
   
-  
+  {{ inventory_management }}
   <p>This item will be shipped in 5-10 business days.</p>
   {% endif %}
  
