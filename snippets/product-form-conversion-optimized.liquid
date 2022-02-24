@@ -93,9 +93,9 @@
     {% endif %}
   {% endif %}
 
-  {% if product.variants[0].inventory_management == "shopify" and product.variants[0].inventory_quantity <= 0 %}
+  {% if product.variants[0].inventory_management == "shopify" and product.variants[0].inventory_quantity <= 0 and product.variants[0].available = true %}
   
-{{ product.variants[0].available }}
+
   <p>This item will be shipped in 5-10 business days.</p>
   {% endif %}
   
