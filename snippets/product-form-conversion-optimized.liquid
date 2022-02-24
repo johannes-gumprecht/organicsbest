@@ -93,7 +93,9 @@
     {% endif %}
   {% endif %}
 
-  
+  {% if product.variants[0].inventory_quantity <= 0 %}
+  <p>This item will ship in 5-10 business days.</p>
+  {% endif %}
  
   <div class="purchase-details">
     {% if settings.display_product_quantity %}
