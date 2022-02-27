@@ -18479,4 +18479,8 @@ flex-direction: column;
   
 .deliverytimeestimate {margin-top: 0px; margin-bottom: 19px;border: #efefef 1px solid; padding: 4px 10px 4px 10px; background-color: #f9f9f9;}
 
+{% if template contains "cart" %}
   
+  .nav--left {display:none;}
+  
+  {% endif %}   
