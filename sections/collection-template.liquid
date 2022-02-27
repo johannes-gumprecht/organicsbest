@@ -205,6 +205,18 @@
           %}
         {% endif %}
       </div>
+      
+      {% if collection.description != blank %}
+          <div class="container">
+            <div class="one-whole column">
+              <div class="collection_description">
+                {{ collection.description }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      
+      
     </div>
   {% endpaginate %}
   </div>
