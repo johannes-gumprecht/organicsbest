@@ -125,6 +125,7 @@
     "align_height": false,
     "collection_height": 200,
     "quick_shop_enabled": false,
+    "quick_shop_style": "popup",
     "cart_action": "redirect_cart",
     "display_tos_checkbox": false,
     "tos_page": "",
