@@ -15,9 +15,15 @@
         "pagination_limit": 10,
         "toggle": false
       }
+    },
+    "bottom-collection-description": {
+      "type": "collection-template",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "bottom-collection-description"
   ]
 }
