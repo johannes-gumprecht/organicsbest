@@ -261,6 +261,11 @@
               </p>
             {% endif %}
 
+            {% if section.settings.display_special_instructions %}
+              <label for="note">{{ 'cart.general.note' | t: shop_name: shop.name }}:</label>
+              <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>
+            {% endif %}
+            
             {% if section.settings.cart_message != blank %}
               {{ section.settings.cart_message }}
             {% endif %}
@@ -277,10 +282,7 @@
             {% endif %}
             {% endcomment %}
 
-              {% if section.settings.display_special_instructions %}
-              <label for="note">{{ 'cart.general.note' | t: shop_name: shop.name }}:</label>
-              <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>
-            {% endif %}
+              
             
             
             {% if cart.item_count > 0 %}
