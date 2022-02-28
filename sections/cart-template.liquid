@@ -10,7 +10,7 @@
   <div class="container content">
     <div class="one-whole column">
 
-      <h1>{{ 'cart.general.title' | t }}</h1>
+      <h1 class="medium-down--hidden">{{ 'cart.general.title' | t }} ({{ cart.item_count }} {{ cart.item_count | pluralize: 'Item', 'Items' }})</h1>
       <div class="feature_divider"></div>
     </div>
 
