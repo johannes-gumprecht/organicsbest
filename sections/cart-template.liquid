@@ -269,11 +269,13 @@
               <button type="submit" class="global-button global-button--primary add_to_cart" id="checkout" name="checkout" data-cart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
             </p>
 
+            {% comment %}
             {% if content_for_additional_checkout_buttons %}
               <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
                 {{ content_for_additional_checkout_buttons }}
               </div>
             {% endif %}
+            {% endcomment %}
 
               {% if section.settings.display_special_instructions %}
               <label for="note">{{ 'cart.general.note' | t: shop_name: shop.name }}:</label>
