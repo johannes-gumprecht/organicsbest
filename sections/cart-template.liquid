@@ -9,10 +9,14 @@
   <a name="pagecontent" id="pagecontent"></a>
   <div class="container content">
     <div class="one-whole column">
+      
+      <form action="{{ routes.cart_url }}" method="post" id="cart_form" data-cart-form="cart-template" data-total-discount="{{ cart.total_discount }}">
 
       <p class="tos_warning checkout_button">
               <button type="submit" class="global-button global-button--primary add_to_cart" id="checkout" name="checkout" data-cart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
             </p>
+        
+        </form>
       
       <h1 class="medium-down--hidden">{{ 'cart.general.title' | t }} ({{ cart.item_count }} {{ cart.item_count | pluralize: 'Item', 'Items' }})</h1>
       <div class="feature_divider"></div>
