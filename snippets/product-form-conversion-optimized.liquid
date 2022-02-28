@@ -136,9 +136,9 @@
             disabled
           {% endif %}
         "
-        data-label=<span class="icon-lock"></span>{{ add_to_cart_label | json }}
+        data-label={{ add_to_cart_label | json }}
       >
-        <span class="text">}test
+        <span class="text">TESTE
           {% if product.available %}{{ add_to_cart_label }}{% else %}{{ settings.sold_out_text }}{% endif %}
         </span>
         <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
