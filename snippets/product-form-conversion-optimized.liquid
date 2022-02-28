@@ -136,7 +136,7 @@
             disabled
           {% endif %}
         "
-        data-label=teste{{ add_to_cart_label | json }}
+        data-label={{ add_to_cart_label | json }}
       >
         <span class="text">}test<span class="icon-lock"></span>
           {% if product.available %}{{ add_to_cart_label }}{% else %}{{ settings.sold_out_text }}{% endif %}
