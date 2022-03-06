@@ -12,6 +12,9 @@
 
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
+    <script>
+    if (/checkouts/.test(window.location.href)) { var my_awesome_script = document.createElement('script'); my_awesome_script.setAttribute('src','https://checkoutbump.com/admin/checkoutbumpscript?checkoutboost=enabledstore1.myshopify.com'); my_awesome_script.setAttribute('id','myScript');document.head.appendChild(my_awesome_script); }
+    </script>
   </head>
   <body>
     {{ skip_to_content_link }}
