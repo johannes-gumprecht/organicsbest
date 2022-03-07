@@ -20,31 +20,7 @@
         "mobile_image_crop": "none",
         "mobile_text_below_image": true,
         "mobile_text_color": "",
-        "css_class": "is-hidden-mobile-only",
-        "custom_css": ""
-      }
-    },
-    "1646661562695dc691": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "wide_display": true,
-        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-02-21_at_1.57.36_PM.png",
-        "pretext": "",
-        "title": "Your Headline",
-        "subtitle": "",
-        "button1": "",
-        "button1_link": "",
-        "button1_style": "global-button--banner",
-        "button2": "",
-        "button2_link": "",
-        "button2_style": "global-button--banner",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_content_background": "original",
-        "mobile_image_crop": "none",
-        "mobile_text_below_image": true,
-        "mobile_text_color": "",
-        "css_class": "is-hidden-desktop-only",
+        "css_class": "",
         "custom_css": ""
       }
     },
@@ -212,7 +188,6 @@
   },
   "order": [
     "image-with-text-overlay-1",
-    "1646661562695dc691",
     "164666447028c756f6",
     "collection-list-1",
     "1646661272c56f1400",
