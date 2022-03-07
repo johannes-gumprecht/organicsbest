@@ -4,7 +4,6 @@
       "type": "image-with-text-overlay",
       "settings": {
         "wide_display": true,
-        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-02-21_at_1.45.37_PM.png",
         "pretext": "",
         "title": "",
         "subtitle": "",
@@ -17,7 +16,6 @@
         "text_position": "left",
         "text_align": "center",
         "caption_content_background": "original",
-        "mobile_image": "shopify:\/\/shop_images\/Screen_Shot_2022-02-21_at_1.57.36_PM.png",
         "mobile_image_crop": "none",
         "mobile_text_below_image": true,
         "mobile_text_color": "",
@@ -28,7 +26,7 @@
     "164666447028c756f6": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"product_page_divider\"><\/div>\n\n<div class=\"product_features\">\n\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">\n            <img src=\"{{ delivery.svg | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n            \n            <\/div>\n        <div class=\"product_features_container_content\">\n            <h4>Insured Express Delivery<\/h4>\n            <p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 1-5 business days.<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">  <img src=\"{{ authenticity.svg | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n        <\/div>\n        <div class=\"product_features_container_content\">\n            <h4>Authentic Products<\/h4>\n            <p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">  <img src=\"{{ expiration.svg | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n        <\/div>\n        <div class=\"product_features_container_content\">\n            <h4>Long Expiration Dates<\/h4>\n            <p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">  <img src=\"{{ formula.svg | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n        <\/div>\n        <div class=\"product_features_container_content\">\n            <h4>Right Formula Guarantee<\/h4>\n            <p>If you experience an issue with this formula, we'll send you a gift card to try out another box of formula for free.<\/p>\n        <\/div>\n    <\/div>\n<\/div>\n<div class=\"product_page_divider\"> <\/div>"
+        "custom_liquid": "<div class=\"one-whole column\"> <div class=\"product_page_divider\"><\/div>\n\n<div class=\"product_features\"> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/delivery.svg?v=644486877650279114\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Insured Express Delivery<\/h4> <p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 1-5 business days.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/authenticity.svg?v=11064849661227138248\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Authentic Products<\/h4> <p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/expiration.svg?v=3076514485066868972\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Long Expiration Dates<\/h4> <p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/formula.svg?v=6813490029840052998\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Right Formula Guarantee<\/h4> <p>If you experience an issue with this formula, we'll send you a gift card to try out another box of formula for free.<\/p><\/div><\/div>\n<\/div>\n<div class=\"product_page_divider\"><\/div><\/div>"
       }
     },
     "collection-list-1": {
