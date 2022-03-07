@@ -189,7 +189,7 @@
     "blog-posts-1": {
       "type": "blog-posts",
       "settings": {
-        "title": "Organic's Best Club Blog",
+        "title": "Our Blog",
         "blog_widget_select": "organicsbestclub",
         "home_page_articles": 3,
         "blog_tags": false,
