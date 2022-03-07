@@ -4,6 +4,7 @@
       "type": "image-with-text-overlay",
       "settings": {
         "wide_display": true,
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-02-21_at_1.45.37_PM.png",
         "pretext": "<p>Introducing the<\/p>",
         "title": "Turbo Shopify Theme",
         "subtitle": "<p>From Out of the Sandbox<\/p>",
@@ -16,7 +17,7 @@
         "text_position": "center",
         "text_align": "center",
         "caption_content_background": "original",
-        "mobile_image_crop": "none",
+        "mobile_image_crop": "center",
         "mobile_text_below_image": true,
         "mobile_text_color": "",
         "css_class": "",
@@ -87,36 +88,6 @@
         "custom_css": ""
       }
     },
-    "1646660691c2319816": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Our Best-Sellers",
-        "collection_description": true,
-        "collection": "all",
-        "collection_style": "slider",
-        "products_per": 5,
-        "products_limit": 10,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "blog-posts-1": {
-      "type": "blog-posts",
-      "settings": {
-        "title": "Organic's Best Club Blog",
-        "blog_widget_select": "organicsbestclub",
-        "home_page_articles": 3,
-        "blog_tags": false,
-        "blog_author": false,
-        "read_time": true,
-        "blog_date": false,
-        "blog_comment_count": true,
-        "read_more_link": true,
-        "excerpt_display": "full_excerpt",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "1646661272c56f1400": {
       "type": "logo-bar",
       "blocks": {
@@ -177,13 +148,43 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "1646660691c2319816": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Our Best-Sellers",
+        "collection_description": true,
+        "collection": "all",
+        "collection_style": "slider",
+        "products_per": 5,
+        "products_limit": 10,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "blog-posts-1": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Organic's Best Club Blog",
+        "blog_widget_select": "organicsbestclub",
+        "home_page_articles": 3,
+        "blog_tags": false,
+        "blog_author": false,
+        "read_time": true,
+        "blog_date": false,
+        "blog_comment_count": true,
+        "read_more_link": true,
+        "excerpt_display": "full_excerpt",
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
     "image-with-text-overlay-1",
     "collection-list-1",
+    "1646661272c56f1400",
     "1646660691c2319816",
-    "blog-posts-1",
-    "1646661272c56f1400"
+    "blog-posts-1"
   ]
 }
