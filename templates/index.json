@@ -3,7 +3,7 @@
     "image-with-text-overlay-1": {
       "type": "image-with-text-overlay",
       "settings": {
-        "wide_display": true,
+        "wide_display": false,
         "image": "shopify:\/\/shop_images\/Screen_Shot_2022-02-21_at_1.45.37_PM.png",
         "pretext": "",
         "title": "",
@@ -179,9 +179,9 @@
         "title": "Our Best-Sellers",
         "collection_description": true,
         "collection": "all",
-        "collection_style": "slider",
+        "collection_style": "grid",
         "products_per": 5,
-        "products_limit": 10,
+        "products_limit": 5,
         "css_class": "",
         "custom_css": ""
       }
