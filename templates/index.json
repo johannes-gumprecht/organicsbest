@@ -26,7 +26,7 @@
     "164666447028c756f6": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"one-whole column\">\n\n<div class=\"product_features\"> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/delivery.svg?v=644486877650279114\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Insured Express Delivery<\/h4> <p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 1-5 business days.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/authenticity.svg?v=11064849661227138248\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Authentic Products<\/h4> <p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/expiration.svg?v=3076514485066868972\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Long Expiration Dates<\/h4> <p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/formula.svg?v=6813490029840052998\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Right Formula Guarantee<\/h4> <p>If you experience an issue with this formula, we'll send you a gift card to try out another box of formula for free.<\/p><\/div><\/div>\n<\/div>\n<div class=\"product_page_divider\"><\/div><\/div><\/div>"
+        "custom_liquid": "<div class=\"one-whole column\">\n<div class=\"product_page_divider\"><\/div>\n<div class=\"product_features\"> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/delivery.svg?v=644486877650279114\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Insured Express Delivery<\/h4> <p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 1-5 business days.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/authenticity.svg?v=11064849661227138248\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Authentic Products<\/h4> <p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/expiration.svg?v=3076514485066868972\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Long Expiration Dates<\/h4> <p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/formula.svg?v=6813490029840052998\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Right Formula Guarantee<\/h4> <p>If you experience an issue with this formula, we'll send you a gift card to try out another box of formula for free.<\/p><\/div><\/div>\n<\/div>\n<div class=\"product_page_divider\"><\/div><\/div><\/div>"
       }
     },
     "collection-list-1": {
@@ -88,68 +88,7 @@
         "title": "Our Brands",
         "align_height": true,
         "collection_height": 150,
-        "frontpage_collections_per_row": 3,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "1646661272c56f1400": {
-      "type": "logo-bar",
-      "blocks": {
-        "16466612728b01b68b-0": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "16466612728b01b68b-1": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "16466612728b01b68b-2": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "16466612728b01b68b-3": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "55bdc03f-fe3f-4fb6-9308-a9ba28fec568": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "8549e593-02ed-4e34-a339-8ce818c9fd3e": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "45891aac-1ae2-43b5-aa0e-279f0b4cfc10": {
-          "type": "logo_image",
-          "settings": {
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16466612728b01b68b-0",
-        "16466612728b01b68b-1",
-        "16466612728b01b68b-2",
-        "16466612728b01b68b-3",
-        "55bdc03f-fe3f-4fb6-9308-a9ba28fec568",
-        "8549e593-02ed-4e34-a339-8ce818c9fd3e",
-        "45891aac-1ae2-43b5-aa0e-279f0b4cfc10"
-      ],
-      "settings": {
-        "title": "Our Brands",
+        "frontpage_collections_per_row": 5,
         "css_class": "",
         "custom_css": ""
       }
@@ -189,7 +128,6 @@
     "image-with-text-overlay-1",
     "164666447028c756f6",
     "collection-list-1",
-    "1646661272c56f1400",
     "1646660691c2319816",
     "blog-posts-1"
   ]
