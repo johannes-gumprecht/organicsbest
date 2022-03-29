@@ -94,7 +94,7 @@
 {%- elsif template == 'unit-measurement' -%}
   <span class="unit-measurement" data-unit-measurement>{%- if value != blank -%}{{- value -}}{%- endif -%}</span>
 {%- elsif template == 'price-ui' -%}
-  <span class="price {% if compare_at_price != blank and compare_at_price != false -%}price--sale{%- endif -%}" data-price>
+  <span class="price sdsx {% if compare_at_price != blank and compare_at_price != false -%}price--sale{%- endif -%}" data-price>
 
     
          {%- if price != blank -%}
