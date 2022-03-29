@@ -101,7 +101,13 @@
         {% unless product.available == false and settings.display_price == false %}
           <span class="current_price">
           
-        
+      
+            
+              {%assign copy = product.metafields.unit_price.copy %}
+{%if copy == blank or copy == empty %}
+{%assign copy = 'per box'%}
+{%endif%}
+            
         
          {%comment%}
         {% if product.price_varies and product.price_min > 0 %}
