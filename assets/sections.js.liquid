@@ -942,13 +942,11 @@ window.productPage = {
            
              per_box = v.price/per_box ;
               
-      
-      var copy = $('.get-copy').data('copy');
-      var priceString = `<span class="money per-box" >${Shopify.formatMoney(per_box, $('body').data('money-format'))}</span> ${copy} (<span class="money variant-price">${Shopify.formatMoney(variant.price, $('body').data('money-format'))}</span>)`;
 
-console.log(copy);
-console.log(priceString);
-
+   const span_perbx = document.createElement('span');
+                      span_perbx.classList.add('money', 'per-box');
+                    span.innerHTML = `${window.Shopify.formatMoney(per_box, $('body').data('money-format'))} ${copy}`;
+       priceUIFragment.appendChild(span);
 
                   if (isPriceSavingsEnabled && v) {
                     if (v.compare_at_price > v.price) {
