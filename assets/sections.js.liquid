@@ -932,6 +932,24 @@ window.productPage = {
                 variant,
                 formatter: price => window.Shopify.formatMoney(price, $('body').data('money-format')),
                 handler: (priceUIFragment, _product, { variant: v }) => {
+
+
+   var per_box = v.sku.split('_');
+        
+        
+         per_box = per_box[per_box.length - 1];
+      
+           
+             per_box = v.price/per_box ;
+              
+      
+      var copy = $('.get-copy').data('copy');
+      var priceString = `<span class="money per-box" >${Shopify.formatMoney(per_box, $('body').data('money-format'))}</span> ${copy} (<span class="money variant-price">${Shopify.formatMoney(variant.price, $('body').data('money-format'))}</span>)`;
+
+console.log(copy);
+console.log(priceString);
+
+
                   if (isPriceSavingsEnabled && v) {
                     if (v.compare_at_price > v.price) {
                       const span = document.createElement('span');
