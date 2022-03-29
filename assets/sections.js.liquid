@@ -947,7 +947,7 @@ window.productPage = {
    const span_perbx = document.createElement('span');
                       span_perbx.classList.add('money', 'per-box');
                     span_perbx.innerHTML = `${window.Shopify.formatMoney(per_box, $('body').data('money-format'))} ${copy}`;
-       priceUIFragment.prependChild(span_perbx);
+       priceUIFragment.prepend(span_perbx);
 
                   if (isPriceSavingsEnabled && v) {
                     if (v.compare_at_price > v.price) {
