@@ -94,7 +94,30 @@
 {%- elsif template == 'unit-measurement' -%}
   <span class="unit-measurement" data-unit-measurement>{%- if value != blank -%}{{- value -}}{%- endif -%}</span>
 {%- elsif template == 'price-ui' -%}
-  <span class="price {% if compare_at_price != blank and compare_at_price != false -%}price--sale{%- endif -%}" data-price>{%- if price != blank -%}{{- price -}}{%- endif -%}</span>
+  <span class="price {% if compare_at_price != blank and compare_at_price != false -%}price--sale{%- endif -%}" data-price>
+
+    
+         {%- if price != blank -%}
+                  {% assign per_box = product.selected_or_first_available_variant.sku | split:"_" | last%}
+                  {% assign per_box = per_box | plus: 0.0 %} 
+                  {%assign per_box = product.selected_or_first_available_variant.price | divided_by: per_box %}
+              
+                   <span class="money per-box" >
+                      
+                      {% render 'price-element', price: per_box %}
+                  
+                 
+                  </span>
+                   {{copy}}
+                  (<span class="money variant-price" {{per_box}}>
+                      
+                      {% render 'price-element', price: product.selected_or_first_available_variant.price %}
+                  
+                  
+                  </span>)
+    {%- endif -%}
+
+</span>
   {%- if compare_at_price != false -%}<span class="compare-at-price" data-compare-at-price>{%- if compare_at_price != blank -%}{{- compare_at_price -}}{%- endif -%}</span>{%- endif -%}
   {%- if unit_pricing != false -%}<span class="unit-pricing" data-unit-pricing>{%- if unit_pricing != blank -%}{{- unit_pricing -}}{%- endif -%}</span>{%- endif -%}
 {%- elsif template == 'price-ui-badge' -%}
