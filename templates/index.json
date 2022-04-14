@@ -116,10 +116,10 @@
       "settings": {
         "title": "Our Best-Sellers",
         "collection_description": true,
-        "collection": "all",
-        "collection_style": "grid",
+        "collection": "best-seller",
+        "collection_style": "slider",
         "products_per": 5,
-        "products_limit": 5,
+        "products_limit": 10,
         "css_class": "",
         "custom_css": ""
       }
