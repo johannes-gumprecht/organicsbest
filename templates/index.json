@@ -276,6 +276,23 @@
       "settings": {
         "title": ""
       }
+    },
+    "1649921074486d205d": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Read our latest blog posts",
+        "blog_widget_select": "organicsbestclub",
+        "home_page_articles": 3,
+        "blog_tags": false,
+        "blog_author": false,
+        "read_time": true,
+        "blog_date": true,
+        "blog_comment_count": false,
+        "read_more_link": false,
+        "excerpt_display": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
@@ -288,6 +305,7 @@
     "1646745754078ac3c9",
     "1646746323d8efed02",
     "16467462755b04bde6",
-    "16467459840d382681"
+    "16467459840d382681",
+    "1649921074486d205d"
   ]
 }
