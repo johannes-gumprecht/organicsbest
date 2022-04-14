@@ -2,6 +2,22 @@
   "sections": {
     "main": {
       "type": "collection-template",
+      "blocks": {
+        "2d3e9f4e-9775-48ba-b4c5-8f649bc2f4ef": {
+          "type": "faceted_filtering",
+          "settings": {
+          }
+        },
+        "51e10851-f551-4339-b89c-a730988cce3d": {
+          "type": "filter_by_vendor",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "2d3e9f4e-9775-48ba-b4c5-8f649bc2f4ef",
+        "51e10851-f551-4339-b89c-a730988cce3d"
+      ],
       "settings": {
         "featured_collection_image": false,
         "wide_display": false,
