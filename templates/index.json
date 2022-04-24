@@ -196,43 +196,15 @@
         "custom_css": ""
       }
     },
-    "1646746323d8efed02": {
-      "type": "divider",
+    "16508075530a9214c8": {
+      "type": "featured-text",
       "settings": {
-        "divider_spacing": 20,
-        "divider_border": false,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "16467462755b04bde6": {
-      "type": "video",
-      "settings": {
-        "wide_display": false,
-        "aspect_ratio": "16:9",
-        "autoplay": false,
-        "autoloop": true,
-        "mute_video": false,
-        "show_controls": true,
-        "video_dark_overlay": false,
-        "iframe_video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "html5_video": "",
-        "display_text_over_video": false,
-        "preheading": "",
-        "heading": "",
-        "subheading": "",
-        "button1_label": "Play Video",
-        "button1_link": "",
-        "button1_style": "global-button--banner",
-        "button2_label": "",
-        "button2_link": "",
-        "button2_style": "global-button--banner",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_content_background": "original",
-        "mobile_image_crop": "none",
-        "mobile_text_below_image": true,
-        "mobile_text_color": "",
+        "title": "How to Prepare European Formula",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
         "css_class": "",
         "custom_css": ""
       }
@@ -330,8 +302,7 @@
     "1646660691c2319816",
     "16508059602975017b",
     "1646745754078ac3c9",
-    "1646746323d8efed02",
-    "16467462755b04bde6",
+    "16508075530a9214c8",
     "1650807271bf000e8f",
     "16467459840d382681",
     "1649921074486d205d"
