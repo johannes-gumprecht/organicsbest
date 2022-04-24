@@ -336,6 +336,15 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "16508089790eaadf0d": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
@@ -355,6 +364,7 @@
     "16508079200469693c",
     "16467459840d382681",
     "165080791487253874",
-    "1649921074486d205d"
+    "1649921074486d205d",
+    "16508089790eaadf0d"
   ]
 }
