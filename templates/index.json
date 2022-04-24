@@ -148,7 +148,7 @@
             "image": "shopify:\/\/shop_images\/heavy-metals_d4253f94-0fd4-450f-a869-ea81ab3f9112_1400x_1.webp",
             "image_crop": "none",
             "title": "Should You Be Concerned About Heavy Metals in Baby Formula?",
-            "text": "<p>\"Ingredients in many baby foods, including some organic fare, are <strong>contaminated with heavy metals <\/strong>like arsenic, lead and cadmium at levels that are far <strong>higher than those allowed in products like bottled water,<\/strong> congressional investigators said on Thursday.\" <\/p><p><em> - New York Times, Feb 2022 <\/em><\/p>",
+            "text": "<p>\"Ingredients in many baby foods, including some organic fare, are <strong>contaminated with heavy metals <\/strong>like arsenic, lead and cadmium at levels that are far <strong>higher than those allowed in products like bottled water...<\/strong>\" <\/p><p><em> - New York Times, Feb 2022 <\/em><\/p>",
             "button_label": "Read more",
             "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/should-you-be-concerned-about-heavy-metals-in-baby-formula",
             "bg_color": "#f9f9f9",
@@ -158,12 +158,13 @@
         "16467457544a5d78fb-1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/additives_1400x_99a2c83e-629c-4762-959d-4d2d2069c09a.webp",
             "image_crop": "none",
-            "title": "Blog article",
-            "text": "<p>Promotion description appears here.<\/p>",
+            "title": "Baby Formula Additives to Watch Out For",
+            "text": "<p>What does a baby formula need to contain to be considered <em>\"similar to breastmilk\"?<\/em><\/p><p><strong>And which ingredients should be avoided?<\/strong><\/p><p>This article will help parents understand what additives to avoid.<\/p>",
             "button_label": "Read more",
-            "link": "",
-            "bg_color": "",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/baby-formula-additives-to-watch-out-for",
+            "bg_color": "#f9f9f9",
             "text_color": ""
           }
         },
