@@ -110,7 +110,7 @@
         "collection_height": 150,
         "frontpage_collections_per_row": 5,
         "css_class": "",
-        "custom_css": ""
+        "custom_css": ".is-flex-wrap {\n    flex-wrap: wrap;\n    justify-content: center;\n}"
       }
     },
     "1646660691c2319816": {
