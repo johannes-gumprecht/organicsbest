@@ -105,7 +105,7 @@
         "25f4300f-7ed1-468f-bb74-7f45751b6f71"
       ],
       "settings": {
-        "title": "Our Brands",
+        "title": "Baby Formula Brands",
         "align_height": true,
         "collection_height": 150,
         "frontpage_collections_per_row": 5,
@@ -116,7 +116,7 @@
     "1646660691c2319816": {
       "type": "featured-collection",
       "settings": {
-        "title": "Our Best-Selling Products",
+        "title": "Best-Selling Products",
         "collection_description": true,
         "collection": "best-seller",
         "collection_style": "slider",
