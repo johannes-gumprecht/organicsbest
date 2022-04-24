@@ -184,6 +184,7 @@
           "show_locale_selector": false,
           "show_currency_selector": false,
           "logo_display_width": 130,
+          "logo": "shopify:\/\/shop_images\/logo_grau_new_410xNEW.png",
           "main_linklist": "main-menu",
           "main_linklist2": "footer",
           "vertical_menu": false,
@@ -193,7 +194,7 @@
           "logo_position": "center",
           "logo_alignment": "center",
           "menu_position": "inline",
-          "menu_alignment": "align_left"
+          "menu_alignment": "align_right"
         }
       },
       "footer": {
