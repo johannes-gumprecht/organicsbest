@@ -30,7 +30,7 @@
     "button_style": "rounded",
     "read_more_style": "link",
     "banner_button_color": "#8ee0f2",
-    "banner_color": "#ffffff",
+    "banner_color": "#333333",
     "banner_background_color": "#1e1e1e",
     "table_styles_enabled": true,
     "slideshow_arrow_size": "light",
