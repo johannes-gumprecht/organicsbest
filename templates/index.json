@@ -4,6 +4,7 @@
       "type": "image-with-text-overlay",
       "settings": {
         "wide_display": true,
+        "image": "shopify:\/\/shop_images\/new_hopmepageimage.jpg",
         "pretext": "",
         "title": "Organic European Baby Formula",
         "subtitle": "<p>Shop our world famous organic baby formulas which are used by thousands of parents to help them raise healthy children.<\/p>",
