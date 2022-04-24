@@ -171,12 +171,13 @@
         "53471d50-e1fe-40fd-9d53-81642d4cbd42": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/aluminum_1400x_cf655a44-40dc-4f20-9ac0-467552eb7738.webp",
             "image_crop": "none",
-            "title": "Blog article",
-            "text": "<p>Promotion description appears here.<\/p>",
+            "title": "Dangers of Aluminium in Infant Formulas - And a Safe Alternative!",
+            "text": "<p>How can parents who need to bottle-feed choose the best formula possible and <strong>avoid the downsides<\/strong> that can come with formula?<\/p><p><\/p><p><strong>Learn about aluminum contamination in baby formula<\/strong> and why choosing specific formula brands can help you avoid contaminants.<\/p>",
             "button_label": "Read more",
-            "link": "",
-            "bg_color": "",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/the-dangers-of-aluminium-in-infant-formulas-and-safe-alternatives",
+            "bg_color": "#f9f9f9",
             "text_color": ""
           }
         }
