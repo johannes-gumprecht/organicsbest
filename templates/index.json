@@ -147,7 +147,7 @@
     "16508059602975017b": {
       "type": "featured-text",
       "settings": {
-        "title": "Learn Why Our Products Are Great",
+        "title": "Learn Why Our Work Is Important",
         "content": "",
         "button_label": "",
         "button_link": "",
@@ -244,6 +244,28 @@
         "custom_css": ""
       }
     },
+    "16508079200469693c": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16508079314bdd3a9e": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "16467459840d382681": {
       "type": "faq",
       "blocks": {
@@ -302,6 +324,15 @@
         "title": ""
       }
     },
+    "165080791487253874": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "1649921074486d205d": {
       "type": "blog-posts",
       "settings": {
@@ -334,7 +365,10 @@
     "1650807756c5a6ffdb",
     "16508075530a9214c8",
     "1650807271bf000e8f",
+    "16508079200469693c",
+    "16508079314bdd3a9e",
     "16467459840d382681",
+    "165080791487253874",
     "1649921074486d205d"
   ]
 }
