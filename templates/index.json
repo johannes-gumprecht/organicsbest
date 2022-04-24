@@ -253,19 +253,6 @@
         "custom_css": ""
       }
     },
-    "16508079314bdd3a9e": {
-      "type": "featured-text",
-      "settings": {
-        "title": "Frequently Asked Questions",
-        "content": "",
-        "button_label": "",
-        "button_link": "",
-        "text_size": "featured_text",
-        "text_alignment": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "16467459840d382681": {
       "type": "faq",
       "blocks": {
@@ -321,7 +308,7 @@
         "1646745984d95d6eb8-7"
       ],
       "settings": {
-        "title": ""
+        "title": "Frequently Asked Questions"
       }
     },
     "165080791487253874": {
@@ -366,7 +353,6 @@
     "16508075530a9214c8",
     "1650807271bf000e8f",
     "16508079200469693c",
-    "16508079314bdd3a9e",
     "16467459840d382681",
     "165080791487253874",
     "1649921074486d205d"
