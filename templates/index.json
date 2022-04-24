@@ -237,6 +237,14 @@
         "custom_css": ""
       }
     },
+    "1650807271bf000e8f": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div style=\"position: relative; width: 100%;height: 0; padding-bottom: 56.25%;\"><iframe style=\"position: absolute;  width: 100%; height: 100%; left: 0; top: 0;\" src=\"https:\/\/killerplayer.com\/start\/video\/4eedf01b-7a94-4910-ac1e-90a153771b36\" width=\"1280\" height=\"720\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe><\/div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "16467459840d382681": {
       "type": "faq",
       "blocks": {
@@ -324,6 +332,7 @@
     "1646745754078ac3c9",
     "1646746323d8efed02",
     "16467462755b04bde6",
+    "1650807271bf000e8f",
     "16467459840d382681",
     "1649921074486d205d"
   ]
