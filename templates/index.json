@@ -40,10 +40,10 @@
         "custom_liquid": "<div class=\"product_features\"> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/delivery.svg?v=644486877650279114\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Insured Express Delivery<\/h4> <p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 1-5 business days.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/authenticity.svg?v=11064849661227138248\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Authentic Products<\/h4> <p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/expiration.svg?v=3076514485066868972\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Long Expiration Dates<\/h4> <p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/formula.svg?v=6813490029840052998\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Right Formula Guarantee<\/h4> <p>If you experience an issue with this formula, we'll send you a gift card to try out another box of formula for free.<\/p><\/div><\/div>\n<\/div>\n<\/div>"
       }
     },
-    "1646746178feb26a97": {
+    "16508077005b272cfb": {
       "type": "divider",
       "settings": {
-        "divider_spacing": 0,
+        "divider_spacing": 20,
         "divider_border": false,
         "css_class": "",
         "custom_css": ""
@@ -113,6 +113,15 @@
         "custom_css": ".is-flex-wrap {\n    flex-wrap: wrap;\n    justify-content: center;\n}"
       }
     },
+    "16508077201cd3852f": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "1646660691c2319816": {
       "type": "featured-collection",
       "settings": {
@@ -122,6 +131,15 @@
         "collection_style": "slider",
         "products_per": 5,
         "products_limit": 10,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1650807743194a5606": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
         "css_class": "",
         "custom_css": ""
       }
@@ -192,6 +210,15 @@
         "featured_links_per_row": "1",
         "frontpage_text_align": "left",
         "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1650807756c5a6ffdb": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
         "css_class": "",
         "custom_css": ""
       }
@@ -297,11 +324,14 @@
     "image-with-text-overlay-1",
     "1646746171aba218de",
     "164666447028c756f6",
-    "1646746178feb26a97",
+    "16508077005b272cfb",
     "collection-list-1",
+    "16508077201cd3852f",
     "1646660691c2319816",
+    "1650807743194a5606",
     "16508059602975017b",
     "1646745754078ac3c9",
+    "1650807756c5a6ffdb",
     "16508075530a9214c8",
     "1650807271bf000e8f",
     "16467459840d382681",
