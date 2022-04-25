@@ -203,7 +203,7 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "menu": "footer",
+              "menu": "help",
               "social_icons_footer": false
             }
           },
@@ -217,7 +217,7 @@
           "footer-2": {
             "type": "link_list",
             "settings": {
-              "menu": "",
+              "menu": "our-company",
               "social_icons_footer": false
             }
           },
