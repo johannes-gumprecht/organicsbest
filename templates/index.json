@@ -128,9 +128,9 @@
         "title": "Best-Selling Products",
         "collection_description": true,
         "collection": "best-seller",
-        "collection_style": "slider",
-        "products_per": 5,
-        "products_limit": 10,
+        "collection_style": "grid",
+        "products_per": 3,
+        "products_limit": 6,
         "css_class": "",
         "custom_css": ""
       }
@@ -260,14 +260,14 @@
           "type": "content",
           "settings": {
             "title": "Where do you buy the products?",
-            "answer": "<p>We buy all products directly from the manufacturers or their official wholesale distributors.<\/p><p>All our products are always 100% authentic.<\/p>"
+            "answer": "<p>We buy all products directly from the manufacturers or their official wholesale distributors.<\/p><p>All our products are always 100% authentic and originally meant for the European market.<\/p>"
           }
         },
         "1646745984d95d6eb8-3": {
           "type": "content",
           "settings": {
             "title": "What expiry date can I expect?",
-            "answer": "<p>All our baby products have a guaranteed expiry date of 6 months into the future or more.<\/p><p>Due to the nature of the products, you usually will find a longer expirary date with our non-baby-formula products.<\/p>"
+            "answer": "<p>All our baby products have a guaranteed expiry date of 6 months into the future or more.<\/p><p>Due to the nature of the products, you will usually find a longer expiry date with our non-baby-formula products.<\/p>"
           }
         },
         "1646745984d95d6eb8-1": {
@@ -281,14 +281,14 @@
           "type": "content",
           "settings": {
             "title": "What happens when my order is lost?",
-            "answer": "<p>Around 99.9% of all orders arrive within 1-5 business days.<\/p><p>If you experience any issues with the arrrival of your order, we will always offer you a free resend or full refund.<\/p><p>No questions asked!<\/p>"
+            "answer": "<p>Around 99.9% of all orders arrive within 1-5 business days.<\/p><p>If you experience issues with the arrrival of your order, we will find  a solution or offer you a free resend or full refund.<\/p><p>No questions asked!<\/p>"
           }
         },
         "1646745984d95d6eb8-6": {
           "type": "content",
           "settings": {
             "title": "What if this baby formula is not working for my baby?",
-            "answer": "<p>We want you to find the best baby formula for your little one. That is why we have our <strong>Right Formula Guarentee!<\/strong><\/p><p><strong>Let us help and send you one box or can of any baby formula free.<\/strong><\/p><p>Please contact our customer service to help you within 24 hours (Mo-Fr): <a href=\"mailto:support@organicsbestshop.com\" target=\"_blank\" title=\"mailto:support@organicsbestshop.com\">support@organicsbestshop.com<\/a><\/p><p><em>Please note, we do not offer refunds due to safety reasons. Refunds with food products in general are not legal.<\/em><\/p>"
+            "answer": "<p>We want you to find the best baby formula for your little one. That is why we have our <strong>Right Formula Guarantee!<\/strong><\/p><p><strong>Let us help and send you one box or can of any baby formula free. We will pay for it.<\/strong><\/p><p>Please contact our customer service to help you within 24 hours (Mo-Fr): <a href=\"mailto:support@organicsbestshop.com\" target=\"_blank\" title=\"mailto:support@organicsbestshop.com\">support@organicsbestshop.com<\/a><\/p><p><em>Please note, we do not offer refunds due to safety reasons. Refunds with food products in general are not legal.<\/em><\/p>"
           }
         },
         "bd98b839-f9dd-4dc5-9f2f-68b1057a4d97": {
