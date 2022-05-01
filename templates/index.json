@@ -64,10 +64,10 @@
             "feature_collection": "holle-formula"
           }
         },
-        "block-3": {
+        "block-5": {
           "type": "collection",
           "settings": {
-            "feature_collection": "loulouka-organic-swiss-formula"
+            "feature_collection": "lebenswert-formula"
           }
         },
         "block-4": {
@@ -76,10 +76,10 @@
             "feature_collection": "jovie-goat-milk-formula"
           }
         },
-        "block-5": {
+        "block-3": {
           "type": "collection",
           "settings": {
-            "feature_collection": "lebenswert-formula"
+            "feature_collection": "loulouka-organic-swiss-formula"
           }
         },
         "block-6": {
@@ -98,9 +98,9 @@
       "block_order": [
         "block-1",
         "block-2",
-        "block-3",
-        "block-4",
         "block-5",
+        "block-4",
+        "block-3",
         "block-6",
         "25f4300f-7ed1-468f-bb74-7f45751b6f71"
       ],
