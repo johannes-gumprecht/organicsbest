@@ -109,8 +109,8 @@
         "align_height": true,
         "collection_height": 250,
         "frontpage_collections_per_row": 4,
-        "css_class": "",
-        "custom_css": ".is-flex-wrap {\n    flex-wrap: wrap;\n    justify-content: center;\n}\n\n.collection-info__caption {display:none;}"
+        "css_class": "grow",
+        "custom_css": ".is-flex-wrap {\n    flex-wrap: wrap;\n    justify-content: center;\n}\n\n.collection-info__caption {display:none;}\n\n.grow { transition: all .2s ease-in-out; }\n.grow:hover { transform: scale(1.1); }"
       }
     },
     "16508077201cd3852f": {
