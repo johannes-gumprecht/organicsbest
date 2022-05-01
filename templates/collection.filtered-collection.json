@@ -25,9 +25,39 @@
         "pagination_limit": 16,
         "toggle": false
       }
+    },
+    "1651432956743e6b64": {
+      "type": "apps",
+      "blocks": {
+        "9567f836-56ff-4e98-b632-41e012230277": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/visual-gallery\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "feed_type": "feed",
+            "auto_play": false,
+            "color_star": "",
+            "color_hover": "",
+            "color_hover_opacity": 50,
+            "review_ids": "",
+            "product_ids": "",
+            "category": "",
+            "product_brand": "",
+            "tags": "",
+            "min_rating": "none",
+            "fill_empty": false,
+            "random": false,
+            "with_photos": false
+          }
+        }
+      },
+      "block_order": [
+        "9567f836-56ff-4e98-b632-41e012230277"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1651432956743e6b64"
   ]
 }
