@@ -108,7 +108,7 @@
         "title": "Baby Formula Brands",
         "align_height": true,
         "collection_height": 250,
-        "frontpage_collections_per_row": 3,
+        "frontpage_collections_per_row": 4,
         "css_class": "",
         "custom_css": ".is-flex-wrap {\n    flex-wrap: wrap;\n    justify-content: center;\n}\n\n.collection-info__caption {display:none;}"
       }
