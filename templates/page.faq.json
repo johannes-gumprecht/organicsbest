@@ -2,65 +2,67 @@
   "sections": {
     "main": {
       "type": "page-faq-template",
-      "settings": {
-        "title": "Page FAQ Template",
-        "subtitle": "<p>Create an amazing FAQ page with a full-width banner</p>",
-        "text_position": "center",
-        "text_align": "center"
-      },
       "blocks": {
         "block-1": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Section"
           }
         },
         "block-2": {
           "type": "Content",
+          "disabled": true,
           "settings": {
             "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.</p>"
+            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-3": {
           "type": "Content",
+          "disabled": true,
           "settings": {
             "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.</p>"
+            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-4": {
           "type": "Content",
+          "disabled": true,
           "settings": {
             "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.</p>"
+            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-5": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Section"
           }
         },
         "block-6": {
           "type": "Content",
+          "disabled": true,
           "settings": {
             "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.</p>"
+            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-7": {
           "type": "Content",
+          "disabled": true,
           "settings": {
             "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.</p>"
+            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-8": {
           "type": "Content",
+          "disabled": true,
           "settings": {
             "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.</p>"
+            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         }
       },
@@ -73,7 +75,24 @@
         "block-6",
         "block-7",
         "block-8"
-      ]
+      ],
+      "settings": {
+        "wide_display": false,
+        "show_banner": false,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "pretext": "",
+        "title": "Page FAQ Template",
+        "subtitle": "<p>Create an amazing FAQ page with a full-width banner<\/p>",
+        "text_position": "center",
+        "text_align": "center",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner"
+      }
     }
   },
   "order": [
