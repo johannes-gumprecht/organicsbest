@@ -366,10 +366,12 @@
             "type": "column",
             "settings": {
               "richtext_top": "",
+              "image_top": "shopify:\/\/shop_images\/lebenswert-megamenu-logo.png",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "lebenswert-bio-organic-infant-formula",
               "menu_1_link": "shopify:\/\/collections\/lebenswert-formula",
+              "image_second": "shopify:\/\/shop_images\/hipp-ha-megamenu-logo_1600x_bd83e41e-c70f-49bf-b92e-5a7d5e22c068.png",
               "image_caption_second": "",
               "image_link_second": "",
               "menu_2": "lowenzahn-organics",
