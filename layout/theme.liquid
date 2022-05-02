@@ -142,7 +142,9 @@
     <script src="{{ 'sections.js' | asset_url }}" defer></script>
     <script src="{{ 'utilities.js' | asset_url }}" defer></script>
     <script src="{{ 'app.js' | asset_url }}" defer></script>
-    <script src="{{ 'geoipdata.js' | asset_url }}" defer></script> 
+    <script src="{{ 'geoipdata.js' | asset_url }}" defer></script>
+    {% include 'scrollbutton' %}
+    {% include 'smoothscroll' %}
 
 
     {% if settings.disqus_enabled %}
