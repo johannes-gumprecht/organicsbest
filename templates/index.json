@@ -161,6 +161,28 @@
         "custom_css": ""
       }
     },
+    "1651499833e5fe3934": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best-Selling Baby Food",
+        "collection_description": false,
+        "collection": "organic-baby-food",
+        "collection_style": "grid",
+        "products_per": 3,
+        "products_limit": 6,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16514998439ac8c7b8": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "16508059602975017b": {
       "type": "featured-text",
       "settings": {
@@ -375,6 +397,8 @@
     "16508077201cd3852f",
     "1646660691c2319816",
     "1650807743194a5606",
+    "1651499833e5fe3934",
+    "16514998439ac8c7b8",
     "16508059602975017b",
     "1646745754078ac3c9",
     "1650807756c5a6ffdb",
