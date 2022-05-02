@@ -49,6 +49,23 @@
         "custom_css": ""
       }
     },
+    "16514996781b65daff": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "NEW VIDEO",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16514997890e1d1fe6": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "collection-list-1": {
       "type": "collection-list",
       "blocks": {
@@ -352,6 +369,8 @@
     "1646746171aba218de",
     "164666447028c756f6",
     "16508077005b272cfb",
+    "16514996781b65daff",
+    "16514997890e1d1fe6",
     "collection-list-1",
     "16508077201cd3852f",
     "1646660691c2319816",
