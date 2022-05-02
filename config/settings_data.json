@@ -257,16 +257,35 @@
       "mega-menu-1": {
         "type": "mega-menu-1",
         "blocks": {
+          "mega-menu-1-2": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "image_link_top": "",
+              "menu_1": "holle",
+              "menu_1_link": "shopify:\/\/collections\/holle-cow-formula",
+              "menu_2": "holle-goat-formula",
+              "menu_2_link": "shopify:\/\/collections\/holle-goat-milk-formula",
+              "menu_3": "holle-a2-milk-formula",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_caption_bottom": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
           "mega-menu-1-0": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>",
+              "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
+              "menu_1": "hipp-combiotic-german-version",
+              "menu_1_link": "shopify:\/\/collections\/hipp-formula",
+              "menu_2": "hipp-combiotic-dutch",
+              "menu_2_link": "shopify:\/\/collections\/hipp-dutch-formula-1",
               "menu_3": "",
               "menu_3_link": "",
               "menu_4": "",
@@ -279,33 +298,14 @@
           "mega-menu-1-1": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>A column with no settings can be used as a spacer<\/p>",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_caption_bottom": "",
-              "image_link_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "mega-menu-1-2": {
-            "type": "column",
-            "settings": {
               "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "",
+              "menu_1": "hipp-ha-combiotik",
               "menu_1_link": "",
-              "menu_2": "",
+              "menu_2": "hipp-special-formula",
               "menu_2_link": "",
-              "menu_3": "",
+              "menu_3": "hipp-ready-to-feed-formula",
               "menu_3_link": "",
               "menu_4": "",
               "menu_4_link": "",
@@ -317,14 +317,14 @@
           "mega-menu-1-3": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Link to your collections, sales and even external links<\/p>",
+              "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "",
+              "menu_1": "kendamil-cow-formula",
               "menu_1_link": "",
-              "menu_2": "",
+              "menu_2": "loulouka-organic-baby-formula",
               "menu_2_link": "",
-              "menu_3": "",
+              "menu_3": "loulouka-goat-milk-formula",
               "menu_3_link": "",
               "menu_4": "",
               "menu_4_link": "",
@@ -336,13 +336,13 @@
           "mega-menu-1-4": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Add up to five columns<\/p>",
+              "richtext_top": "",
               "image_caption_top": "",
               "image_link_top": "",
-              "menu_1": "",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
+              "menu_1": "lebenswert-bio-organic-infant-formula",
+              "menu_1_link": "shopify:\/\/collections\/lebenswert-formula",
+              "menu_2": "lowenzahn-organics",
+              "menu_2_link": "shopify:\/\/collections\/lowenzahn-organics",
               "menu_3": "",
               "menu_3_link": "",
               "menu_4": "",
@@ -354,9 +354,9 @@
           }
         },
         "block_order": [
+          "mega-menu-1-2",
           "mega-menu-1-0",
           "mega-menu-1-1",
-          "mega-menu-1-2",
           "mega-menu-1-3",
           "mega-menu-1-4"
         ],
