@@ -57,6 +57,25 @@
                 </div>
               {% endif %}
 
+             {% comment %}Image with caption and link{% endcomment %}
+              {% if block.settings.image_second != nil or block.settings.image_caption_second != blank %}
+                <div class="mega-menu__image-caption-link">
+                  <a {% if block.settings.image_link_second != blank %}href="{{ block.settings.image_link_second }}"{% endif %} >
+                    {% if block.settings.image_second != nil %}
+                      {%
+                        render 'image-element',
+                        image: block.settings.image_second,
+                        alt: block.settings.image_second.alt
+                      %}
+                    {% endif %}
+                    {% if block.settings.image_caption_second != blank %}
+                      <p class="mega-menu__image-caption">{{ block.settings.image_caption_second }}</p>
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+            
+            
               {% comment %}Menu 2{% endcomment %}
               {% if block.settings.menu_2 != blank %}
                 <div class="dropdown_column__menu">
@@ -77,6 +96,25 @@
                 </div>
               {% endif %}
 
+            
+            {% comment %}Image with caption and link{% endcomment %}
+              {% if block.settings.image_third != nil or block.settings.image_caption_third != blank %}
+                <div class="mega-menu__image-caption-link">
+                  <a {% if block.settings.image_link_third != blank %}href="{{ block.settings.image_link_third }}"{% endif %} >
+                    {% if block.settings.image_third != nil %}
+                      {%
+                        render 'image-element',
+                        image: block.settings.image_third,
+                        alt: block.settings.image_third.alt
+                      %}
+                    {% endif %}
+                    {% if block.settings.image_caption_third != blank %}
+                      <p class="mega-menu__image-caption">{{ block.settings.image_caption_third }}</p>
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+            
               {% comment %}Menu 3{% endcomment %}
               {% if block.settings.menu_3 != blank %}
                 <div class="dropdown_column__menu">
@@ -97,6 +135,24 @@
                 </div>
               {% endif %}
 
+                {% comment %}Image with caption and link{% endcomment %}
+              {% if block.settings.image_fourth != nil or block.settings.image_caption_fourth != blank %}
+                <div class="mega-menu__image-caption-link">
+                  <a {% if block.settings.image_link_fourth != blank %}href="{{ block.settings.image_link_fourth}}"{% endif %} >
+                    {% if block.settings.image_fourth != nil %}
+                      {%
+                        render 'image-element',
+                        image: block.settings.image_fourth,
+                        alt: block.settings.image_fourth.alt
+                      %}
+                    {% endif %}
+                    {% if block.settings.image_caption_fourth != blank %}
+                      <p class="mega-menu__image-caption">{{ block.settings.image_caption_fourth }}</p>
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+            
               {% comment %}Menu 4{% endcomment %}
               {% if block.settings.menu_4 != blank %}
                 <div class="dropdown_column__menu">
