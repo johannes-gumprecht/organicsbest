@@ -234,6 +234,7 @@
           "footer-0": {
             "type": "logo",
             "settings": {
+              "image": "shopify:\/\/shop_images\/LOGO_ORGANIC_NEW.png",
               "text_align": "right",
               "social_icons_footer": true
             }
