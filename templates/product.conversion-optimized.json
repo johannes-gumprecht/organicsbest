@@ -131,30 +131,6 @@
         "products_per_row": 3,
         "recommended_products_limit": 3
       }
-    },
-    "1643229551bb3d3ecf": {
-      "type": "recently-viewed",
-      "settings": {
-        "rv_title": "Love this? Then you also may enjoy:",
-        "rv_products_style": "grid",
-        "rv_max_display": 3,
-        "rv_per": 3,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "16432297203ca0cea6": {
-      "type": "newsletter",
-      "settings": {
-        "wide_display": true,
-        "display_first_name": false,
-        "display_last_name": false,
-        "newsletter_title": "Join the Organic's Best Club",
-        "newsletter_text": "<p>Sign up to access our knowledge base of baby and parenting tips.<\/p>",
-        "newsletter_section_text_align": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
     }
   },
   "order": [
@@ -165,8 +141,6 @@
     "164321041625547195",
     "16431066694cde1fec",
     "bottomforms",
-    "recommendations",
-    "1643229551bb3d3ecf",
-    "16432297203ca0cea6"
+    "recommendations"
   ]
 }
