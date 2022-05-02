@@ -189,7 +189,7 @@
           "logo": "shopify:\/\/shop_images\/logo_grau_new_410xNEW.png",
           "main_linklist": "left-main-menu",
           "main_linklist2": "right-main-menu",
-          "vertical_menu": false,
+          "vertical_menu": true,
           "dropdown_click": false,
           "search_enabled": true,
           "fixed_header": true,
