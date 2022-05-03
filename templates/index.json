@@ -420,6 +420,14 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "1651583276875e09cd": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
+        "css_class": "container",
+        "custom_css": ""
+      }
     }
   },
   "order": [
@@ -445,6 +453,7 @@
     "16467459840d382681",
     "165080791487253874",
     "1649921074486d205d",
-    "16508089790eaadf0d"
+    "16508089790eaadf0d",
+    "1651583276875e09cd"
   ]
 }
