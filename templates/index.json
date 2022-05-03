@@ -29,7 +29,7 @@
       "type": "divider",
       "settings": {
         "divider_spacing": 20,
-        "divider_border": false,
+        "divider_border": true,
         "css_class": "",
         "custom_css": ""
       }
@@ -44,7 +44,7 @@
       "type": "divider",
       "settings": {
         "divider_spacing": 20,
-        "divider_border": false,
+        "divider_border": true,
         "css_class": "",
         "custom_css": ""
       }
