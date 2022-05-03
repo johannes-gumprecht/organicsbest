@@ -384,6 +384,15 @@
         "custom_css": ""
       }
     },
+    "1651599728a7049c93": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "1649921074486d205d": {
       "type": "blog-posts",
       "settings": {
@@ -434,6 +443,7 @@
     "1651588229d65eff2c",
     "1651588248ffc27beb",
     "1651583276875e09cd",
+    "1651599728a7049c93",
     "1649921074486d205d",
     "16508089790eaadf0d"
   ]
