@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html class="no-js no-touch" lang="{{ shop.locale }}">
   <head>
+  {% include 'shop-sheriff-amp' %}
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
     <meta name="robots" content="index,follow">
@@ -303,6 +304,8 @@
     {% endunless %}
 
     {% section 'footer' %}
+
+    <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=enabledstore1.myshopify.com" defer></script>
 
     {% if settings.quick_shop_enabled %}
       {% render 'quick-shop' %}
