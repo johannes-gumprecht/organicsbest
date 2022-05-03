@@ -52,21 +52,13 @@
     "1651563419a2f6d4dc": {
       "type": "featured-text",
       "settings": {
-        "title": "What Parents Say About Us",
+        "title": "Meet Our Community",
         "content": "",
         "button_label": "",
         "button_link": "",
         "text_size": "featured_text",
         "text_alignment": "center",
         "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "1651583276875e09cd": {
-      "type": "custom-html",
-      "settings": {
-        "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-review-ids=\"67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
-        "css_class": "one-whole",
         "custom_css": ""
       }
     },
@@ -363,6 +355,36 @@
         "title": "Frequently Asked Questions"
       }
     },
+    "1651588229d65eff2c": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651588248ffc27beb": {
+      "type": "featured-text",
+      "settings": {
+        "title": "What Parents Say About us",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651583276875e09cd": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-review-ids=\"67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
+        "css_class": "one-whole",
+        "custom_css": ""
+      }
+    },
     "165080791487253874": {
       "type": "divider",
       "settings": {
@@ -405,7 +427,6 @@
     "164666447028c756f6",
     "16508077005b272cfb",
     "1651563419a2f6d4dc",
-    "1651583276875e09cd",
     "16514997890e1d1fe6",
     "collection-list-1",
     "16508077201cd3852f",
@@ -420,6 +441,9 @@
     "1650807271bf000e8f",
     "16508079200469693c",
     "16467459840d382681",
+    "1651588229d65eff2c",
+    "1651588248ffc27beb",
+    "1651583276875e09cd",
     "165080791487253874",
     "1649921074486d205d",
     "16508089790eaadf0d"
