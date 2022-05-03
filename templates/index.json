@@ -21,8 +21,8 @@
         "mobile_image_crop": "none",
         "mobile_text_below_image": true,
         "mobile_text_color": "",
-        "css_class": "",
-        "custom_css": ".global-button {margin-bottom:15px;\nbox-shadow: 6px 8px 22px -2px rgb(0 0 0 \/ 74%);\n}\n@media only screen and (max-width: 1400px) {\n  .caption .headline {\n    font-size: 33px;\n  }\n}"
+        "css_class": "homepagebanner",
+        "custom_css": ".global-button {margin-bottom:15px;\nbox-shadow: 6px 8px 22px -2px rgb(0 0 0 \/ 74%);\n}"
       }
     },
     "1646746171aba218de": {
