@@ -68,7 +68,7 @@
         "b3e80d23-b72e-4aaf-9189-05b86511e826": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/wall-photos\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
-            "feed_type": "carousel",
+            "feed_type": "feed",
             "height": 0,
             "auto_play": false,
             "color_star": "",
