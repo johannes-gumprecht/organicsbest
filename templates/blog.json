@@ -2,26 +2,6 @@
   "sections": {
     "main": {
       "type": "blog-template",
-      "blocks": {
-        "5b39ad32-4fb5-488f-b4c4-5d00cc35625f": {
-          "type": "newsletter",
-          "disabled": true,
-          "settings": {
-            "newsletter_title": "Subscribe",
-            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>"
-          }
-        },
-        "659da72b-6f3d-4133-b5e7-db5b82c78f63": {
-          "type": "search",
-          "disabled": true,
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "5b39ad32-4fb5-488f-b4c4-5d00cc35625f",
-        "659da72b-6f3d-4133-b5e7-db5b82c78f63"
-      ],
       "settings": {
         "wide_display": false,
         "mobile_image_crop": "none",
@@ -36,7 +16,7 @@
         "blog_comment_count": false,
         "read_more_link": true,
         "excerpt_display": "full_excerpt",
-        "toggle": false
+        "toggle": true
       }
     }
   },
