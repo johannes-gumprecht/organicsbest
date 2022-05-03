@@ -28,8 +28,8 @@
     "1646746171aba218de": {
       "type": "divider",
       "settings": {
-        "divider_spacing": 20,
-        "divider_border": true,
+        "divider_spacing": 10,
+        "divider_border": false,
         "css_class": "",
         "custom_css": ""
       }
@@ -44,7 +44,20 @@
       "type": "divider",
       "settings": {
         "divider_spacing": 20,
-        "divider_border": true,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651563419a2f6d4dc": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Why Parents Love Our Products",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
         "css_class": "",
         "custom_css": ""
       }
@@ -53,7 +66,7 @@
       "type": "custom-html",
       "settings": {
         "custom_html": "NEW VIDEO",
-        "css_class": "",
+        "css_class": "center",
         "custom_css": ""
       }
     },
@@ -391,6 +404,7 @@
     "1646746171aba218de",
     "164666447028c756f6",
     "16508077005b272cfb",
+    "1651563419a2f6d4dc",
     "16514996781b65daff",
     "16514997890e1d1fe6",
     "collection-list-1",
