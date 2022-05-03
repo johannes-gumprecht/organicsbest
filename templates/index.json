@@ -62,35 +62,12 @@
         "custom_css": ""
       }
     },
-    "165156404543e46c2b": {
-      "type": "apps",
-      "blocks": {
-        "b3e80d23-b72e-4aaf-9189-05b86511e826": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/wall-photos\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "feed_type": "feed",
-            "height": 0,
-            "auto_play": false,
-            "color_star": "",
-            "color_hover": "",
-            "color_hover_opacity": 50,
-            "review_ids": "67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810",
-            "product_ids": "",
-            "category": "",
-            "product_brand": "",
-            "tags": "",
-            "limit_words": 15,
-            "min_rating": "none",
-            "fill_empty": false,
-            "random": true,
-            "with_photos": true
-          }
-        }
-      },
-      "block_order": [
-        "b3e80d23-b72e-4aaf-9189-05b86511e826"
-      ],
+    "1651583276875e09cd": {
+      "type": "custom-html",
       "settings": {
+        "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-review-ids=\"67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
+        "css_class": "container",
+        "custom_css": ""
       }
     },
     "16514997890e1d1fe6": {
@@ -420,14 +397,6 @@
         "css_class": "",
         "custom_css": ""
       }
-    },
-    "1651583276875e09cd": {
-      "type": "custom-html",
-      "settings": {
-        "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
-        "css_class": "container",
-        "custom_css": ""
-      }
     }
   },
   "order": [
@@ -436,7 +405,7 @@
     "164666447028c756f6",
     "16508077005b272cfb",
     "1651563419a2f6d4dc",
-    "165156404543e46c2b",
+    "1651583276875e09cd",
     "16514997890e1d1fe6",
     "collection-list-1",
     "16508077201cd3852f",
@@ -453,7 +422,6 @@
     "16467459840d382681",
     "165080791487253874",
     "1649921074486d205d",
-    "16508089790eaadf0d",
-    "1651583276875e09cd"
+    "16508089790eaadf0d"
   ]
 }
