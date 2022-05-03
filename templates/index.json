@@ -62,13 +62,12 @@
         "custom_css": ""
       }
     },
-    "16514997890e1d1fe6": {
-      "type": "divider",
+    "16515994206cbbd993": {
+      "type": "custom-html",
       "settings": {
-        "divider_spacing": 20,
-        "divider_border": false,
-        "css_class": "",
-        "custom_css": ""
+        "custom_html": "<div style=\"position: relative; width: 100%;height: 0; padding-bottom: 56.25%;\"><iframe style=\"position: absolute;  width: 100%; height: 100%; left: 0; top: 0;\" src=\"https:\/\/killerplayer.com\/start\/video\/3fda8e6b-83a1-43d4-8d09-ea48f9120606\" width=\"745\" height=\"419\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe><\/div>",
+        "css_class": "hmvideo",
+        "custom_css": ".hmvideo {max-width:800px;margin:auto;margin-bottom:40px;}"
       }
     },
     "collection-list-1": {
@@ -385,15 +384,6 @@
         "custom_css": ""
       }
     },
-    "165080791487253874": {
-      "type": "divider",
-      "settings": {
-        "divider_spacing": 20,
-        "divider_border": false,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "1649921074486d205d": {
       "type": "blog-posts",
       "settings": {
@@ -427,7 +417,7 @@
     "164666447028c756f6",
     "16508077005b272cfb",
     "1651563419a2f6d4dc",
-    "16514997890e1d1fe6",
+    "16515994206cbbd993",
     "collection-list-1",
     "16508077201cd3852f",
     "1646660691c2319816",
@@ -444,7 +434,6 @@
     "1651588229d65eff2c",
     "1651588248ffc27beb",
     "1651583276875e09cd",
-    "165080791487253874",
     "1649921074486d205d",
     "16508089790eaadf0d"
   ]
