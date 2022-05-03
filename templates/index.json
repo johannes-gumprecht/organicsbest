@@ -66,7 +66,7 @@
       "type": "custom-html",
       "settings": {
         "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-review-ids=\"67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
-        "css_class": "container",
+        "css_class": "one-whole",
         "custom_css": ""
       }
     },
