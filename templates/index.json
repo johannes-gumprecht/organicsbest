@@ -65,21 +65,22 @@
     "165156404543e46c2b": {
       "type": "apps",
       "blocks": {
-        "5f7225e6-f3cf-4a1e-963e-c97abc73e68f": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/visual-gallery\/a103faaf-2125-4b0e-89fa-de5149736723",
+        "b3e80d23-b72e-4aaf-9189-05b86511e826": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/wall-photos\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
-            "feed_type": "feed",
-            "auto_play": true,
-            "auto_play_speed": 6000,
-            "color_star": "#ffa800",
-            "color_hover": "#8ee0f2",
-            "color_hover_opacity": 76,
-            "review_ids": "",
+            "feed_type": "carousel",
+            "height": 0,
+            "auto_play": false,
+            "color_star": "",
+            "color_hover": "",
+            "color_hover_opacity": 50,
+            "review_ids": "67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810",
             "product_ids": "",
             "category": "",
             "product_brand": "",
             "tags": "",
-            "min_rating": "3",
+            "limit_words": 100,
+            "min_rating": "none",
             "fill_empty": false,
             "random": true,
             "with_photos": true
@@ -87,7 +88,7 @@
         }
       },
       "block_order": [
-        "5f7225e6-f3cf-4a1e-963e-c97abc73e68f"
+        "b3e80d23-b72e-4aaf-9189-05b86511e826"
       ],
       "settings": {
       }
