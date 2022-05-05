@@ -192,7 +192,7 @@
           "vertical_menu": true,
           "dropdown_click": false,
           "search_enabled": true,
-          "fixed_header": true,
+          "fixed_header": false,
           "logo_position": "center",
           "logo_alignment": "center",
           "menu_position": "inline",
