@@ -934,20 +934,7 @@ window.productPage = {
                 handler: (priceUIFragment, _product, { variant: v }) => {
 
 
-   var per_box = v.sku.split('_');
-        
-        
-         per_box = per_box[per_box.length - 1];
-      
-           
-             per_box = v.price/per_box ;
-              
-
-      var copy = $('.get-copy').data('copy');
-   const span_perbx = document.createElement('span');
-                      span_perbx.classList.add('money', 'per-box');
-                    span_perbx.innerHTML = `&nbsp;(${window.Shopify.formatMoney(per_box, $('body').data('money-format'))} ${copy})`;
-       priceUIFragment.append(span_perbx);
+ 
 
                   if (isPriceSavingsEnabled && v) {
                     if (v.compare_at_price > v.price) {
