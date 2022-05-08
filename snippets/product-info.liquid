@@ -127,17 +127,7 @@
         
        
        
-<span class="money">{% render 'price-element', price: product.selected_or_first_available_variant.price %}
-                  </span> 
-        
-         <div>(<span class="money per-box" >
-                      
-                      {% render 'price-element', price: per_box %}
-                  
-                 
-                  </span>
-                   {{copy}})
-        </div>
+<span class="money">{% render 'price-element', price: product.selected_or_first_available_variant.price %}</span><div>(<span class="money per-box" >{% render 'price-element', price: per_box %}</span>{{copy}})</div>
         
         {%comment%}
         
