@@ -129,9 +129,12 @@
        
 <span class="money">{% render 'price-element', price: product.selected_or_first_available_variant.price %}
                   </span> 
-        
+       {% if product.tags contains "multipack" %}
+            
          <div class"moneybox" style="font-size:14px;">(<span class="money per-box" >{% render 'price-element', price: per_box %}</span>&nbsp;{{copy}})</div>
         
+              {% endif %}
+            
         {% comment %}
         
         <span class="money">{% render 'price-element', price: product.price_min %}</span>
