@@ -122,10 +122,9 @@
         
                   {% assign per_box = product.selected_or_first_available_variant.sku | split:"_" | last %}
                   {% assign per_box = per_box | plus: 0.0 %} 
-                  {%assign per_box = product.selected_or_first_available_variant.price | divided_by: per_box %}
+                  {% assign per_box = product.selected_or_first_available_variant.price | divided_by: per_box %}
        
-        
-       
+              
        
 <span class="money">{% render 'price-element', price: product.selected_or_first_available_variant.price %}
                   </span> 
@@ -136,12 +135,7 @@
         
               {% endunless %}
             
-        {% comment %}
-        
-        <span class="money">{% render 'price-element', price: product.price_min %}</span>
-        
-        {% endcomment %}
-        
+
         
           {% else %}
             {{ settings.free_price_text }}
