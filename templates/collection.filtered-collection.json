@@ -2,6 +2,16 @@
   "sections": {
     "main": {
       "type": "collection-template",
+      "blocks": {
+        "f688b20a-b19a-4a16-92b2-aae72e198931": {
+          "type": "faceted_filtering",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "f688b20a-b19a-4a16-92b2-aae72e198931"
+      ],
       "settings": {
         "featured_collection_image": false,
         "wide_display": false,
@@ -12,7 +22,7 @@
         "collection_tags": false,
         "collection_sort": false,
         "products_per_row": 5,
-        "pagination_limit": 15,
+        "pagination_limit": 10,
         "toggle": false
       }
     }

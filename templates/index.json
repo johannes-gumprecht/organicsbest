@@ -4,9 +4,10 @@
       "type": "image-with-text-overlay",
       "settings": {
         "wide_display": true,
+        "image": "shopify:\/\/shop_images\/neueee_ced54c3a-78d5-4024-baf6-c62722b78b4a.jpg",
         "pretext": "",
         "title": "Organic European Baby Formula",
-        "subtitle": "<p>Shop our world famous organic baby formulas which are used by thousands of parents to help them raise healthy children.<\/p>",
+        "subtitle": "<p>Our carefully selected baby formulas from Europe are used by parents worldwide to help them raise healthy children.<\/p>",
         "button1": "Shop Organic Baby Formula",
         "button1_link": "",
         "button1_style": "global-button--primary",
@@ -16,11 +17,12 @@
         "text_position": "left",
         "text_align": "left",
         "caption_content_background": "original",
+        "mobile_image": "shopify:\/\/shop_images\/mobileimagrhomepage.jpg",
         "mobile_image_crop": "none",
         "mobile_text_below_image": true,
         "mobile_text_color": "",
         "css_class": "",
-        "custom_css": ""
+        "custom_css": ".global-button {margin-bottom:15px;\nbox-shadow: 6px 8px 22px -2px rgb(0 0 0 \/ 74%);\n}\n\n\n\n}"
       }
     },
     "1646746171aba218de": {
@@ -38,10 +40,10 @@
         "custom_liquid": "<div class=\"product_features\"> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/delivery.svg?v=644486877650279114\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Insured Express Delivery<\/h4> <p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 1-5 business days.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/authenticity.svg?v=11064849661227138248\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Authentic Products<\/h4> <p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/expiration.svg?v=3076514485066868972\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Long Expiration Dates<\/h4> <p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p><\/div><\/div> <div class=\"product_features_container\"> <div class=\"product_features_container_icon\"> <img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0613\/4998\/6548\/t\/6\/assets\/formula.svg?v=6813490029840052998\" alt=\"Organic's Best Test Store\"><\/div> <div class=\"product_features_container_content\"> <h4>Right Formula Guarantee<\/h4> <p>If you experience an issue with this formula, we'll send you a gift card to try out another box of formula for free.<\/p><\/div><\/div>\n<\/div>\n<\/div>"
       }
     },
-    "1646746178feb26a97": {
+    "16508077005b272cfb": {
       "type": "divider",
       "settings": {
-        "divider_spacing": 0,
+        "divider_spacing": 20,
         "divider_border": false,
         "css_class": "",
         "custom_css": ""
@@ -103,10 +105,19 @@
         "25f4300f-7ed1-468f-bb74-7f45751b6f71"
       ],
       "settings": {
-        "title": "Our Brands",
+        "title": "Baby Formula Brands",
         "align_height": true,
         "collection_height": 150,
         "frontpage_collections_per_row": 5,
+        "css_class": "",
+        "custom_css": ".is-flex-wrap {\n    flex-wrap: wrap;\n    justify-content: center;\n}"
+      }
+    },
+    "16508077201cd3852f": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
         "css_class": "",
         "custom_css": ""
       }
@@ -114,12 +125,34 @@
     "1646660691c2319816": {
       "type": "featured-collection",
       "settings": {
-        "title": "Our Best-Sellers",
+        "title": "Best-Selling Baby Formula",
         "collection_description": true,
-        "collection": "all",
+        "collection": "best-seller",
         "collection_style": "grid",
-        "products_per": 5,
-        "products_limit": 5,
+        "products_per": 3,
+        "products_limit": 6,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1650807743194a5606": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16508059602975017b": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Why Our Work Is Important",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
         "css_class": "",
         "custom_css": ""
       }
@@ -130,36 +163,39 @@
         "16467457544a5d78fb-0": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/heavy-metals_d4253f94-0fd4-450f-a869-ea81ab3f9112_1400x_1.webp",
             "image_crop": "none",
-            "title": "Blog article",
-            "text": "<p>Promotion description appears here.<\/p>",
+            "title": "Should You Be Concerned About Heavy Metals in Baby Formula?",
+            "text": "<p>\"Ingredients in many baby foods, including some organic fare, are <strong>contaminated with heavy metals  <\/strong>like arsenic, lead and cadmium at levels that are far <strong>higher than those allowed in products like bottled water...<\/strong>\" <\/p><p><em> - New York Times, Feb 2022 <\/em><\/p>",
             "button_label": "Read more",
-            "link": "",
-            "bg_color": "",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/should-you-be-concerned-about-heavy-metals-in-baby-formula",
+            "bg_color": "#f9f9f9",
             "text_color": ""
           }
         },
         "16467457544a5d78fb-1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/additives_1400x_99a2c83e-629c-4762-959d-4d2d2069c09a.webp",
             "image_crop": "none",
-            "title": "Blog article",
-            "text": "<p>Promotion description appears here.<\/p>",
+            "title": "Baby Formula Additives to Watch Out For",
+            "text": "<p>What does a baby formula need to contain to be considered <em>\"similar to breastmilk\"?<\/em><\/p><p><strong>And which ingredients should be avoided?<\/strong><\/p><p>This article will help parents understand what additives to avoid.<\/p>",
             "button_label": "Read more",
-            "link": "",
-            "bg_color": "",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/baby-formula-additives-to-watch-out-for",
+            "bg_color": "#f9f9f9",
             "text_color": ""
           }
         },
         "53471d50-e1fe-40fd-9d53-81642d4cbd42": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/aluminum_1400x_cf655a44-40dc-4f20-9ac0-467552eb7738.webp",
             "image_crop": "none",
-            "title": "Blog article",
-            "text": "<p>Promotion description appears here.<\/p>",
+            "title": "Dangers of Aluminium in Infant Formulas - And a Safe Alternative!",
+            "text": "<p>How can parents who need to bottle-feed choose the best formula possible and <strong>avoid the downsides<\/strong> that can come with formula?<\/p><p><\/p><p><strong>Learn about aluminum contamination in baby formula<\/strong> and why choosing specific formula brands can help you avoid contaminants.<\/p>",
             "button_label": "Read more",
-            "link": "",
-            "bg_color": "",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/the-dangers-of-aluminium-in-infant-formulas-and-safe-alternatives",
+            "bg_color": "#f9f9f9",
             "text_color": ""
           }
         }
@@ -178,7 +214,7 @@
         "custom_css": ""
       }
     },
-    "1646746323d8efed02": {
+    "1650807756c5a6ffdb": {
       "type": "divider",
       "settings": {
         "divider_spacing": 20,
@@ -187,34 +223,32 @@
         "custom_css": ""
       }
     },
-    "16467462755b04bde6": {
-      "type": "video",
+    "16508075530a9214c8": {
+      "type": "featured-text",
       "settings": {
-        "wide_display": false,
-        "aspect_ratio": "16:9",
-        "autoplay": false,
-        "autoloop": true,
-        "mute_video": false,
-        "show_controls": true,
-        "video_dark_overlay": false,
-        "iframe_video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "html5_video": "",
-        "display_text_over_video": false,
-        "preheading": "",
-        "heading": "",
-        "subheading": "",
-        "button1_label": "Play Video",
-        "button1_link": "",
-        "button1_style": "global-button--banner",
-        "button2_label": "",
-        "button2_link": "",
-        "button2_style": "global-button--banner",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_content_background": "original",
-        "mobile_image_crop": "none",
-        "mobile_text_below_image": true,
-        "mobile_text_color": "",
+        "title": "How to Prepare European Formula",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1650807271bf000e8f": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div style=\"position: relative; width: 100%;height: 0; padding-bottom: 56.25%;\"><iframe style=\"position: absolute;  width: 100%; height: 100%; left: 0; top: 0;\" src=\"https:\/\/killerplayer.com\/start\/video\/4eedf01b-7a94-4910-ac1e-90a153771b36\" width=\"1280\" height=\"720\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe><\/div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16508079200469693c": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
         "css_class": "",
         "custom_css": ""
       }
@@ -222,59 +256,94 @@
     "16467459840d382681": {
       "type": "faq",
       "blocks": {
-        "1646745984d95d6eb8-1": {
-          "type": "content",
-          "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
-          }
-        },
         "1646745984d95d6eb8-2": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "Where do you buy the products?",
+            "answer": "<p>We buy all products directly from the manufacturers or their official wholesale distributors.<\/p><p>All our products are always 100% authentic and originally meant for the European market.<\/p>"
           }
         },
         "1646745984d95d6eb8-3": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "What expiry date can I expect?",
+            "answer": "<p>All our baby products have a guaranteed expiry date of 6 months into the future or more.<\/p><p>Due to the nature of the products, you will usually find a longer expiry date with our non-baby-formula products.<\/p>"
+          }
+        },
+        "1646745984d95d6eb8-1": {
+          "type": "content",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "answer": "<p>Yes, we do!<\/p><p>We exclusively use express shipping with all carriers to ensure your orders <strong>arrive within 1-5 business days.<\/strong><\/p><p><em>Please note, that we do not ship to Russia, Ukraine and Mexico.<\/em><\/p>"
           }
         },
         "1646745984d95d6eb8-5": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "What happens when my order is lost?",
+            "answer": "<p>Around 99.9% of all orders arrive within 1-5 business days.<\/p><p>If you experience issues with the arrrival of your order, we will find  a solution or offer you a free resend or full refund.<\/p><p>No questions asked!<\/p>"
           }
         },
         "1646745984d95d6eb8-6": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "What if this baby formula is not working for my baby?",
+            "answer": "<p>We want you to find the best baby formula for your little one. That is why we have our <strong>Right Formula Guarantee!<\/strong><\/p><p><strong>Let us help and send you one box or can of any baby formula free. We will pay for it.<\/strong><\/p><p>Please contact our customer service to help you within 24 hours (Mo-Fr): <a href=\"mailto:support@organicsbestshop.com\" target=\"_blank\" title=\"mailto:support@organicsbestshop.com\">support@organicsbestshop.com<\/a><\/p><p><em>Please note, we do not offer refunds due to safety reasons. Refunds with food products in general are not legal.<\/em><\/p>"
           }
         },
-        "1646745984d95d6eb8-7": {
+        "bd98b839-f9dd-4dc5-9f2f-68b1057a4d97": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "Will I be able to read the preparation instructions on the packaging?",
+            "answer": "<p><em>Sometimes yes, sometimes no!<\/em><\/p><p>Some of the brands we sell include English instructions on the packaging - but not all.<\/p><p>Don't worry! It is fine.<\/p><p>All <strong>translated preparation instructions<\/strong> can be found on our products pages and in our support center here <a href=\"https:\/\/organicsbestshop.com\/pages\/support-center\" title=\"https:\/\/organicsbestshop.com\/pages\/support-center\">https:\/\/organicsbestshop.com\/pages\/support-center<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "1646745984d95d6eb8-1",
         "1646745984d95d6eb8-2",
         "1646745984d95d6eb8-3",
+        "1646745984d95d6eb8-1",
         "1646745984d95d6eb8-5",
         "1646745984d95d6eb8-6",
-        "1646745984d95d6eb8-7"
+        "bd98b839-f9dd-4dc5-9f2f-68b1057a4d97"
       ],
       "settings": {
-        "title": ""
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "165080791487253874": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1649921074486d205d": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Read Our Latest Blog Posts",
+        "blog_widget_select": "organicsbestclub",
+        "home_page_articles": 3,
+        "blog_tags": false,
+        "blog_author": false,
+        "read_time": true,
+        "blog_date": true,
+        "blog_comment_count": false,
+        "read_more_link": false,
+        "excerpt_display": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16508089790eaadf0d": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
       }
     }
   },
@@ -282,12 +351,20 @@
     "image-with-text-overlay-1",
     "1646746171aba218de",
     "164666447028c756f6",
-    "1646746178feb26a97",
+    "16508077005b272cfb",
     "collection-list-1",
+    "16508077201cd3852f",
     "1646660691c2319816",
+    "1650807743194a5606",
+    "16508059602975017b",
     "1646745754078ac3c9",
-    "1646746323d8efed02",
-    "16467462755b04bde6",
-    "16467459840d382681"
+    "1650807756c5a6ffdb",
+    "16508075530a9214c8",
+    "1650807271bf000e8f",
+    "16508079200469693c",
+    "16467459840d382681",
+    "165080791487253874",
+    "1649921074486d205d",
+    "16508089790eaadf0d"
   ]
 }
