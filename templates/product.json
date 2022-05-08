@@ -1,23 +1,36 @@
 {
   "wrapper": "div.shopify-section-wrapper.section",
   "sections": {
-    "16431085846ebf2c95": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<span class=\"product_name mobile-product-title is-hidden-desktop-only\">{{ product.title }}<\/span>"
-      }
-    },
     "sidebar": {
       "type": "product-sidebar",
+      "disabled": true,
       "settings": {
         "toggle": false
       }
     },
+    "16455271642dbc0bd4": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<h1 class=\"product_name center\">{{ product.title }}<\/h1>\n    <div class=\"feature_divider\"><\/div>"
+      }
+    },
     "main": {
-      "type": "product-template",
+      "type": "product-template-conversion-optimized",
       "blocks": {
-        "title": {
-          "type": "title",
+        "382b33d3-fcb9-40b7-b501-e3467a776989": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.review.copy | metafield_tag }}<\/p>"
+          }
+        },
+        "fb7590be-8bc9-49d3-b176-94181b5045cc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.review.name | metafield_tag }}<\/p>"
+          }
+        },
+        "description": {
+          "type": "description",
           "settings": {
           }
         },
@@ -27,9 +40,67 @@
             "display_savings": true
           }
         },
-        "description": {
-          "type": "description",
+        "form": {
+          "type": "form",
           "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "382b33d3-fcb9-40b7-b501-e3467a776989",
+        "fb7590be-8bc9-49d3-b176-94181b5045cc",
+        "description",
+        "price",
+        "form"
+      ],
+      "settings": {
+        "product_breadcrumb": false,
+        "media_position": "is-flex-row",
+        "set_product_height": true,
+        "product_height": 800,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": false,
+        "enable_product_lightbox": true,
+        "activate_zoom": true,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "bottom",
+        "enable_thumbnail_slider": false
+      }
+    },
+    "1645436842743a9f59": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"product_page_divider\"><\/div>\n\n<div class=\"product_features\">\n\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">\n            <img src=\"{{ product.metafields.uvp-1.svg-code.value | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n            \n            <\/div>\n        <div class=\"product_features_container_content\">\n            <p class=\"uvp-headline\">{{ product.metafields.uvp-1.headline }}<\/p class=\"uvp-headline\">\n            <p>{{ product.metafields.uvp-1.copy }}<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">  <img src=\"{{ product.metafields.uvp-2.svg-code.value | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n        <\/div>\n        <div class=\"product_features_container_content\">\n            <p class=\"uvp-headline\">{{ product.metafields.uvp-2.headline }}<\/p class=\"uvp-headline\">\n            <p>{{ product.metafields.uvp-2.copy }}<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">  <img src=\"{{ product.metafields.uvp-3.svg-code.value | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n        <\/div>\n        <div class=\"product_features_container_content\">\n            <p class=\"uvp-headline\">{{ product.metafields.uvp-3.headline }}<\/p class=\"uvp-headline\">\n            <p>{{ product.metafields.uvp-3.copy }}<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"product_features_container\">\n\n        <div class=\"product_features_container_icon\">  <img src=\"{{ product.metafields.uvp-4.svg-code.value | asset_url }}\" \n            alt=\"{{ shop.name }}\"\n            >\n        <\/div>\n        <div class=\"product_features_container_content\">\n            <p class=\"uvp-headline\">{{ product.metafields.uvp-4.headline }}<\/p class=\"uvp-headline\">\n            <p>{{ product.metafields.uvp-4.copy }}<\/p>\n        <\/div>\n    <\/div>\n<\/div>\n<div class=\"product_page_divider\"> <\/div>"
+      }
+    },
+    "1651501212f0e2850d": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "{{ product.description | split: '<!-- split -->' | last }}"
+      }
+    },
+    "164321041625547195": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% assign section1bulletsarray = product.metafields.copy.section-1-bullets | split: ';' %}\n{% assign section2bulletsarray = product.metafields.copy.section-2-bullets | split: ';' %}\n\n<div class=\"container customdescriptioncontainer\">\n    <div class=\"one-half columns medium-down--one-whole customdescriptioncolumn flexorder-2\">\n        <h2>{{ product.metafields.copy.headline-1 }}<\/h2>\n        <p class=\"product-subheadline\">{{ product.metafields.copy.subheadline-1 }}<\/p>\n        <p>{{ product.metafields.copy.text-1 | newline_to_br }}<\/p>\n        <ul>{% for bullet in section1bulletsarray %}\n                <li>{{ bullet }}<\/li>\n            {% endfor %}\n        <\/ul>\n    <\/div>\n    <div class=\"one-half columns medium-down--one-whole customdescriptioncolumn flexorder-1\">\n        {{ product.metafields.copy.video-1 }}\n    <\/div>\n<\/div>\n<div class=\"product_page_divider\"><\/div>\n\n<div class=\"container customdescriptioncontainer\">\n    <div class=\"one-half columns medium-down--one-whole customdescriptioncolumn flexorder-1\">{{ product.metafields.copy.video-2 }}<\/div>\n    <div class=\"one-half columns medium-down--one-whole customdescriptioncolumn flexorder-2\">\n        <h2>{{ product.metafields.copy.headline-2 }}<\/h2>\n        <p class=\"product-subheadline\">{{ product.metafields.copy.subheadline-2 }}<\/p>\n        <p>{{ product.metafields.copy.text-2 | newline_to_br }}<\/p>\n        <ul>{% for bullet in section2bulletsarray %}\n                <li>{{ bullet }}<\/li>\n            {% endfor %}\n        <\/ul>\n    <\/div>\n<\/div>"
+      }
+    },
+    "16431066694cde1fec": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"product-accordion\"><dl class=\"accordion\">\n\n\n\n    <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small><h2>Preparation<\/h2><\/a><\/dt>\n    <dd><div class=\"prod_tab_preparation_instr\">\n       <div class=\"prod_tab_preparation_instr_steps\">\n           {% assign preparation_steps =  product.metafields.tabs.preparation_steps | split: '_' %}\n           {% for preparation_step in preparation_steps%}\n               {% assign forloop.index = preparation_step_number %}\n               {% assign preparation_step_number = preparation_step_number | plus: 1 %}\n               <div class=\"prod_tab_preparation_instr_step\">\n                   <p>{{preparation_step_number}}.<\/p><span>{{preparation_step}}<\/span>\n               <\/div>\n           {% endfor %}\n       <\/div>\n       <div class=\"prod_tab_preparation_instr_notes\">\n           <p>{{product.metafields.tabs.preparation_notes}}<\/p>\n       <\/div>\n   <\/div><div class=\"prod_tab_item\" id=\"fourth_tab\" >\n                   <div class=\"prod_tab_table\">\n                      {{product.metafields.tabs.feedingtable}}\n                   <\/div>\n               <\/div> <\/dd>\n   \n    <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small><h2>Ingredients<\/h2><\/a><\/dt>\n    <dd><p>{{ product.metafields.tabs.ingredients }}<\/p><div class=\"prod_tab_item\">\n        <div class=\"prod_tab_ingredients\">\n            {% assign ingredients = product.metafields.tabs.nutritionfacts | split: ';' %}\n            {% for ingredient in ingredients %}\n                {% assign ingredient_text = ingredient | split: '_' %}\n                <div class=\"ingredient_item\">\n                    <span>{{ ingredient_text[0] }}:<\/span><span>{{ ingredient_text[1] }}<\/span>\n                <\/div>\n            {% endfor %}\n        <\/div>\n        <p>{{ product.metafields.tabs.nutritionfactsnote }}<\/p>\n    <\/div><\/dd>\n   \n    <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small><h2>Nutrition facts<\/h2><\/a><\/dt>\n    <dd><div class=\"prod_tab_item\">\n                       <div class=\"prod_tab_ingredients\">\n                           {% assign ingredients = product.metafields.tabs.nutritionfacts | split: ';' %}\n                           {% for ingredient in ingredients %}\n                               {% assign ingredient_text = ingredient | split: '_' %}\n                               <div class=\"ingredient_item\">\n                                   <span>{{ ingredient_text[0] }}:<\/span><span>{{ ingredient_text[1] }}<\/span>\n                               <\/div>\n                           {% endfor %}\n                       <\/div>\n                       <p>{{ product.metafields.tabs.nutritionfactsnote }}<\/p>\n                   <\/div> <\/dd>\n   \n    <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small><h2>Frequently Asked Questions<\/h2><\/a><\/dt>\n    <dd>   <div class=\"prod_tab_faq\">\n        {% assign faqs = product.metafields.tabs.frequently_asked_questions | split: ';' %}\n        {% for faq in faqs %}\n            {% assign faq_text = faq | split: '_' %}\n            <div class=\"faq_item\">\n                <p><span class=\"faqquestion\">{{ faq_text[0] }}<\/span><br><span class=\"faqanswer\">{{ faq_text[1] }}<\/span><\/p>\n            <\/div>\n        {% endfor %}\n    <\/div><\/dd>\n   \n   <\/dl>\n   \n   <div class=\"bottom-guarantee center\"><h2 class=\"center\">{{ product.metafields.tabs.guarantee_headline }}<\/h2><p class=\"center product-subheadline\">{{ product.metafields.tabs.guarantee_subheadline }}<\/p>{{ product.metafields.tabs.guarantee_copy }}<img src=\"{{ product.metafields.uvp-4.svg-code.value | asset_url }}\" \n            alt=\"{{ shop.name }}\" width=\"135px;\"\n            ><\/div>\n   \n   \n   <\/div>"
+      }
+    },
+    "bottomforms": {
+      "type": "product-template-bottom-form",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
           }
         },
         "form": {
@@ -39,57 +110,55 @@
         }
       },
       "block_order": [
-        "title",
         "price",
-        "description",
         "form"
       ],
       "settings": {
         "product_breadcrumb": false,
         "media_position": "is-flex-row",
-        "set_product_height": true,
-        "product_height": 500,
+        "set_product_height": false,
+        "product_height": 200,
         "video_looping": false,
-        "product_thumbs": true,
-        "gallery_arrows": true,
-        "enable_product_lightbox": true,
-        "activate_zoom": true,
+        "product_thumbs": false,
+        "gallery_arrows": false,
+        "enable_product_lightbox": false,
+        "activate_zoom": false,
         "slideshow_speed": 0,
         "slideshow_animation": "slide",
         "thumbnail_position": "bottom",
-        "enable_thumbnail_slider": true
+        "enable_thumbnail_slider": false
       }
     },
-    "164310661322577cc4": {
-      "type": "custom-liquid",
+    "16515009551e72c4eb": {
+      "type": "divider",
       "settings": {
-        "custom_liquid": "{{ product.description | split: '<!-- split -->' | last }}"
-      }
-    },
-    "16431066694cde1fec": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"product-accordion\"><dl class=\"accordion\">\n\n\n\n    <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small><h2>Preparation<\/h2><\/a><\/dt>\n    <dd><div class=\"prod_tab_preparation_instr\">\n       <div class=\"prod_tab_preparation_instr_steps\">\n           {% assign preparation_steps =  product.metafields.tabs.preparation_steps | split: '_' %}\n           {% for preparation_step in preparation_steps%}\n               {% assign forloop.index = preparation_step_number %}\n               {% assign preparation_step_number = preparation_step_number | plus: 1 %}\n               <div class=\"prod_tab_preparation_instr_step\">\n                   <p>{{preparation_step_number}}.<\/p><span>{{preparation_step}}<\/span>\n               <\/div>\n           {% endfor %}\n       <\/div>\n       <div class=\"prod_tab_preparation_instr_notes\">\n           <p>{{product.metafields.tabs.preparation_notes}}<\/p>\n       <\/div>\n   <\/div><div class=\"prod_tab_item\" id=\"fourth_tab\" >\n                   <div class=\"prod_tab_table\">\n                      {{product.metafields.tabs.feedingtable}}\n                   <\/div>\n               <\/div> <\/dd>\n   \n    <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small><h2>Ingredients<\/h2><\/a><\/dt>\n    <dd><p>{{ product.metafields.tabs.ingredients }}<\/p><div class=\"prod_tab_item\">\n        <div class=\"prod_tab_ingredients\">\n            {% assign ingredients = product.metafields.tabs.nutritionfacts | split: ';' %}\n            {% for ingredient in ingredients %}\n                {% assign ingredient_text = ingredient | split: '_' %}\n                <div class=\"ingredient_item\">\n                    <span>{{ ingredient_text[0] }}:<\/span><span>{{ ingredient_text[1] }}<\/span>\n                <\/div>\n            {% endfor %}\n        <\/div>\n        <p>{{ product.metafields.tabs.nutritionfactsnote }}<\/p>\n    <\/div><\/dd>\n   \n    <dt><a href=\"#\"><small class=\"right\">&#9668;<\/small><h2>Nutrition facts<\/h2><\/a><\/dt>\n    <dd><div class=\"prod_tab_item\">\n                       <div class=\"prod_tab_ingredients\">\n                           {% assign ingredients = product.metafields.tabs.nutritionfacts | split: ';' %}\n                           {% for ingredient in ingredients %}\n                               {% assign ingredient_text = ingredient | split: '_' %}\n                               <div class=\"ingredient_item\">\n                                   <span>{{ ingredient_text[0] }}:<\/span><span>{{ ingredient_text[1] }}<\/span>\n                               <\/div>\n                           {% endfor %}\n                       <\/div>\n                       <p>{{ product.metafields.tabs.nutritionfactsnote }}<\/p>\n                   <\/div> <\/dd>\n   \n    <dt><a href=\"#\"><small class=\"right\">&#9660;<\/small><h2>Frequently Asked Questions<\/h2><\/a><\/dt>\n    <dd>   <div class=\"prod_tab_faq\">\n        {% assign faqs = product.metafields.tabs.frequently_asked_questions | split: ';' %}\n        {% for faq in faqs %}\n            {% assign faq_text = faq | split: '_' %}\n            <div class=\"faq_item\">\n                <p><span class=\"faqquestion\">{{ faq_text[0] }}<\/span><br><span class=\"faqanswer\">{{ faq_text[1] }}<\/span><\/p>\n            <\/div>\n        {% endfor %}\n    <\/div><\/dd>\n   \n   <\/dl>\n   \n   <div class=\"bottom-guarantee center\"><h2 class=\"center\">{{ product.metafields.tabs.guarantee_headline }}<\/h2><p class=\"center product-subheadline\">{{ product.metafields.tabs.guarantee_subheadline }}<\/p>{{ product.metafields.tabs.guarantee_copy }}<img src=\"{{ product.metafields.uvp-4.svg-code.value | asset_url }}\" \n            alt=\"{{ shop.name }}\" width=\"135px;\"\n            ><\/div>\n   \n   \n   <\/div>"
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
       }
     },
     "recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
-        "show_product_recommendations": false,
+        "show_product_recommendations": true,
         "product_recommendations_style": "grid",
-        "product_recommendations_heading": "You may also like",
+        "product_recommendations_heading": "Love this? Then you also may enjoy:",
         "products_per_row": 3,
-        "recommended_products_limit": 4
+        "recommended_products_limit": 3
       }
     }
   },
   "order": [
-    "16431085846ebf2c95",
     "sidebar",
+    "16455271642dbc0bd4",
     "main",
-    "164310661322577cc4",
+    "1645436842743a9f59",
+    "1651501212f0e2850d",
+    "164321041625547195",
     "16431066694cde1fec",
+    "bottomforms",
+    "16515009551e72c4eb",
     "recommendations"
   ]
 }
