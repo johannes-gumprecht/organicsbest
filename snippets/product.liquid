@@ -60,14 +60,7 @@
   %}
 {% endif %}
 
-
-
-{%assign copy = product.metafields.unit_price.copy %}
-{%if copy == blank or copy == empty %}
-{%assign copy = 'per box'%}
-{%endif%}
-
-<div class="product-main product-{{ product.id }} get-copy" data-copy="{{copy}}">
+<div class="product-main product-{{ product.id }}">
   <div
     class="
       product_section
@@ -277,7 +270,7 @@
                     
                       {%-
                         render 'price-ui-templates',
-                        template: 'price-ui',product:product,copy:copy,
+                        template: 'price-ui',
                         compare_at_price: compare_at_price,
                         price: price,
                         unit_pricing: false,
