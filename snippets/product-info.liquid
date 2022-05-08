@@ -125,12 +125,17 @@
                   {%assign per_box = product.selected_or_first_available_variant.price | divided_by: per_box %}
        
         
-      
        
        
-<span class="money">{% render 'price-element',price: product.selected_or_first_available_variant.price %}</span><div>(<span class="money per-box">{% render 'price-element',price: per_box %}</span>{{copy}})</div>
+<span class="money">{% render 'price-element', price: product.selected_or_first_available_variant.price %}
+                  </span> 
+            
+       {% unless product.tags contains "multipack" %}
+            
+         <div class"moneybox" style="font-size:14px;">(<span class="money per-box" >{% render 'price-element', price: per_box %}</span>&nbsp;{{copy}})</div>
         
-        
+              {% endunless %}
+            
         {% comment %}
         
         <span class="money">{% render 'price-element', price: product.price_min %}</span>
