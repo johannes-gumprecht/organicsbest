@@ -93,7 +93,7 @@
           price: price,
           unit_pricing: false,
         -%}
-      </div>BOAH GEIL
+      </div>
       {% comment %}Inject @pixelunion/shopify-price-ui/price-ui end{% endcomment %}
 
     {% else %}
@@ -109,7 +109,7 @@
               {% if settings.free_price_text != blank %}
                 <span class="free">{{ settings.free_price_text }}</span>
               {% else %}
-                <span class="money">{% render 'price-element', price: product.price_min %}</span>BOAH
+                <span class="money">{% render 'price-element', price: product.price_min %}</span>
               {% endif %}
             {% endif %}
           </span>
