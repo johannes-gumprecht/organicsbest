@@ -18551,3 +18551,8 @@ flex-direction: column;
 }
 
   
+  
+  
+  {% if product.tags contains "multipack" %}
+  .per-box {display:none;}
+  {% endif %}
