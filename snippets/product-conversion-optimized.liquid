@@ -60,12 +60,7 @@
   %}
 {% endif %}
 
-{%assign copy = product.metafields.unit_price.copy %}
-{%if copy == blank or copy == empty %}
-{%assign copy = 'per box'%}
-{%endif%}
-
-<div class="product-main product-{{ product.id }} get-copy" data-copy="{{copy}}">
+<div class="product-main product-{{ product.id }}">
   <div
     class="
       product_section
