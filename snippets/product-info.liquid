@@ -132,7 +132,7 @@
             
        {% unless product.tags contains "multipack" %}
             
-       <div>(<span class="money per-box">{% render 'price-element',price: per_box %}</span>{{copy}})</div>
+         <div class"moneybox" style="font-size:14px;">(<span class="money per-box" >{% render 'price-element', price: per_box %}</span>&nbsp;{{copy}})</div>
         
               {% endunless %}
             
