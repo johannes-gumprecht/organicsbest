@@ -120,7 +120,7 @@
         
         
         
-                  {% assign per_box = product.selected_or_first_available_variant.sku | split:"_" | last %}
+                  {% assign per_box = product.selected_or_first_available_variant.sku | split:"_" | last%}
                   {% assign per_box = per_box | plus: 0.0 %} 
                   {%assign per_box = product.selected_or_first_available_variant.price | divided_by: per_box %}
        
@@ -129,13 +129,9 @@
        
 <span class="money">{% render 'price-element', price: product.selected_or_first_available_variant.price %}
                   </span> 
-            
-       {% unless product.tags contains "multipack" %}
-            
-         <div class"moneybox" style="font-size:14px;">(<span class="money per-box" >{% render 'price-element', price: per_box %}</span>&nbsp;{{copy}})</div>
         
-              {% endunless %}
-            
+         <div class"moneybox">(<span class="money per-box" >{% render 'price-element', price: per_box %}</span>&nbsp;{{copy}})</div>
+        
         {% comment %}
         
         <span class="money">{% render 'price-element', price: product.price_min %}</span>
