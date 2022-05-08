@@ -100,50 +100,18 @@
       <span class="price {% if product.compare_at_price_max > product.price %}sale{% endif %}">
         {% unless product.available == false and settings.display_price == false %}
           <span class="current_price">
-          
-      
-            
-              {%assign copy = product.metafields.unit_price.copy %}
-{%if copy == blank or copy == empty %}
-{%assign copy = 'each'%}
-{%endif%}
-            
-        
-         {%comment%}
-        {% if product.price_varies and product.price_min > 0 %}
-            <small><em>{{ 'products.general.from' | t }}</em></small>
-          {% endif %}
-         {%endcomment%}
-          {% if product.price_min > 0 %}
-        
-        
-        
-        
-        
-                  {% assign per_box = product.selected_or_first_available_variant.sku | split:"_" | last%}
-                  {% assign per_box = per_box | plus: 0.0 %} 
-                  {%assign per_box = product.selected_or_first_available_variant.price | divided_by: per_box %}
-       
-        
-       
-       
-<span class="money">{% render 'price-element', price: product.selected_or_first_available_variant.price %}
-                  </span> 
-        
-         <div class"moneybox">(<span class="money per-box" >{% render 'price-element', price: per_box %}</span>&nbsp;{{copy}})</div>
-        
-        {% comment %}
-        
-        <span class="money">{% render 'price-element', price: product.price_min %}</span>
-        
-        {% endcomment %}
-        
-        
-          {% else %}
-            {{ settings.free_price_text }}
-          {% endif %}
-        
-        
+            {% if product.price_varies %}
+              <small class="from"><em>{{ 'products.general.from' | t }}</em></small>
+            {% endif %}
+            {% if product.price_min > 0 %}
+              <span class="money">{% render 'price-element', price: product.price_min %}</span>
+            {% else %}
+              {% if settings.free_price_text != blank %}
+                <span class="free">{{ settings.free_price_text }}</span>
+              {% else %}
+                <span class="money">{% render 'price-element', price: product.price_min %}</span>
+              {% endif %}
+            {% endif %}
           </span>
           <span class="was_price">
             {% if product.price < product.compare_at_price %}
