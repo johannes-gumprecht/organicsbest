@@ -11,13 +11,26 @@
       display: none;
     }
 
-  {% if product.tags contains "multipack" %}
-  .per-box {display:none;}
-  {% endif %}
-
 
   {% endstyle %}
 {% endif %}
+
+
+ 
+
+  {% if product.tags contains "multipack" %}
+
+ {% style %}
+
+.per-box {display:none;}
+
+  {% endstyle %}
+
+
+  {% endif %}
+
+
+
 
 {% comment %}
   The contents of the product.liquid template can be found in /sections/product-template.liquid
