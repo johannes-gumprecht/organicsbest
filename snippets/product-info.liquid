@@ -144,7 +144,11 @@
 {% capture getvariantnumbercoll %}{{ variant.sku | split:"_" | last }}{% endcapture %}
 {% capture boxpricecoll %}{{- variant.price | divided_by: getvariantnumbercoll | times: 1 -}}{% endcapture %}
 
+{% assign copy = product.metafields.unit_price.copy %}
+{% if copy == blank or copy == empty %}
+{% assign copy = 'each'%}
+{% endif %}
 
-<span class="collectionboxprice">(<span class="money" data-price>{{- boxpricecoll | money -}}</span> each)</span>
+<span class="collectionboxprice">(<span class="money" data-price>{{- boxpricecoll | money -}}</span> each {{ product.metafields.unit_price.copy }})</span>
 
 {% endunless %}
