@@ -199,10 +199,13 @@
   {% unless product.tags contains "ontheway" or product.variants[0].inventory_quantity <= 0 %}
   <p class="deliverytimeestimate"><span class="is-hidden-mobile-only"><b>This item arrives on </b></span><span class="is-hidden-desktop-only"><b>Delivery on </b></span><span style="font-weight:normal;"> {{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
 
- {% endunless %}
+  
+  
+  
   <p class="deliverytimeestimate">Express shipping to <b id="country-name-product2">New York</b> available.</p>
 
  
+ {% endunless %}
   
   
   
