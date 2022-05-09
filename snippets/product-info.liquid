@@ -145,5 +145,8 @@
 {% capture boxpricecoll %}{{- variant.price | divided_by: getvariantnumbercoll | times: 1 -}}{% endcapture %}
 {{ boxpricecoll }}
 
+<span><span class="money" data-price>{{- boxpricecoll | money -}}</span> each</span>
+
+
 <span>(<span class="money">{% render 'price-element', price: product.price_min %}</span>)</span>
 {% endunless %}
