@@ -142,6 +142,6 @@
 
 
 {% capture totalpricecollection %}{% render 'price-element', price: product.price_min %}{% endcapture %}
-{{ variant.sku }}
+{{ variant.sku | split:"_" | last }}
 <span>(<span class="money">{% render 'price-element', price: product.price_min %}</span>)</span>
 {% endunless %}
