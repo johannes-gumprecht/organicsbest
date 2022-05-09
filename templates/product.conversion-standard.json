@@ -160,6 +160,26 @@
         "products_per_row": 3,
         "recommended_products_limit": 3
       }
+    },
+    "16520833922da60e84": {
+      "type": "apps",
+      "blocks": {
+        "f9c467db-4202-440a-8858-6c259b8d7eea": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true
+          }
+        }
+      },
+      "block_order": [
+        "f9c467db-4202-440a-8858-6c259b8d7eea"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -173,6 +193,7 @@
     "16516501627752dc7f",
     "bottomforms",
     "16515009551e72c4eb",
-    "recommendations"
+    "recommendations",
+    "16520833922da60e84"
   ]
 }
