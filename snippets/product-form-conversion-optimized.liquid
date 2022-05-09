@@ -16,6 +16,17 @@
   {% endif %}
 {% endfor %}
 
+  {% unless product.variants[0].inventory_quantity <= 0 %}
+     <noscript>
+          <style>
+            .bgs-aov-app {
+              display: none !important;
+             
+            }
+          </style>
+        </noscript>
+{% endunless %}
+
 <div
   class="
     product_form
