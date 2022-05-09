@@ -152,11 +152,14 @@
       <div data-payment-terms-reference style="display: none;">
         {{ form | payment_terms }}
       </div>
+      
+      
+      <div class="aovsell"></div>
     </div>
     
   
   </div>
-<div class="aovsell"></div>
+
    {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
 
   {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' %}
