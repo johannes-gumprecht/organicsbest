@@ -17,8 +17,8 @@
 {% endfor %}
 
 
-
-  
+  {% if product.variants[0].inventory_quantity > 1 %}
+   
           <style>
             .bgs-row-app {
               display: none !important;
@@ -26,6 +26,7 @@
             }
           </style>
        
+{% endif %}
 
 <div
   class="
