@@ -136,4 +136,6 @@
       class: 'product-details__unit-price'
     %}
   {% endif %}
-</div> TEST
+</div> {% unless product.tags contains "multipack" %}
+TEST
+{% endunless %}
