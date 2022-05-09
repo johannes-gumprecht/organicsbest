@@ -140,11 +140,5 @@
 
 {% unless product.tags contains "multipack" %}
 TEST
-{%-
-          render 'price-ui-templates',
-          template: 'price-ui',
-          compare_at_price: compare_at_price,
-          price: price,
-          unit_pricing: false,
-        -%}
+<span class="money">{% render 'price-element', price: product.price_min %}</span>
 {% endunless %}
