@@ -7,9 +7,15 @@
         "display_savings": true,
         "cart_message": ""
       }
+    },
+    "1652102252c7fa390e": {
+      "type": "apps",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1652102252c7fa390e"
   ]
 }
