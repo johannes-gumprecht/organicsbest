@@ -145,6 +145,6 @@
 {% capture boxpricecoll %}{{- variant.price | divided_by: getvariantnumbercoll | times: 1 -}}{% endcapture %}
 
 
-<span class="collectionboxprice"><span class="money" data-price>{{- boxpricecoll | money -}}</span> each</span>
+<span class="collectionboxprice">(<span class="money" data-price>{{- boxpricecoll | money -}}</span> each)</span>
 
 {% endunless %}
