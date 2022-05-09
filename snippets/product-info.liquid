@@ -136,6 +136,15 @@
       class: 'product-details__unit-price'
     %}
   {% endif %}
-</div> {% unless product.tags contains "multipack" %}
+</div>
+
+{% unless product.tags contains "multipack" %}
 TEST
+{%-
+          render 'price-ui-templates',
+          template: 'price-ui',
+          compare_at_price: compare_at_price,
+          price: price,
+          unit_pricing: false,
+        -%}
 {% endunless %}
