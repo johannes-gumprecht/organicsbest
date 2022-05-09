@@ -16,7 +16,7 @@ url: 'https://api.ipdata.co?api-key=707d6b4c1028c1a7659278a928ac17764a3e7c232b27
     jQuery('#country-name').html(location.country_name);
     
 
-    
+      jQuery('#country-name-product').html('All orders over 190 USD are shipped with 1-5 Day Express for free.');
   
     
     
