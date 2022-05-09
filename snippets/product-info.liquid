@@ -99,10 +99,12 @@
     {% else %}
       <span class="price {% if product.compare_at_price_max > product.price %}sale{% endif %}">
         {% unless product.available == false and settings.display_price == false %}
-          <span class="current_price">
+        {% if product.tags contains "multipack" %}
+        <span class="current_price">
             {% if product.price_varies %}
               <small class="from"><em>{{ 'products.general.from' | t }}</em></small>
             {% endif %}
+          {% endif %}
             {% if product.price_min > 0 %}
               <span class="money">{% render 'price-element', price: product.price_min %}</span>
             {% else %}
