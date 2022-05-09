@@ -141,7 +141,9 @@
 {% unless product.tags contains "multipack" %}
 
 
-{% capture totalpricecollection %}{% render 'price-element', price: product.price_min %}{% endcapture %}
-{{ variant.sku | split:"_" | last }}
+{% capture getvariantnumbercoll %}{{ variant.sku | split:"_" | last }}{% endcapture %}
+{% capture boxpricecoll %}{{- variant.price | divided_by: getvariantnumbercoll | times: 1 -}}{% endcapture %}
+{{ boxpricecoll }}
+
 <span>(<span class="money">{% render 'price-element', price: product.price_min %}</span>)</span>
 {% endunless %}
