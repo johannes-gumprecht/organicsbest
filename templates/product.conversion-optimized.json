@@ -138,6 +138,26 @@
         "custom_css": ""
       }
     },
+    "1652083474a1265bdf": {
+      "type": "apps",
+      "blocks": {
+        "0a1ad97e-e5d4-40cb-a604-92a353460a17": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true
+          }
+        }
+      },
+      "block_order": [
+        "0a1ad97e-e5d4-40cb-a604-92a353460a17"
+      ],
+      "settings": {
+      }
+    },
     "recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -159,6 +179,7 @@
     "16431066694cde1fec",
     "bottomforms",
     "16515009551e72c4eb",
+    "1652083474a1265bdf",
     "recommendations"
   ]
 }
