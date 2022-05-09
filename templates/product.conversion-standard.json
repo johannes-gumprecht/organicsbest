@@ -107,6 +107,7 @@
     },
     "bottomforms": {
       "type": "product-template-bottom-form",
+      "disabled": true,
       "blocks": {
         "price": {
           "type": "price",
@@ -142,6 +143,7 @@
     },
     "16515009551e72c4eb": {
       "type": "divider",
+      "disabled": true,
       "settings": {
         "divider_spacing": 20,
         "divider_border": false,
