@@ -149,6 +149,6 @@
 {% assign copy = 'each'%}
 {% endif %}
 
-<span class="collectionboxprice">(<span class="money" data-price>{{- boxpricecoll | money -}}</span> each {{ product.metafields.unit_price.copy }})</span>
+<span class="collectionboxprice">(<span class="money" data-price>{{- boxpricecoll | money -}}</span> each {{ copy }})</span>
 
 {% endunless %}
