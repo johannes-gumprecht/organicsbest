@@ -140,5 +140,8 @@
 
 {% unless product.tags contains "multipack" %}
 
+
+{% capture totalpricecollection %}{% render 'price-element', price: product.price_min %}{% endcapture %}
+{{ variant.sku }}
 <span>(<span class="money">{% render 'price-element', price: product.price_min %}</span>)</span>
 {% endunless %}
