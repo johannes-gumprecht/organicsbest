@@ -479,5 +479,22 @@
         "other": "{{ count }} items"
       }
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "pay_now_button_label": "Complete Order",
+        "continue_to_shipping_method": "Continue to Shipping →",
+        "continue_to_payment_method": "Continue →"
+      },
+      "contact": {
+        "email_label": "Email (required for order confirmation)",
+        "email_placeholder": "Email (required for order confirmation)",
+        "address1_label": "Address (no P.O. boxes)"
+      },
+      "order_summary": {
+        "shipping_default_value": "Express Delivery Available"
+      }
+    }
   }
 }
