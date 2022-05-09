@@ -140,5 +140,5 @@
 
 {% unless product.tags contains "multipack" %}
 TEST
-<span class="money">{% render 'price-element', price: product.price_min %}</span>
+<span class="money">({% render 'price-element', price: product.price_min %})</span>
 {% endunless %}
