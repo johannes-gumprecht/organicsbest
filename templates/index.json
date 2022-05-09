@@ -111,6 +111,7 @@
         },
         "block-3": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "feature_collection": "loulouka-organic-swiss-formula"
           }
