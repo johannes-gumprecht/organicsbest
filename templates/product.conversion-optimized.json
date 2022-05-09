@@ -96,6 +96,7 @@
     },
     "bottomforms": {
       "type": "product-template-bottom-form",
+      "disabled": true,
       "blocks": {
         "price": {
           "type": "price",
