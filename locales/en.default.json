@@ -494,6 +494,9 @@
       },
       "order_summary": {
         "shipping_default_value": "Express Delivery Available"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Join our free Organic's Best Club for exclusive offers and news via text messages & email."
       }
     }
   }
