@@ -62,6 +62,7 @@
     },
     "164310661322577cc4": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{{ product.description | split: '<!-- split -->' | last }}"
       }
