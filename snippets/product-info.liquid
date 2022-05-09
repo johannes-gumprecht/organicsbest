@@ -136,8 +136,8 @@
       class: 'product-details__unit-price'
     %}
   {% endif %}
-</div>
-
+  
+  
 {% unless product.tags contains "multipack" %}
 
 
@@ -152,3 +152,5 @@
 <span class="collectionboxprice">(<span class="money" data-price>{{- boxpricecoll | money -}}</span> {{ copy }})</span>
 
 {% endunless %}
+  
+</div>
