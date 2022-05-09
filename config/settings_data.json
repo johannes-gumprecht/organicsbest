@@ -171,6 +171,8 @@
     "favicon": "shopify:\/\/shop_images\/LOGO_ORGANIC.png",
     "disqus_enabled": false,
     "disqus_shortname": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/checklogonew.png",
+    "checkout_logo_size": "large",
     "checkout_accent_color": "#7b3b47",
     "checkout_button_color": "#8ee0f2",
     "checkout_error_color": "#7b3b47",
