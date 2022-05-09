@@ -492,7 +492,8 @@
         "email_placeholder": "Email (required for order confirmation)",
         "address1_label": "Address (no P.O. boxes)",
         "phone_label": "Phone (required for delivery & updates)",
-        "optional_phone_label": "Phone (required for delivery & updates)"
+        "optional_phone_label": "Phone (required for delivery & updates)",
+        "phone_placeholder": "Phone (required for delivery & updates)"
       },
       "order_summary": {
         "shipping_default_value": "Express Delivery Available"
