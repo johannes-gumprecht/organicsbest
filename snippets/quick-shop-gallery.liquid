@@ -39,7 +39,7 @@
                   srcset="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='{{ media.width }}'%20height='{{ media.height }}'></svg>"
                   />
           {% else %}
-            {% assign hs_data_src = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}{% assign hs_img_src = image | img_url: '120x' %}<img class="hs-id-b37848cd lazyload hs-lazyload hs-blur-up" data-aspectratio="{{ image.aspect_ratio }}" data-parent-fit="contain" data-sizes="auto" data-src="{{ hs_data_src }}" data-widths="[50,90,180,360,480,720,900,1080,1296,1512]" src="{{ hs_img_src }}"/>
+            <img src="{{ image | img_url: 'master' }}"/>
           {% endif %}
         </div>
       {% else %}

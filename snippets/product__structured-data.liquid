@@ -1,4 +1,3 @@
-{% assign hs_product_description = product.description | replace: ' src="', ' loading="lazy" class="lazyload" data-src="' %}
 {% comment %}
   Product structured data
   https://developers.google.com/search/docs/data-types/products
@@ -26,8 +25,8 @@
     "@type": "Product",
     "name": {{ product_name | strip_newlines | json }},
     "image": {{ product_image | img_url: '1024x1024' | prepend: 'https:' | json }},
-    {% if hs_product_description != blank %}
-      "description": {{ hs_product_description | json }},
+    {% if product.description != blank %}
+      "description": {{ product.description | json }},
     {% endif %}
     {% if product.vendor %}
       "brand": {
