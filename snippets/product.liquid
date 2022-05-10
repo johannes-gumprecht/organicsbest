@@ -1,3 +1,4 @@
+{% assign hs_product_description = product.description | replace: ' src="', ' loading="lazy" class="lazyload" data-src="' %}
 {% comment %}
   @param product {Object}
     The product object
@@ -289,9 +290,9 @@
                 {% else %}
                   {% if context == 'quickshop' %}
                     {% if block.settings.truncate_description %}
-                      {{ product.description | truncatewords: block.settings.truncated_words }}
+                      {{ hs_product_description | truncatewords: block.settings.truncated_words }}
                     {% else %}
-                      {{ product.description }}
+                      {{ hs_product_description }}
                     {% endif %}
                     <a
                       class="secondary_button"
@@ -301,7 +302,7 @@
                       {{ 'collections.general.view_product_details_html' | t }}
                     </a>
                   {% else %}
-                    {{ product.description | split: '<!-- split -->' | first }}
+                    {{ hs_product_description | split: '<!-- split -->' | first }}
                   {% endif %}
                 {% endif %}
               </div>
