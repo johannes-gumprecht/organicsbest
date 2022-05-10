@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html class="no-js no-touch" lang="{{ shop.locale }}">
   <head>
+{% include 'hyperspeed-imports' %}
+
   {% include 'shop-sheriff-amp' %}
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
@@ -73,17 +75,17 @@
 
     <link rel="preload" href="{{ 'jquery.min.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'vendors.js' | asset_url }}" as="script">
-    <link rel="preload" href="{{ 'sections.js' | asset_url }}" as="script">
-    <link rel="preload" href="{{ 'utilities.js' | asset_url }}" as="script">
-    <link rel="preload" href="{{ 'app.js' | asset_url }}" as="script">
+    <link rel="preload" href="{{ 'sections.min.js' | asset_url }}" as="script">
+    <link rel="preload" href="{{ 'utilities.min.js' | asset_url }}" as="script">
+    <link rel="preload" href="{{ 'app.min.js' | asset_url }}" as="script">
 
     <!-- Stylesheet for Fancybox library -->
-    {{ 'fancybox.css' | asset_url | stylesheet_tag }}
+    {% render 'hs-minify-css' with filename: 'fancybox.css' %}
 
     <!-- Stylesheets for Turbo -->
-    {{ 'styles.css' | asset_url | stylesheet_tag }}
+    {% render 'hs-minify-css' with filename: 'styles.css' %}
 
-    <script>
+    <script hs-ignore>
       window.lazySizesConfig = window.lazySizesConfig || {};
 
       lazySizesConfig.expand = 300;
@@ -157,17 +159,17 @@
     
 
     {% if template contains 'customer' %}
-      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
-      <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
+      <script defer="" src="{{ 'shopify_common.js' | shopify_asset_url }}" type="hyperscript/defer-load"></script>
+      <script defer="" src="{{ 'customer_area.js' | shopify_asset_url }}" type="hyperscript/defer-load"></script>
     {% endif %}
 
-    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script defer="" src="{{ 'jquery.min.js' | asset_url }}" type="hyperscript/defer-load"></script>
 
         
     
-    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NRJ853F"></script>
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NRJ853F" type="hyperscript/defer-load"></script>
 <!-- TrustBox script -->
-<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<script async="" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" type="hyperscript/defer-load"></script>
 <!-- End TrustBox script -->
     
     
@@ -179,11 +181,11 @@
     
     
     {% if settings.show_multiple_currencies or settings.show_shipping_calculator %}
-      <script type="text/javascript" src="/services/javascripts/currencies.js" data-no-instant></script>
+      <script data-no-instant="" src="/services/javascripts/currencies.js" type="hyperscript/defer-load"></script>
     {% endif %}
 
     {% if settings.show_multiple_currencies or shop.enabled_currencies.size > 1 %}
-      <script src="{{ 'currencies.js' | asset_url }}" defer></script>
+      <script defer="" src="{{ 'currencies.min.js' | asset_url }}" type="hyperscript/defer-load"></script>
     {% endif %}
 
     {% comment %}Inject theme-object begin{% endcomment %}
@@ -224,23 +226,23 @@
       {% render 'js-variables' %}
     </script>
 
-    <script src="{{ 'vendors.js' | asset_url }}" defer></script>
-    <script src="{{ 'sections.js' | asset_url }}" defer></script>
-    <script src="{{ 'utilities.js' | asset_url }}" defer></script>
-    <script src="{{ 'app.js' | asset_url }}" defer></script>
-    <script src="{{ 'geoipdata.js' | asset_url }}" defer></script>
+    <script defer="" src="{{ 'vendors.js' | asset_url }}" type="hyperscript/defer-load"></script>
+    <script defer="" src="{{ 'sections.min.js' | asset_url }}" type="hyperscript/defer-load"></script>
+    <script defer="" src="{{ 'utilities.min.js' | asset_url }}" type="hyperscript/defer-load"></script>
+    <script defer="" src="{{ 'app.min.js' | asset_url }}" type="hyperscript/defer-load"></script>
+    <script defer="" src="{{ 'geoipdata.min.js' | asset_url }}" type="hyperscript/defer-load"></script>
     {% include 'scrollbutton' %}
     {% include 'smoothscroll' %}
 
 
     {% if settings.disqus_enabled %}
       {% if template contains "blog" or template contains "article" or template contains "index" %}
-        <script id="dsq-count-scr" src="//{{ settings.disqus_shortname }}.disqus.com/count.js" async></script>
+        <script async="" id="dsq-count-scr" src="//{{ settings.disqus_shortname }}.disqus.com/count.js" type="hyperscript/defer-load"></script>
       {% endif %}
     {% endif %}
 
     {% unless settings.performance == "sport" or template contains "customer" %}
-      <script src="{{ 'instantclick.min.js' | asset_url }}" data-no-instant defer></script>
+      <script data-no-instant="" defer="" src="{{ 'instantclick.min.js' | asset_url }}" type="hyperscript/defer-load"></script>
 
       <script data-no-instant>
         window.addEventListener('DOMContentLoaded', function() {
@@ -390,7 +392,7 @@
 
     {% section 'footer' %}
 
-    <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=enabledstore1.myshopify.com" defer></script>
+    <script defer="" src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=enabledstore1.myshopify.com" type="hyperscript/defer-load"></script>
 
     {% if settings.quick_shop_enabled %}
       {% render 'quick-shop' %}
@@ -452,7 +454,7 @@ window.dataLayer.push({
   
   
   
-  <!--Gorgias Chat Widget Start--><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=10103"></script>
+  <!--Gorgias Chat Widget Start--><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=10103" type="hyperscript/defer-load"></script>
 <script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
   </body>
 </html>
