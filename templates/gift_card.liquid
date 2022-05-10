@@ -28,11 +28,11 @@
   <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
   <link rel="preload" href="{{ 'gift-card.css' | asset_url }}" as="style">
 
-  {% render 'hs-minify-css' with filename: 'styles.css' %}
-  {% render 'hs-minify-css' with filename: 'gift-card.css' %}
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
+  {{ 'gift-card.css' | asset_url | stylesheet_tag }}
 
-  <script defer="" src="{{ 'modernizr.gift-card.js' | shopify_asset_url }}" type="hyperscript/defer-load"></script>
-  <script defer="" src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" type="hyperscript/defer-load"></script>
+  <script defer="" src="{{ 'modernizr.gift-card.js' | shopify_asset_url }}"></script>
+  <script defer="" src="{{ 'vendor/qrcode.js' | shopify_asset_url }}"></script>
 </head>
 <body>
   <div class="wrapper">
