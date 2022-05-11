@@ -138,7 +138,7 @@
     "show_shipping_calculator": false,
     "shipping_calculator_default_country": "United States",
     "currency_format": "money_with_currency_format",
-    "show_multiple_currencies": true,
+    "show_multiple_currencies": false,
     "supported_currencies": "USD CAD AUD GBP EUR JPY",
     "default_currency": "USD",
     "mailchimp_link": "",
@@ -185,9 +185,8 @@
           "show_locale_selector": false,
           "show_currency_selector": false,
           "logo_display_width": 130,
-          "logo": "shopify:\/\/shop_images\/logo_grau_new_410xNEW.png",
-          "main_linklist": "left-main-menu",
-          "main_linklist2": "right-main-menu",
+          "main_linklist": "",
+          "main_linklist2": "",
           "vertical_menu": false,
           "dropdown_click": false,
           "search_enabled": true,
@@ -204,21 +203,21 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "menu": "help",
+              "menu": "",
               "social_icons_footer": false
             }
           },
           "b97c552d-1e24-4855-8d40-9c59c2b86b4b": {
             "type": "link_list",
             "settings": {
-              "menu": "account",
+              "menu": "",
               "social_icons_footer": false
             }
           },
           "footer-2": {
             "type": "link_list",
             "settings": {
-              "menu": "our-company",
+              "menu": "",
               "social_icons_footer": false
             }
           },
