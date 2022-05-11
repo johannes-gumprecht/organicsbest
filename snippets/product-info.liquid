@@ -8,9 +8,21 @@
     </span>
   {% endif %}
   {% if settings.enable_shopify_collection_badges %}
-    <div class="shopify-reviews">
+  <!-- Stamped - Begin Star Rating Badge -->
+<span 
+class="stamped-product-reviews-badge" 
+data-id="{{ product.id }}"
+data-product-sku="{{ product.handle }}" 
+data-product-type="{{product.type}}" 
+data-product-title="{{product.title}}" 
+style="display:block;">
+{{product.metafields.stamped.badge}}
+</span>
+<!-- Stamped - End Star Rating Badge -->
+	{% comment %}  
+  <div class="shopify-reviews">
       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-    </div>
+    </div>{% endcomment %}
   {% endif %}
   {% if collection_handles contains 'coming-soon' %}
     <span class="coming-soon">{{ 'collections.general.coming_soon' | t }}</span>
