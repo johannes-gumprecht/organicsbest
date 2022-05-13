@@ -172,10 +172,10 @@
 
    {% capture today_string_date %} {{ 'now' | date: '%s' | date: '%A' }} {% endcapture %}
 
-  {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' %}
+  {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' or today_string_date contains 'Sunday' %}
   
   {% assign earlyarrival = 3 | times: 86400 %}
-  {% assign latearrival = 9 | times: 86400 %}
+  {% assign latearrival = 8 | times: 86400 %}
   {% else %}
   {% assign earlyarrival = 2 | times: 86400 %}
   {% assign latearrival = 8 | times: 86400 %}
