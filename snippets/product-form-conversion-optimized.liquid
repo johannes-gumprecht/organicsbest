@@ -108,7 +108,7 @@
   {% if product.variants[0].inventory_quantity <= 0 and product.variants[0].available == true %}
   
 
-  <p><b>Pre-Order Available</b><br>This item will be available in approximately 3 weeks. You can pre-order now to be on our high priority list. You can cancel the order as long as it has not left our warehouse.</p>
+  <p><b>Pre-Order Available</b><br>This item is will be available in approximately 3 weeks. You can pre-order now to be on our high priority list. You can cancel the order as long as it has not left our warehouse.</p>
   {% endif %}
   
   
@@ -210,7 +210,7 @@
   
   
   
-  <p class="deliverytimeestimate">Express shipping to <b id="country-name-product2">New York</b> available.</p>
+  <p class="deliverytimeestimate">Express shipping to <b id="country-name-product2"></b> available.</p>
 
  
  {% endunless %}
@@ -234,7 +234,7 @@
   <p class="deliverytimeestimate"><span class="is-hidden-mobile-only"><b>This item arrives on </b></span><span class="is-hidden-desktop-only"><b>Delivery on </b></span><span style="font-weight:normal;"> {{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
 
 
-  <p class="deliverytimeestimate">Express shipping to <b id="country-name-product2">New York</b> available.</p>
+  <p class="deliverytimeestimate">Express shipping to <b id="country-name-product2"></b> available.</p>
 
   {% endunless %}
   
