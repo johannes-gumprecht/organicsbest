@@ -105,7 +105,7 @@
     {% endif %}
   {% endif %}
 
-  {% if product.variants[0].inventory_quantity <= 400 and product.variants[0].available == true %}
+  {% if product.variants[0].inventory_quantity <= 0 and product.variants[0].available == true %}
   
 
   <p><b>This item is temporarily out of stock and is only available for pre-order.</b></p>
@@ -194,25 +194,25 @@
   
   
   
-  	{% unless product.variants[0].inventory_quantity <= 400 and product.variants[0].available == true %}
+  	{% unless product.variants[0].inventory_quantity <= 0 and product.variants[0].available == true %}
   <p class="deliverytimeestimate"><svg style="width: 14px;vertical-align:middle;height: 14px;margin-top: -1px;margin-right: 3px;"> <circle fill="green" stroke="none" cx="7px" cy="7" r="7"> <animate attributeName="opacity" dur="6s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate></circle></svg> <b>In stock</b> ({{ product.variants[0].inventory_quantity }} {% if product.variants[0].inventory_quantity == 1 %}unit{% else %}units{% endif %} available)</p>
 	 {% endunless %}
   
   {% comment %}
-  {% if product.variants[0].inventory_quantity > 400 and product.variants[0].available == true %}
+  {% if product.variants[0].inventory_quantity > 0 and product.variants[0].available == true %}
       <p class="deliverytimeestimate"><svg style="width: 14px;vertical-align:middle;height: 14px;margin-top: -1px;margin-right: 3px;"> <circle fill="orange" stroke="none" cx="7px" cy="7" r="7"> <animate attributeName="opacity" dur="6s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate></circle></svg> <b>On the way to our warehouse.</b><br>Pre-orders available. This item will ship once it arrives at our warehouse in approximately 5-10 business days. You can cancel your order anytime as long as it hasn't been shipped.</p>
 
   {% endif %}
   {% endcomment %}
   
   
-  {% if product.variants[0].inventory_quantity <= 400 and product.variants[0].available == true %}
+  {% if product.variants[0].inventory_quantity <= 0 and product.variants[0].available == true %}
         <p class="deliverytimeestimate"><svg style="width: 14px;vertical-align:middle;height: 14px;margin-top: -1px;margin-right: 3px;"> <circle fill="orange" stroke="none" cx="7px" cy="7" r="7"> <animate attributeName="opacity" dur="6s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate></circle></svg> <b>Temporarily out of stock. Pre-orders available.</b><br>This item will be available in approximately 3 weeks. You can pre-order now to be on our high priority list. You can cancel the order as long as it has not left our warehouse.</p>
 {% endif %}
   
   
   
-  {% unless  product.variants[0].inventory_quantity <= 400 and product.variants[0].available == true %}
+  {% unless  product.variants[0].inventory_quantity <= 0 and product.variants[0].available == true %}
   <p class="deliverytimeestimate"><span class="is-hidden-mobile-only"><b>This item arrives on </b></span><span class="is-hidden-desktop-only"><b>Delivery on </b></span><span style="font-weight:normal;"> {{ 'now' | date: '%s' | plus: earlyarrival | date: '%A, %b %d' }} - {{ 'now' | date: '%s' | plus: latearrival | date: '%A, %b %d' }}</span>.</p>
 
   
