@@ -105,6 +105,78 @@
     {% endif %}
   {% endif %}
 
+  
+  
+  
+  
+  {% if product.tags contains 'multipack' %}
+  
+  
+  
+  {% if product.variants[0].inventory_quantity <= 200 and product.variants[0].available == true %}
+
+  <p><b>This item is temporarily out of stock and is only available for pre-order.</b></p>
+  
+  {% else %}
+
+  <p><b>Please allow us 2-3 days to process your order due to extreme high demand.</b></p>
+  
+  {% endif %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {% else %}
+  
+  
+ {% capture boxnumbernonmultipack %}{{ product.variants[0].sku | split: "_" | last }}{% endcapture %}
+  
+  {% assign realinventorynonmultipack = boxnumbernonmultipack | times: product.variants[0].inventory_quantity %}
+	  
+  
+  
+  
+  {% if realinventorynonmultipack <= 200 and product.variants[0].available == true %}
+
+  <p><b>This item is temporarily out of stock and is only available for pre-order.</b></p>
+  
+  {% else %}
+
+  <p><b>Please allow us 2-3 days to process your order due to extreme high demand.</b></p>
+  
+  {% endif %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {% endif %}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {% comment %}
+  
+  
   {% if product.variants[0].inventory_quantity <= 0 and product.variants[0].available == true %}
   
 
@@ -115,6 +187,8 @@
   <p><b>Please allow us 2-3 days to process your order due to extreme high demand.</b></p>
   {% endif %}
   
+  
+  {% endcomment %}
   
  
   <div class="purchase-details">
