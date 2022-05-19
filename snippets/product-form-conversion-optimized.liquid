@@ -105,12 +105,7 @@
     {% endif %}
   {% endif %}
 
-  {% capture boxnumbernonmultipack %}{{ product.variants[0].sku | split: "_" | last }}{% endcapture %}
-  
-  {% assign realinventorynonmultipack = boxnumbernonmultipack | times: product.variants[0].inventory_quantity %}
-	  
-  
-  
+
   
   {% if product.tags contains 'multipack' %}
   
