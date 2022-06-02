@@ -231,11 +231,11 @@
 
   {% if today_string_date contains 'Friday' or today_string_date contains 'Saturday' or today_string_date contains 'Sunday' %}
   
-  {% assign earlyarrival = 3 | times: 86400 %}
-  {% assign latearrival = 12 | times: 86400 %}
+  {% assign earlyarrival = 2 | times: 86400 %}
+  {% assign latearrival = 8 | times: 86400 %}
   {% else %}
   {% assign earlyarrival = 2 | times: 86400 %}
-  {% assign latearrival = 10 | times: 86400 %}
+  {% assign latearrival = 7 | times: 86400 %}
   
   {% endif %}
   
