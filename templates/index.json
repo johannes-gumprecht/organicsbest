@@ -418,10 +418,18 @@
           "settings": {
             "label_title": ""
           }
+        },
+        "ea11a580-4328-46ed-928a-d8a18b431242": {
+          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/page-spendings\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
+          "settings": {
+            "label_title": "Redeem for Discounts",
+            "label_description": ""
+          }
         }
       },
       "block_order": [
-        "a5aed149-8a34-47e2-b9bc-6c3f8765fe1a"
+        "a5aed149-8a34-47e2-b9bc-6c3f8765fe1a",
+        "ea11a580-4328-46ed-928a-d8a18b431242"
       ],
       "settings": {
       }
