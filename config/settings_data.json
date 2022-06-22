@@ -410,9 +410,21 @@
 
     ],
     "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "3868388246157625423": {
+        "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/rewards-launcher\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
+        "disabled": false,
+        "settings": {
+        }
+      },
       "1169919934575453974": {
         "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/referral-modal\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "customer_email": "",
           "customer_first_name": "",
@@ -429,12 +441,6 @@
           "text_disclaimer": "",
           "text_share_manual": "",
           "button_text_send": ""
-        }
-      },
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {
         }
       }
     }
