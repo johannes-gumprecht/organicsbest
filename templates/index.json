@@ -393,15 +393,6 @@
         "custom_css": ""
       }
     },
-    "1651599728a7049c93": {
-      "type": "divider",
-      "settings": {
-        "divider_spacing": 20,
-        "divider_border": false,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "1649921074486d205d": {
       "type": "blog-posts",
       "settings": {
@@ -417,6 +408,22 @@
         "excerpt_display": "none",
         "css_class": "",
         "custom_css": ""
+      }
+    },
+    "165589260614833c62": {
+      "type": "apps",
+      "blocks": {
+        "a5aed149-8a34-47e2-b9bc-6c3f8765fe1a": {
+          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/vip-tiers\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
+          "settings": {
+            "label_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "a5aed149-8a34-47e2-b9bc-6c3f8765fe1a"
+      ],
+      "settings": {
       }
     }
   },
@@ -444,7 +451,7 @@
     "1651588229d65eff2c",
     "1651588248ffc27beb",
     "1651583276875e09cd",
-    "1651599728a7049c93",
-    "1649921074486d205d"
+    "1649921074486d205d",
+    "165589260614833c62"
   ]
 }
