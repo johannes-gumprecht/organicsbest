@@ -416,12 +416,6 @@
         "settings": {
         }
       },
-      "3868388246157625423": {
-        "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/rewards-launcher\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "1169919934575453974": {
         "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/referral-modal\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
         "disabled": true,
@@ -441,6 +435,12 @@
           "text_disclaimer": "",
           "text_share_manual": "",
           "button_text_send": ""
+        }
+      },
+      "3868388246157625423": {
+        "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/rewards-launcher\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
+        "disabled": true,
+        "settings": {
         }
       }
     }
