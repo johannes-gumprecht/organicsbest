@@ -32,14 +32,9 @@ url: 'https://api.ipdata.co?api-key=707d6b4c1028c1a7659278a928ac17764a3e7c232b27
     
   if (userCountryName == "United States") {   
     
-   // jQuery('#topgeopcopid').html('FREE EXPRESS DELIVERY TO');
+$(".topbarshipping").show();
+    jQuery('.topbarlocation').html(location.region);
    
-    //
-   // jQuery('#freeshippingnote-productpage').html('Free Express Delivery (1-5 Business Days)');
-   //  jQuery('#secondbullet-productpage').html('Fully Insured Shipping');
-    
-    jQuery('#dhlheadline').html('FREE EXPRESS DELIVERY');
-    jQuery('#dhlcopy').html('All orders over 190 USD are shipped with 1-5 Day Express for free.');
     jQuery('#country-name').html(location.region);
      jQuery('#country-name-product2').html(location.region);
  	jQuery('#country-name-product3').html(location.region);
