@@ -54,7 +54,12 @@ $(".topbarshipping").show();
     
     
       if (userCountryName == "Canada") {
-        
+
+
+            
+$(".topbarshipping").show();
+    jQuery('.topbarlocation').html(location.region);
+   
         jQuery('#country-name').html(location.region);
         $(".price__fordiscont").show();
     	$(".progressbar__wrapper").show();
