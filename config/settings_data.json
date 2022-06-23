@@ -183,7 +183,7 @@
           "promo_text": "",
           "social_icons_header": false,
           "phone_number": "",
-          "top_bar_menu": "",
+          "top_bar_menu": "top-bar-menu",
           "show_cart": true,
           "cart_icon": "cart",
           "show_locale_selector": false,
