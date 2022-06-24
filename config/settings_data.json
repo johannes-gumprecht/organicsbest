@@ -140,7 +140,7 @@
     "shipping_calculator_default_country": "United States",
     "currency_format": "money_with_currency_format",
     "show_multiple_currencies": true,
-    "supported_currencies": "USD CAD AUD GBP EUR JPY",
+    "supported_currencies": "USD CAD AUD GBP EUR JPY AED",
     "default_currency": "USD",
     "mailchimp_link": "",
     "secondary_newsletter_banner": false,
@@ -413,33 +413,6 @@
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "1169919934575453974": {
-        "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/referral-modal\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
-        "disabled": true,
-        "settings": {
-          "customer_email": "",
-          "customer_first_name": "",
-          "frequency": "once",
-          "background_image_url": "",
-          "style-color-background": "",
-          "style-color-button": "",
-          "style-color-link": "",
-          "subtitle": "",
-          "title": "",
-          "description": "",
-          "button_text": "",
-          "subtitle_two": "",
-          "text_disclaimer": "",
-          "text_share_manual": "",
-          "button_text_send": ""
-        }
-      },
-      "3868388246157625423": {
-        "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/rewards-launcher\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
-        "disabled": true,
         "settings": {
         }
       }
