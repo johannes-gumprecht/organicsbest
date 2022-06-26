@@ -140,7 +140,7 @@
     "shipping_calculator_default_country": "United States",
     "currency_format": "money_with_currency_format",
     "show_multiple_currencies": true,
-    "supported_currencies": "USD CAD AUD GBP EUR JPY",
+    "supported_currencies": "USD CAD AUD GBP EUR JPY AED",
     "default_currency": "USD",
     "mailchimp_link": "",
     "secondary_newsletter_banner": false,
@@ -408,6 +408,14 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   }
 }

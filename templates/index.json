@@ -7,7 +7,7 @@
         "image": "shopify:\/\/shop_images\/neueee_ced54c3a-78d5-4024-baf6-c62722b78b4a.jpg",
         "pretext": "",
         "title": "Organic European Baby Formula",
-        "subtitle": "<p>Our carefully selected baby formulas from Europe are used by parents worldwide to help them raise healthy children.<\/p>",
+        "subtitle": "<p>Carefully selected baby formulas from Europe are used by parents worldwide to help them raise healthy children.<\/p>",
         "button1": "Shop Organic Baby Formula",
         "button1_link": "shopify:\/\/collections\/organic-baby-formula",
         "button1_style": "global-button--primary",
@@ -32,50 +32,6 @@
         "divider_border": false,
         "css_class": "",
         "custom_css": ""
-      }
-    },
-    "164666447028c756f6": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"product_features\">\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/delivery1.svg?v=1651560400\" alt=\"Organic's Best Test Store\">\n<\/div>\n<div class=\"product_features_container_content\">\n<p class=\"uvp-headline\">Insured Express Delivery<\/p>\n<p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 2-5 business days.<\/p>\n<\/div><\/div>\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/authenticity.svg?v=1651560402\" alt=\"Organic's Best Test Store\">\n<\/div>\n<div class=\"product_features_container_content\">\n<p class=\"uvp-headline\">Authentic Products<\/p>\n<p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p>\n<\/div><\/div>\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/expiration.svg?v=1651560400\" alt=\"Organic's Best Test Store\">\n<\/div> <div class=\"product_features_container_content\"> \n<p class=\"uvp-headline\">Long Expiration Dates<\/p>\n<p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p>\n<\/div><\/div>\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/formula1.svg?v=1651560400\" alt=\"Organic's Best Test Store\"><\/div>\n<div class=\"product_features_container_content\">\n<p class=\"uvp-headline\">Right Formula Guarantee<\/p>\n<p>If you feel there is a better formula for your child than this one,\nwe'll send you a gift card to try out another box or can.<\/p>\n<\/div><\/div>\n<\/div>\n<div style=\"margin-top:35px;margin-bottom:45px;font-size:14px;\"><p><b>Disclaimer:<\/b> Breastfeeding is the best nutrition for your baby, because breast milk provides your child with all the essential nutrients it needs for growth and development. Please consult your pediatrician if your child requires supplemental feeding.<\/p><\/div>"
-      }
-    },
-    "1652125874c400d309": {
-      "type": "custom-html",
-      "settings": {
-        "custom_html": "<div class=\"rich-text__content center\"> <h2 class=\"rich-text__heading title\">\n            Recommended By<\/h2> <div class=\"feature_divider\"><\/div> <div class=\"rich-text__text featured_text\"><\/div>\n<\/div><div class=\"row cc-three-columns\">\n<div class=\"one-third column alpha\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/pickyeater-home-logo.png?v=1613465041\" alt=\"rookiemoms-logo\"><\/div>\n<div class=\"one-third column\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/rookiemoms-home-logo.png?v=1613465041\" alt=\"rookiemoms-logo\"><\/div>\n<div class=\"one-third column omega\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/scarymoms-home-logo.png?v=1613465040\" alt=\"rookiemoms-logo\"><\/div>\n<\/div>",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "16508077005b272cfb": {
-      "type": "divider",
-      "settings": {
-        "divider_spacing": 5,
-        "divider_border": false,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "1651563419a2f6d4dc": {
-      "type": "featured-text",
-      "settings": {
-        "title": "Meet Our Community",
-        "content": "",
-        "button_label": "",
-        "button_link": "",
-        "text_size": "featured_text",
-        "text_alignment": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "16515994206cbbd993": {
-      "type": "custom-html",
-      "settings": {
-        "custom_html": "<div style=\"position: relative; width: 100%;height: 0; padding-bottom: 56.25%;\"><iframe style=\"position: absolute;  width: 100%; height: 100%; left: 0; top: 0;\" src=\"https:\/\/killerplayer.com\/start\/video\/3fda8e6b-83a1-43d4-8d09-ea48f9120606\" width=\"745\" height=\"419\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe><\/div>",
-        "css_class": "hmvideo",
-        "custom_css": ".hmvideo {max-width:800px;margin:auto;margin-bottom:40px;}"
       }
     },
     "collection-list-1": {
@@ -141,6 +97,63 @@
         "frontpage_collections_per_row": 4,
         "css_class": "grow",
         "custom_css": ".is-flex-wrap {\n    flex-wrap: wrap;\n    justify-content: center;\n}\n\n.collection-info__caption {display:none;}\n\n.grow .product-wrap { transition: all .2s ease-in-out; }\n.grow .product-wrap:hover { transform: scale(1.1); }"
+      }
+    },
+    "16560101683c80a97e": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Why Parents Trust Us",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "164666447028c756f6": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"product_features\">\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/delivery1.svg?v=1651560400\" alt=\"Organic's Best Test Store\">\n<\/div>\n<div class=\"product_features_container_content\">\n<p class=\"uvp-headline\">Insured Express Delivery<\/p>\n<p>We exclusively ship all orders with insured express delivery to ensure all orders arrive in only 2-5 business days.<\/p>\n<\/div><\/div>\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/authenticity.svg?v=1651560402\" alt=\"Organic's Best Test Store\">\n<\/div>\n<div class=\"product_features_container_content\">\n<p class=\"uvp-headline\">Authentic Products<\/p>\n<p>We source our products directly from the manufacturers in Europe to ensure all our products are always authentic.<\/p>\n<\/div><\/div>\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/expiration.svg?v=1651560400\" alt=\"Organic's Best Test Store\">\n<\/div> <div class=\"product_features_container_content\"> \n<p class=\"uvp-headline\">Long Expiration Dates<\/p>\n<p>Our direct supply chain guarantees an expiration date of 6 months into the future or more.<\/p>\n<\/div><\/div>\n<div class=\"product_features_container\">\n<div class=\"product_features_container_icon\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/formula1.svg?v=1651560400\" alt=\"Organic's Best Test Store\"><\/div>\n<div class=\"product_features_container_content\">\n<p class=\"uvp-headline\">Right Formula Guarantee<\/p>\n<p>If you're thinking about trying out another formula after buying from us, let us know! We'll send you a gift card to try out another box or can for free.<\/p>\n<\/div><\/div>\n<\/div>\n<div style=\"margin-top:35px;margin-bottom:45px;font-size:14px;\"><p><b>Disclaimer:<\/b> Breastfeeding is the best nutrition for your baby, because breast milk provides your child with all the essential nutrients it needs for growth and development. Please consult your pediatrician if your child requires supplemental feeding.<\/p><\/div>"
+      }
+    },
+    "1651563419a2f6d4dc": {
+      "type": "featured-text",
+      "settings": {
+        "title": "What Parents Say About Us",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16515994206cbbd993": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div style=\"position: relative; width: 100%;height: 0; padding-bottom: 56.25%;\"><iframe style=\"position: absolute;  width: 100%; height: 100%; left: 0; top: 0;\" src=\"https:\/\/killerplayer.com\/start\/video\/3fda8e6b-83a1-43d4-8d09-ea48f9120606\" width=\"745\" height=\"419\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe><\/div>",
+        "css_class": "hmvideo",
+        "custom_css": ".hmvideo {max-width:800px;margin:auto;margin-bottom:40px;}"
+      }
+    },
+    "1652125874c400d309": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div class=\"rich-text__content center\"> <h2 class=\"rich-text__heading title\">\n            Recommended By<\/h2> <div class=\"feature_divider\"><\/div> <div class=\"rich-text__text featured_text\"><\/div>\n<\/div><div class=\"row cc-three-columns\">\n<div class=\"one-third column alpha\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/pickyeater-home-logo.png?v=1613465041\" alt=\"rookiemoms-logo\"><\/div>\n<div class=\"one-third column\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/rookiemoms-home-logo.png?v=1613465041\" alt=\"rookiemoms-logo\"><\/div>\n<div class=\"one-third column omega\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0107\/8227\/7732\/files\/scarymoms-home-logo.png?v=1613465040\" alt=\"rookiemoms-logo\"><\/div>\n<\/div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16508077005b272cfb": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 5,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
       }
     },
     "16508077201cd3852f": {
@@ -375,7 +388,7 @@
     "1651588248ffc27beb": {
       "type": "featured-text",
       "settings": {
-        "title": "What Parents Say About us",
+        "title": "Customer Reviews",
         "content": "",
         "button_label": "",
         "button_link": "",
@@ -390,15 +403,6 @@
       "settings": {
         "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-review-ids=\"67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
         "css_class": "one-whole",
-        "custom_css": ""
-      }
-    },
-    "1651599728a7049c93": {
-      "type": "divider",
-      "settings": {
-        "divider_spacing": 20,
-        "divider_border": false,
-        "css_class": "",
         "custom_css": ""
       }
     },
@@ -423,12 +427,13 @@
   "order": [
     "image-with-text-overlay-1",
     "1646746171aba218de",
+    "collection-list-1",
+    "16560101683c80a97e",
     "164666447028c756f6",
-    "1652125874c400d309",
-    "16508077005b272cfb",
     "1651563419a2f6d4dc",
     "16515994206cbbd993",
-    "collection-list-1",
+    "1652125874c400d309",
+    "16508077005b272cfb",
     "16508077201cd3852f",
     "1646660691c2319816",
     "1650807743194a5606",
@@ -444,7 +449,6 @@
     "1651588229d65eff2c",
     "1651588248ffc27beb",
     "1651583276875e09cd",
-    "1651599728a7049c93",
     "1649921074486d205d"
   ]
 }
