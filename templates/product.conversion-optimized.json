@@ -54,7 +54,7 @@
         "form"
       ],
       "settings": {
-        "product_breadcrumb": false,
+        "product_breadcrumb": true,
         "media_position": "is-flex-row",
         "set_product_height": true,
         "product_height": 800,
@@ -149,7 +149,9 @@
             "tags_exclude": "",
             "tags_include": "",
             "search": "",
-            "linkify": true
+            "linkify": true,
+            "use_metafields": true,
+            "sku_tagtype": "sku"
           }
         }
       },
