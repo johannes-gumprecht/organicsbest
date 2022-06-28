@@ -159,7 +159,9 @@
                   <h4 class="sidebar-block__heading">{{ pages[block.settings.content_page].title }}<span class="right icon-down-arrow sidebar-block-toggle-icon"></h4>
                 </summary>
                 <ul class="toggle_list content_block">
-                  <li>{{ pages[block.settings.content_page].content }}</li>
+                  <li class="rte">
+                    {{ pages[block.settings.content_page].content }}
+                  </li>
                 </ul>
               {% else %}
                 <summary>

@@ -5,27 +5,71 @@
 >
 </script>
 
+{% liquid
+  assign continue_url = routes.all_products_collection_url
+
+  if section.settings.continue_shopping_url != blank
+    assign continue_url = section.settings.continue_shopping_url
+  endif
+%}
+
 <section class="section">
-  <a name="pagecontent" id="pagecontent"></a>
   <div class="container content">
     <div class="one-whole column">
-
       <h1>{{ 'cart.general.title' | t }}</h1>
       <div class="feature_divider"></div>
     </div>
 
     {% if cart.item_count == 0 %}
-      <div class="three-eighths columns medium-down--one-whole offset-by-five is-hidden-offset-mobile-only">
-        <p class="quote">{{ 'cart.general.continue_browsing_html' | t }}</p>
-
-        <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}" class="cart__continue-shopping global-button global-button--text">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
+      <div
+        class="
+          three-eighths
+          columns
+          medium-down--one-whole
+          offset-by-five
+          is-hidden-offset-mobile-only
+        "
+      >
+        <p class="quote">
+          {{ 'cart.general.continue_browsing_html' | t }}
+        </p>
+        <a
+          class="
+            cart__continue-shopping
+            global-button
+            global-button--text
+          "
+          href="{{ continue_url }}"
+        >
+          {{ 'cart.general.continue_shopping' | t }}
+        </a>
       </div>
       <br />
     {% else %}
-      <div class="three-eighths columns medium-down--one-whole offset-by-five is-hidden-offset-mobile-only hidden js-empty-cart__message">
-        <p class="quote">{{ 'cart.general.continue_browsing_html' | t }}</p>
-
-        <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}" class="cart__continue-shopping global-button global-button--text">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
+      <div
+        class="
+          three-eighths
+          columns
+          medium-down--one-whole
+          offset-by-five
+          is-hidden-offset-mobile-only
+          hidden
+          js-empty-cart__message
+        "
+      >
+        <p class="quote">
+          {{ 'cart.general.continue_browsing_html' | t }}
+        </p>
+        <a
+          class="
+            cart__continue-shopping
+            global-button
+            global-button--text
+          "
+          href="{{ continue_url }}"
+        >
+          {{ 'cart.general.continue_shopping' | t }}
+        </a>
       </div>
       <br />
 
@@ -272,7 +316,9 @@
             {% endif %}
 
             {% if cart.item_count > 0 %}
-              <a href="{% if cart.items.first.product.collections != blank %}{{ cart.items.first.product.collections.last.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}" class="continue-shopping">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
+              <a class="continue-shopping" href="{{ continue_url }}">
+                {{ 'cart.general.continue_shopping' | t }}
+              </a>
             {% endif %}
           </div>
         </div>
@@ -283,16 +329,6 @@
 </section>
 
 {% render 'cart-shipping-calculator' %}
-
-<div class="cart__blocks">
-  {% for block in section.blocks %}
-    <div {{ block.shopify_attributes }} class="block__{{ block.type }} block__{{ block.id }}">
-      {% if block.type == 'featured_collection' %}
-        {% include 'include-featured-collection', type: 'block' %}
-      {% endif %}
-    </div>
-  {% endfor %}
-</div>
 
 {% schema %}
 {
@@ -314,65 +350,12 @@
       "type": "richtext",
       "id": "cart_message",
       "label": "Cart message"
-    }
-  ],
-  "blocks": [
+    },
     {
-      "type": "featured_collection",
-      "name": "Featured collection",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Heading",
-          "default": "You may also be interested in"
-        },
-        {
-          "type": "checkbox",
-          "id": "collection_description",
-          "label": "Show collection description",
-          "default": false
-        },
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "Collection"
-        },
-        {
-          "type": "radio",
-          "id": "collection_style",
-          "label": "Collection layout",
-          "default": "grid",
-          "options": [
-            {
-              "value": "slider",
-              "label": "Slider"
-            },
-            {
-              "value": "grid",
-              "label": "Grid"
-            }
-          ]
-        },
-        {
-          "type": "range",
-          "id": "products_per",
-          "label": "Products per row",
-          "min": 2,
-          "max": 7,
-          "step": 1,
-          "default": 6
-        },
-        {
-          "type": "range",
-          "id": "products_limit",
-          "label": "Limit products",
-          "min": 2,
-          "max": 50,
-          "step": 1,
-          "default": 6
-        }
-      ]
+      "type": "url",
+      "id": "continue_shopping_url",
+      "label": "Continue shopping link",
+      "info": "Where to direct customers after clicking \"Continue shopping\""
     }
   ]
 }

@@ -5,17 +5,15 @@
 >
 </script>
 
-<a name="pagecontent" id="pagecontent"></a>
-
 {%
   render 'sidebar',
-  context: 'product'
+  context: 'product',
 %}
 
 {% schema %}
 {
   "name": "Sidebar",
-  "class": "shopify-section--product-sidebar is-product-sidebar",
+  "class": "shopify-section--product-sidebar is-product-sidebar content",
   "settings": [
     {
       "type": "paragraph",

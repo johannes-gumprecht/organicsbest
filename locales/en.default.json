@@ -37,6 +37,10 @@
       "subtext": "We're sorry, but the page you requested could not be found.",
       "continue_shopping_html": "Try searching or <a href=\"/collections/all\">continue shopping &rarr;</a>"
     },
+    "accessibility": {
+      "total_reviews": "total reviews",
+      "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars"
+    },
     "meta": {
       "tagged_html": "Tagged \"{{ tags }}\"",
       "page": "Page {{ page_number }}"
@@ -168,21 +172,15 @@
       "tags": "Tags",
       "clear": "Clear",
       "apply_filter": "Apply",
-      "clear_all": "Clear all"
+      "clear_all": "Clear all",
+      "from": "From",
+      "to": "To"
     },
     "sorting": {
       "title": "Sort by",
       "sort_collection": "Sort {{ title }}",
       "filter": "Filter by",
-      "filter_collection": "Filter {{ title }}",
-      "featured": "Featured",
-      "best_selling": "Best Selling",
-      "az": "Alphabetically: A-Z",
-      "za": "Alphabetically: Z-A",
-      "price_ascending": "Price: Low to High",
-      "price_descending": "Price: High to Low",
-      "date_descending": "Date: New to Old",
-      "date_ascending": "Date: Old to New"
+      "filter_collection": "Filter {{ title }}"
     }
   },
   "products": {
@@ -224,6 +222,10 @@
       "message_content_last": " becomes available - ",
       "post_success": "Thanks! We will notify you when this product becomes available!",
       "post_error": "Please provide a valid email address."
+    },
+    "onboarding": {
+      "tab_title": "Description",
+      "tab_content": "Add a product description to share information about your product."
     }
   },
   "contact": {
@@ -401,7 +403,7 @@
       "free": "Free",
       "uploaded_file": "uploaded file",
       "continue_browsing_html": "There are no items in your cart.",
-      "continue_shopping_link_html": "Continue Shopping",
+      "continue_shopping": "Continue Shopping",
       "excluding_tax_shipping": "Excluding tax & shipping",
       "tax_and_shipping": "Taxes and shipping calculated at checkout",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",

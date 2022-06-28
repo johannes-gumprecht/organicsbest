@@ -37,6 +37,10 @@
       "subtext": "Nous sommes désolés, la page que vous avez demandée n'existe pas.",
       "continue_shopping_html": "Essayez de faire une recherche ou <a href=\"/collections/all\">poursuivez vos achats →</a>"
     },
+    "accessibility": {
+      "total_reviews": "total des critiques",
+      "star_reviews_info": "{{ rating_value }} sur {{ rating_max }} étoiles"
+    },
     "password_page": {
       "opening_soon": "Bientôt ouvert",
       "spread_the_word": "Passez le mot",
@@ -168,21 +172,15 @@
       "tags": "Labels",
       "clear": "Annuler",
       "apply_filter": "Appliquer",
-      "clear_all": "Tout effacer"
+      "clear_all": "Tout effacer",
+      "from": "À partir de",
+      "to": "À"
     },
     "sorting": {
       "title": "Classer par",
       "sort_collection": "Classer {{ title }}",
       "filter": "Filter by",
-      "filter_collection": "Filtrer {{ title }}",
-      "featured": "Coups de cœur",
-      "best_selling": "Meilleurs ventes",
-      "az": "Par ordre alphabétique : A-Z",
-      "za": "Par ordre alphabétique : Z-A",
-      "price_ascending": "Par prix : du moins cher au plus cher",
-      "price_descending": "Par prix : du plus cher au moins cher",
-      "date_descending": "Par date : du plus récent au moins récent",
-      "date_ascending": "Par date : du moins récent au plus récent"
+      "filter_collection": "Filtrer {{ title }}"
     }
   },
   "products": {
@@ -224,6 +222,10 @@
       "price": {
         "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} / {{ unit_measure }}"
       }
+    },
+    "onboarding": {
+      "tab_title": "La description",
+      "tab_content": "Ajoutez une description de produit pour partager des informations sur votre produit."
     }
   },
   "contact": {
@@ -399,7 +401,7 @@
       "item": "Article",
       "uploaded_file": "fichier téléchargé",
       "continue_browsing_html": "Votre panier ne contient aucun article.",
-      "continue_shopping_link_html": "Poursuivre vos achats→",
+      "continue_shopping": "Poursuivre vos achats→",
       "excluding_tax_shipping": "Taxe et frais de livraison non compris",
       "tax_and_shipping": "Taxes et frais de port calculés à l'étape de paiement",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes et <a href=\"{{ link }}\">frais de port</a> calculés à l'étape de paiement",

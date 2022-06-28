@@ -5,38 +5,28 @@
 >
 </script>
 
-{%- assign image = section.settings.image -%}
-{%- assign mobile_image = section.settings.mobile_image -%}
-{%- assign background_style = section.settings.caption_content_background -%}
-{%- assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop -%}
-{%- assign wide_display = section.settings.wide_display -%}
-{%- assign banner_title = section.settings.contact_heading -%}
-{%- assign banner_subheading = section.settings.subtitle -%}
+{% assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop %}
 
-{% if image != blank %}
+{% if section.settings.image != blank %}
   {%
     render 'template-banner',
-    image: image,
-    mobile_image: mobile_image
-    background_style: background_style,
+    image: section.settings.image,
+    mobile_image: section.settings.mobile_image,
+    background_style: section.settings.caption_content_background,
     mobile_crop: mobile_crop,
-    wide_display: wide_display,
-    banner_title: banner_title,
-    banner_subheading: banner_subheading,
-    show_caption: true
+    wide_display: section.settings.wide_display,
+    banner_title: section.settings.contact_heading,
+    banner_subheading: section.settings.subtitle,
+    show_caption: true,
   %}
 {% endif %}
 
-{% if image == blank %}
-  <a name="pagecontent" id="pagecontent"></a>
-{% endif %}
-
-{% include 'include-custom-contact-form' %}
+{% render 'include-custom-contact-form' %}
 
 {% schema %}
 {
   "name": "Contact",
-  "class": "shopify-section--contact-section",
+  "class": "shopify-section--contact-section under-menu",
   "settings": [
     {
       "type": "header",

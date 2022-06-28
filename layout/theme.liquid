@@ -1,6 +1,6 @@
 {% capture content %}
 <!DOCTYPE html>
-<html class="no-js no-touch" lang="{{ shop.locale }}">
+<html class="no-js no-touch" lang="{{ request.locale.iso_code }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
@@ -34,11 +34,6 @@
     <link rel="dns-prefetch" href="https://v.shopify.com" />
     <link rel="dns-prefetch" href="https://cdn.shopifycloud.com" />
     <link rel="dns-prefetch" href="https://monorail-edge.shopifysvc.com">
-
-    {% if settings.enable_shopify_review_comments %}
-      <link rel="preconnect" href="https://productreviews.shopifycdn.com" />
-      <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com" />
-    {% endif %}
 
     <!-- Preload Assets -->
     <link rel="preload" href="{{ 'fancybox.css' | asset_url }}" as="style">
@@ -103,7 +98,7 @@
     {% comment %}Inject theme-object begin{% endcomment %}
     <script>
       window.PXUTheme = window.PXUTheme || {};
-      window.PXUTheme.version = '7.0.1';
+      window.PXUTheme.version = '7.1.1';
       window.PXUTheme.name = 'Turbo';
     </script>
     {% comment %}Inject theme-object end{% endcomment %}
@@ -213,8 +208,6 @@
     {% assign feature_image = true %}
   {% elsif template contains "banner" %}
     {% assign feature_image = true %}
-  {% elsif template contains "details" %}
-    {% assign feature_image = true %}
   {% elsif template contains "faq" %}
     {% assign feature_image = true %}
   {% elsif template contains "search" %}
@@ -258,9 +251,28 @@
     if(('ontouchstart' in window)||window.DocumentTouch&&document instanceof DocumentTouch)document.documentElement.className=document.documentElement.className.replace(/\bno-touch\b/,'has-touch');
   </script>
 
+    {% comment %}Inject icon-star-symbol begin{% endcomment %}
+    <svg
+      class="icon-star-reference"
+      aria-hidden="true"
+      focusable="false"
+      role="presentation"
+      xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="3 3 17 17" fill="none"
+    >
+      <symbol id="icon-star">
+        <rect class="icon-star-background" width="20" height="20" fill="currentColor"/>
+        <path d="M10 3L12.163 7.60778L17 8.35121L13.5 11.9359L14.326 17L10 14.6078L5.674 17L6.5 11.9359L3 8.35121L7.837 7.60778L10 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </symbol>
+      <clipPath id="icon-star-clip">
+        <path d="M10 3L12.163 7.60778L17 8.35121L13.5 11.9359L14.326 17L10 14.6078L5.674 17L6.5 11.9359L3 8.35121L7.837 7.60778L10 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </clipPath>
+    </svg>
+    {% comment %}Inject icon-star-symbol end{% endcomment %}
+
+
     {% section 'header' %}
 
-    <div class="mega-menu-container">
+    <div class="mega-menu-container nav-desktop__tier-1">
       {% if settings.mega_menu_1 %}
         {% section 'mega-menu-1' %}
       {% endif %}
@@ -280,23 +292,11 @@
       {% if settings.mega_menu_5 %}
         {% section 'mega-menu-5' %}
       {% endif %}
-
     </div>
 
-    {% if template contains 'index' %}
-      <a name="pagecontent" id="pagecontent"></a>
-      <div class="index-sections">
-    {% endif %}
-
-    {{ content_for_layout }}
-
-    {% if template contains 'index' %}
-      </div>
-    {% endif %}
-
-    {% unless template contains 'index' or settings.secondary_newsletter_banner == false %}
-      {% section 'newsletter' %}
-    {% endunless %}
+    <div class="section-wrapper section-wrapper--{{ template.name }}">
+      {{ content_for_layout }}
+    </div>
 
     {% section 'footer' %}
 
@@ -313,7 +313,6 @@
     {% if settings.show_shipping_calculator and template contains "cart" %}
       {% render 'cart-shipping-scripts' %}
     {% endif %}
-
   </body>
 </html>
 {% endcapture %}

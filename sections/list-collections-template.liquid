@@ -5,32 +5,24 @@
 >
 </script>
 
-{%- assign image = section.settings.image -%}
-{%- assign mobile_image = section.settings.mobile_image -%}
-{%- assign background_style = section.settings.caption_content_background -%}
 {%- assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop -%}
-{%- assign wide_display = section.settings.wide_display -%}
-{%- assign display_collection_title = section.settings.display_collection_title -%}
 {%- assign banner_title = 'collections.general.title' | t -%}
 
-{% if image %}
+{% if section.settings.image %}
   {%
     render 'template-banner',
-    image: image,
-    mobile_image: mobile_image,
-    background_style: background_style,
+    image: section.settings.image,
+    mobile_image: section.settings.mobile_image,
+    background_style: section.settings.caption_content_background,
     mobile_crop: mobile_crop,
-    wide_display: wide_display,
+    wide_display: section.settings.wide_display,
     banner_title: banner_title,
-    show_caption: display_collection_title
+    show_caption: section.settings.display_collection_title,
   %}
 {% endif %}
 
 <section class="section">
-  {% if image == blank %}
-    <a name="pagecontent" id="pagecontent"></a>
-  {% endif %}
-  <div class="container">
+  <div class="container content">
     {% paginate collections by section.settings.pagination_limit %}
       {%- assign collections_per_row = section.settings.collections_per_row -%}
 
@@ -81,7 +73,7 @@
         </div>
       </div>
 
-      {% if display_collection_title and image == blank %}
+      {% if section.settings.display_collection_title and section.settings.image == blank %}
         <div class="one-whole column">
           <h1>{{ 'collections.general.title' | t }}</h1>
         </div>
@@ -104,7 +96,16 @@
         <div class="has-sidebar-option sidebar-enabled--{{ sidebar }}">
           <div class="container">
             <div class="one-whole column list-collections-wrapper">
-              <div class="list-collections collection-matrix equal-columns--outside-trim is-flex is-flex-wrap">
+              <div
+                class="
+                  list-collections
+                  product-list
+                  product-list--collection
+                  equal-columns--outside-trim
+                  is-flex
+                  is-flex-wrap
+                "
+              >
                 {% for collection in collections %}
                   {% unless collection.handle == 'frontpage' %}
                     {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
@@ -187,7 +188,7 @@
 {% schema %}
 {
   "name": "Collections",
-  "class": "shopify-section--collection-template",
+  "class": "shopify-section--collection-template under-menu",
   "settings": [
     {
       "type": "header",

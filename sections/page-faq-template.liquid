@@ -5,22 +5,7 @@
 >
 </script>
 
-{%- assign image = section.settings.image -%}
-{%- assign mobile_image = section.settings.mobile_image -%}
-{%- assign background_style = section.settings.caption_content_background -%}
-{%- assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop -%}
-{%- assign wide_display = section.settings.wide_display -%}
-{%- assign banner_pretext = section.settings.pretext -%}
-{%- assign banner_title = section.settings.title -%}
-{%- assign banner_subheading = section.settings.subtitle -%}
-{%- assign banner_button1 = section.settings.button1 -%}
-{%- assign banner_button1_link = section.settings.button1_link -%}
-{%- assign banner_button1_style = section.settings.button1_style -%}
-{%- assign banner_button2 = section.settings.button2 -%}
-{%- assign banner_button2_link = section.settings.button2_link -%}
-{%- assign banner_button2_style = section.settings.button2_style -%}
-{%- assign banner_text_align = section.settings.text_align -%}
-{%- assign banner_text_position = section.settings.text_position -%}
+{% assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop %}
 
 <script type="application/ld+json">
   {
@@ -46,40 +31,48 @@
 {% if section.settings.show_banner %}
   {%
     render 'template-banner',
-    image: image,
-    mobile_image: mobile_image
-    background_style: background_style,
+    image: section.settings.image,
+    mobile_image: section.settings.mobile_image,
+    background_style: section.settings.caption_content_background,
     mobile_crop: mobile_crop,
-    wide_display: wide_display,
-    banner_pretext: banner_pretext,
-    banner_title: banner_title,
-    banner_subheading: banner_subheading,
-    banner_button1: banner_button1,
-    banner_button1_link: banner_button1_link,
-    banner_button1_style: banner_button1_style,
-    banner_button2: banner_button2,
-    banner_button2_link: banner_button2_link,
-    banner_button2_style: banner_button2_style,
-    banner_text_align: banner_text_align,
-    banner_text_position: banner_text_position,
+    wide_display: section.settings.wide_display,
+    banner_pretext: section.settings.pretext,
+    banner_title: section.settings.title,
+    banner_subheading: section.settings.subtitle,
+    banner_button1: section.settings.button1,
+    banner_button1_link: section.settings.button1_link,
+    banner_button1_style: section.settings.button1_style,
+    banner_button2: section.settings.button2,
+    banner_button2_link: section.settings.button2_link,
+    banner_button2_style: section.settings.button2_style,
+    banner_text_align: section.settings.text_align,
+    banner_text_position: section.settings.text_position,
     show_caption: true
   %}
 {% endif %}
 
 <section class="section">
-  {% if section.settings.show_banner == blank %}
-    <a name="pagecontent" id="pagecontent"></a>
-  {% endif %}
-  <div class="container main content">
-    <div class="one-whole column page">
-      {% unless image != blank or section.settings.show_banner %}
+  <div
+    class="
+      container
+      main
+      content
+    "
+  >
+    <div
+      class="
+        one-whole
+        column
+        page
+      "
+    >
+      {% unless section.settings.image != blank or section.settings.show_banner %}
         <h1>{{ page.title }}</h1>
         <div class="feature_divider"></div>
       {% endunless %}
-
       {%
         render 'page-multi-column',
-        content: page.content
+        content: page.content,
       %}
     </div>
 
@@ -91,19 +84,39 @@
       {% endfor %}
     {% endif %}
 
-    <div class="{% if image == true %}one-half{% else %}one-whole{% endif %} column medium-down--one-whole faq faq__column-1">
+    <div
+      class="
+        {% if image == true %}
+          one-half
+        {% else %}
+          one-whole
+        {% endif %}
+        column
+        medium-down--one-whole
+        faq
+        faq__column-1
+      "
+    >
       {% if section.blocks.size > 0 %}
         <dl class="faqAccordion">
           {% for block in section.blocks %}
             {% if block.type == "heading" %}
               {% if block.settings.heading != blank %}
-                <h2 class="title faq--heading">{{ block.settings.heading }}</h2>
+                <h2 class="title faq--heading">
+                  {{ block.settings.heading }}
+                </h2>
               {% endif %}
             {% endif %}
 
             {% if block.settings.title != blank %}
               <dt>
-                <button type="button" aria-controls="panel-01" aria-expanded="true">{{ block.settings.title }}</button>
+                <button
+                  type="button"
+                  aria-controls="panel-01"
+                  aria-expanded="true"
+                >
+                  {{ block.settings.title }}
+                </button>
               </dt>
 
               <dd id="panel-01" aria-hidden="false">
@@ -119,13 +132,22 @@
   {% if section.blocks.size > 0 %}
     {% for block in section.blocks %}
       {% if block.type == 'image' %}
-        <div class="one-half column medium-down--one-whole faq faq--image faq__column-2">
+        <div
+          class="
+            one-half
+            column
+            medium-down--one-whole
+            faq
+            faq--image
+            faq__column-2
+          "
+        >
           {% if block.settings.image != blank %}
             {%
               render 'image-element',
               image: block.settings.image,
               alt: block.settings.image.alt,
-              stretch_width: true
+              stretch_width: true,
             %}
           {% else %}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -139,7 +161,7 @@
 {% schema %}
 {
   "name": "Page | faq",
-  "class": "shopify-section--page-faq-template",
+  "class": "shopify-section--page-faq-template under-menu",
   "settings": [
     {
       "type": "checkbox",

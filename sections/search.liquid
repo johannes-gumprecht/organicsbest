@@ -16,42 +16,48 @@
 <section
   class="
     section
-    is-width-wide
-    has-no-side-gutter
+    {% if section.settings.wide_display == true %}
+      is-width-wide
+      has-no-side-gutter
+    {% endif %}
     {{ section.settings.css_class }}
   "
 >
-  <div
-    class="
-      search__section
-      {% if section.settings.image != blank %}
-        search-bgr-true
-      {% endif %}
-      text-align--{{ section.settings.search_section_text_align }}
-      lazyload
-    "
-    {% if section.settings.image != blank %}
-      data-bg="{{ section.settings.image | img_url: '1600x' }}"
-      {% if section.settings.mobile_image != blank %}
-        data-mobile-bg="{{ section.settings.mobile_image | img_url: '800x' }}"
-      {% endif %}
-      data-sizes="100vw"
-    {% endif %}
-  >
-    <div class="section_form">
-      {% if section.settings.search_title != blank %}
-        <h2 class="title">
-          {{ section.settings.search_title }}
-        </h2>
-      {% endif %}
+  <div class="container">
+    <div class="one-whole column">
+      <div
+        class="
+          search__section
+          {% if section.settings.image != blank %}
+            search-bgr-true
+          {% endif %}
+          text-align--{{ section.settings.search_section_text_align }}
+          lazyload
+        "
+        {% if section.settings.image != blank %}
+          data-bg="{{ section.settings.image | img_url: '1600x' }}"
+          {% if section.settings.mobile_image != blank %}
+            data-mobile-bg="{{ section.settings.mobile_image | img_url: '800x' }}"
+          {% endif %}
+          data-sizes="100vw"
+        {% endif %}
+      >
+        <div class="section_form">
+          {% if section.settings.search_title != blank %}
+            <h2 class="title">
+              {{ section.settings.search_title }}
+            </h2>
+          {% endif %}
 
-      {% if section.settings.search_text != blank %}
-        <div class="search-text">
-          {{ section.settings.search_text }}
+          {% if section.settings.search_text != blank %}
+            <div class="search-text">
+              {{ section.settings.search_text }}
+            </div>
+          {% endif %}
+
+          {% render 'search-form' %}
         </div>
-      {% endif %}
-
-      {% render 'search-form' %}
+      </div>
     </div>
   </div>
 </section>
@@ -61,6 +67,12 @@
   "name": "Search",
   "class": "shopify-section--search",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "wide_display",
+      "label": "Wide display",
+      "default": true
+    },
     {
       "type": "text",
       "id": "search_title",
@@ -136,12 +148,7 @@
   "presets": [{
     "name": "Search",
     "category": "Content"
-  }],
-  "templates": [
-    "index",
-    "product",
-    "page"
-  ]
+  }]
 }
 
 {% endschema %}

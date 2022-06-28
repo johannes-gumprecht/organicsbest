@@ -143,7 +143,7 @@
               {% if block.settings.page != blank %}
                 <h6>{{ pages[block.settings.page].title }}<span class="right icon-down-arrow"></span></h6>
 
-                <div class="toggle_content">
+                <div class="toggle_content rte">
                   {{ pages[block.settings.page].content }}
                 </div>
               {% else %}
@@ -189,7 +189,7 @@
         {% endif %}
 
         <p class="credits">
-          &copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: '/' }}.
+          &copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}.
 
           {{ section.settings.copyright_text }}
 
@@ -252,13 +252,13 @@
     },
     {
       "type": "header",
-      "content": "Currency selector",
-      "info": "To add a payment, go to your [currency settings.](/admin/settings/payments)"
+      "content": "Country selector",
+      "info": "To add a country, go to your [payment settings.](/admin/settings/payments)"
     },
     {
       "type": "checkbox",
       "id": "show_currency_selector",
-      "label": "Show currency selector",
+      "label": "Show country selector",
       "default": true
     }
   ],

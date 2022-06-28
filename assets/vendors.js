@@ -218,10 +218,9 @@ window.PaymentTerms = class PaymentTerms {
   constructor(el) {
     this._el = el;
     this._reference = this._el.querySelector('[data-payment-terms-reference] shopify-payment-terms');
-
-    if (!this._reference) return;
-
     this._target = this._el.querySelector('[data-payment-terms-target]');
+
+    if (!(this._reference && this._target)) return;
 
     this._input = document.createElement('input');
     this._input.name = 'id';
@@ -234,7 +233,7 @@ window.PaymentTerms = class PaymentTerms {
   }
 
   update(variantId) {
-    if (!this._reference) return;
+    if (!(this._reference && this._target)) return;
     this._input.value = variantId;
     this._input.dispatchEvent(new Event('change', { bubbles: true }));
   }
@@ -243,3 +242,35 @@ window.PaymentTerms = class PaymentTerms {
 // @pixelunion/animations@0.1.0
 
 !function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"function"==typeof define&&define.amd?define(["exports"],e):e((t=t||self).animations={})}(this,function(t){"use strict";function n(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function i(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i)}}function r(t,e,n){return e&&i(t.prototype,e),n&&i(t,n),t}function e(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var i=Object.getOwnPropertySymbols(e);t&&(i=i.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,i)}return n}function s(){return new Promise(function(t){window.requestAnimationFrame(t)})}var a=function(){function e(t){n(this,e),this._el=t.el,this.cancelRunning=null,this._state=t.state||"initial",this.initialState=this._state,this.stateAttribute=t.stateAttribute||"data-animation-state",this.stateChangeAttribute=t.stateChangeAttribute||"data-animation",this.endEvent=t.endEvent||"transitionend",this.hold=!!t.hold,this.onStart=t.onStart||function(){},this.activeEventHandler=null}return r(e,[{key:"isState",value:function(t){return t===this._state}},{key:"animateTo",value:function(t,e){var i=this,r=1<arguments.length&&void 0!==e?e:{},a=this._el.dataset[this.stateAttribute]||this._state,o=t||this.initialState,u=r.force,l="hold"in r?r.hold:this.hold;return new Promise(function(e){if(i.cancelRunning&&i.cancelRunning(),a===o)return i._el.removeAttribute(i.stateChangeAttribute),void e(a,null);var n=!0;if(i.cancelRunning=function(){n=!1,e(null,null)},i._el.removeEventListener(i.endEvent,i.activeEventHandler),i.activeEventHandler=null,u)return i._el.setAttribute(i.stateChangeAttribute,"".concat(a,"=>").concat(o)),i.onStart({el:i._el,from:a,to:o}),"function"==typeof r.onStart&&r.onStart({el:i._el,from:a,to:o}),i._el.setAttribute(i.stateAttribute,o),i._state=o,l||i._el.removeAttribute(i.stateChangeAttribute),void e(o,null);s().then(function(){if(!n)throw new Error("cancelled");return i._el.setAttribute(i.stateChangeAttribute,"".concat(a,"=>").concat(o)),i.onStart({el:i._el,from:a,to:o}),"function"==typeof r.onStart&&r.onStart({el:i._el,from:a,to:o}),s()}).then(function(){if(!n)throw new Error("cancelled");i._el.removeEventListener(i.endEvent,i.activeEventHandler),i.activeEventHandler=function(t){t.target===i._el&&n&&(i._el.removeEventListener(i.endEvent,i.activeEventHandler),l||i._el.removeAttribute(i.stateChangeAttribute),e(o,t))},i._el.addEventListener(i.endEvent,i.activeEventHandler),i._el.setAttribute(i.stateAttribute,o),i._state=o}).catch(function(t){if("cancelled"!==t.message)throw t})})}},{key:"unload",value:function(){this._el.removeEventListener(this.endEvent,this.activeEventHandler),this.activeEventHandler=null}},{key:"el",get:function(){return this._el}},{key:"state",get:function(){return this._state}}]),e}(),o=function(){function t(){n(this,t),this.animations=new Map}return r(t,[{key:"add",value:function(t){if(this.animations.has(t.el))return this.animations.get(t.el);var e=new a(t);return this.animations.set(t.el,e),e}},{key:"remove",value:function(t){this.animations.delete(t.el),t.unload()}},{key:"removeAll",value:function(){this.animations.forEach(function(t){return t.unload()})}}]),t}();t.Animation=a,t.AnimationsManager=o,t.animation=function(t){return new a(function(r){for(var t=1;t<arguments.length;t++){var a=null!=arguments[t]?arguments[t]:{};t%2?e(a,!0).forEach(function(t){var e,n,i;e=r,i=a[n=t],n in e?Object.defineProperty(e,n,{value:i,enumerable:!0,configurable:!0,writable:!0}):e[n]=i}):Object.getOwnPropertyDescriptors?Object.defineProperties(r,Object.getOwnPropertyDescriptors(a)):e(a).forEach(function(t){Object.defineProperty(r,t,Object.getOwnPropertyDescriptor(a,t))})}return r}({options:t},{endEvent:"animationend",hold:!0}))},t.transition=function(t){return new a(t)},Object.defineProperty(t,"__esModule",{value:!0})});
+
+// @pixelunion/events@1.0.0
+
+var EventHandler = /** @class */ (function () {
+  function EventHandler() {
+      this.events = [];
+  }
+  EventHandler.prototype.register = function (el, event, listener) {
+      if (!el || !event || !listener)
+          return null;
+      this.events.push({ el: el, event: event, listener: listener });
+      el.addEventListener(event, listener);
+      return { el: el, event: event, listener: listener };
+  };
+  EventHandler.prototype.unregister = function (_a) {
+      var el = _a.el, event = _a.event, listener = _a.listener;
+      if (!el || !event || !listener)
+          return null;
+      this.events = this.events.filter(function (e) { return el !== e.el
+          || event !== e.event || listener !== e.listener; });
+      el.removeEventListener(event, listener);
+      return { el: el, event: event, listener: listener };
+  };
+  EventHandler.prototype.unregisterAll = function () {
+      this.events.forEach(function (_a) {
+          var el = _a.el, event = _a.event, listener = _a.listener;
+          return el.removeEventListener(event, listener);
+      });
+      this.events = [];
+  };
+  return EventHandler;
+}());

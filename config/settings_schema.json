@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Turbo",
     "theme_author": "Out of the Sandbox",
-    "theme_version": "7.0.1",
+    "theme_version": "7.1.1",
     "theme_documentation_url": "https:\/\/help.outofthesandbox.com\/",
     "theme_support_url": "https:\/\/help.outofthesandbox.com\/hc\/en-us\/requests\/new"
   },
@@ -455,6 +455,12 @@
       },
       {
         "type": "color",
+        "id": "sold_out_banner_color",
+        "label": "Sold out",
+        "default": "#363636"
+      },
+      {
+        "type": "color",
         "id": "new_banner_color",
         "label": "New, pre-order, and coming soon",
         "default": "#AE3333"
@@ -699,13 +705,13 @@
         "type": "color",
         "id": "password_page_text_color",
         "label": "Text",
-        "default": "#ffffff"
+        "default": "#333333"
       },
       {
         "type": "color",
         "id": "password_page_background_color",
         "label": "Background",
-        "default": "#000000"
+        "default": "#FFFFFF"
       }
     ]
   },
@@ -1178,29 +1184,6 @@
         ]
       },
       {
-        "type": "select",
-        "id": "search_pagination_type",
-        "label": "Pagination type",
-        "options": [
-          {
-            "value": "basic_pagination",
-            "label": "Page links"
-          },
-          {
-            "value": "load_more_button",
-            "label": "Load more button"
-          },
-          {
-            "value": "load_more",
-            "label": "Infinite load more button"
-          },
-          {
-            "value": "infinite_scroll",
-            "label": "Infinite scroll"
-          }
-        ]
-      },
-      {
         "type": "header",
         "content": "Predictive search"
       },
@@ -1290,45 +1273,6 @@
         "id": "notify_me_richtext",
         "label": "Text",
         "default": "<p>Notify me when this product is available:</p>"
-      },
-      {
-        "type": "header",
-        "content": "Product reviews"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_shopify_review_comments",
-        "label": "Enable product reviews and ratings",
-        "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360008549274#section2)",
-        "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_shopify_product_badges",
-        "label": "Display star rating on products",
-        "default": false
-      },
-      {
-        "type": "radio",
-        "id": "shopify_review_position",
-        "label": "Reviews position",
-        "default": "right",
-        "options": [
-          {
-            "value": "right",
-            "label": "In product description area"
-          },
-          {
-            "value": "below",
-            "label": "Below image\/description"
-          }
-        ]
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_shopify_collection_badges",
-        "label": "Display star rating on product thumbnails",
-        "default": false
       }
     ]
   },
@@ -1349,6 +1293,13 @@
         "id": "collection_swatches",
         "label": "Show color swatches",
         "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006911447-Enabling-Color-Swatches-for-Products)"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_star_ratings",
+        "label": "Show star ratings",
+        "info": "To display a rating, add a product rating app. [Learn more](https://apps.shopify.com/product-reviews)",
+        "default": false
       },
       {
         "type": "checkbox",
@@ -1377,6 +1328,28 @@
         "default": "2"
       },
       {
+        "type": "checkbox",
+        "id": "display_price",
+        "label": "Show price for sold out items",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "sold_out_text",
+        "label": "\"Sold out\" text",
+        "default": "Sold out"
+      },
+      {
+        "type": "text",
+        "id": "free_price_text",
+        "label": "\"Free\" text (for $0 products)",
+        "default": "Free"
+      },
+      {
+        "type": "header",
+        "content": "Pagination"
+      },
+      {
         "type": "select",
         "id": "pagination_type",
         "label": "Pagination type",
@@ -1398,24 +1371,6 @@
             "label": "Infinite scroll"
           }
         ]
-      },
-      {
-        "type": "checkbox",
-        "id": "display_price",
-        "label": "Show price for sold out items",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "sold_out_text",
-        "label": "\"Sold out\" text",
-        "default": "Sold out"
-      },
-      {
-        "type": "text",
-        "id": "free_price_text",
-        "label": "\"Free\" text (for $0 products)",
-        "default": "Free"
       },
       {
         "type": "header",
@@ -1585,7 +1540,7 @@
       {
         "type": "header",
         "content": "Custom theme currency converter",
-        "info": "If custom converter is enabled, the native multi-currency converter will be disabled. [Learn more](https://help.shopify.com/en/manual/payments/shopify-payments/multi-currency/setup)"
+        "info": "If custom converter is enabled, the native multi-country selector will be disabled. [Learn more](https://help.shopify.com/en/manual/payments/shopify-payments/multi-currency/setup)"
       },
       {
         "type": "checkbox",
@@ -1617,13 +1572,6 @@
         "id": "mailchimp_link",
         "label": "Newsletter form action URL",
         "info": "[Find your form action URL](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006912487-Setting-Up-MailChimp-Turbo-)"
-      },
-      {
-        "type": "checkbox",
-        "id": "secondary_newsletter_banner",
-        "label": "Show newsletter form above footer",
-        "info": "Home page newsletter can be added as a section.",
-        "default": true
       }
     ]
   },

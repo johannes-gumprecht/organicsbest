@@ -112,8 +112,12 @@
               <div class="image__container" style="max-width: {{ media.width }}px">
                 {% if product.images.size > 0 %}
                   <img  data-zoom-src="{{ image_5000x }}"
-                        alt="{{ image_alt | escape }}"
-                        class=" lazyload {{ settings.image_loading_style }}"
+                        alt="{{ image_alt }}"
+                        class="
+                          product-gallery__image
+                          lazyload
+                          {{ settings.image_loading_style }}
+                        "
                         data-image-id="{{ product.media[forloop.index0].id }}"
                         data-index="{{ forloop.index0 }}"
                         data-sizes="{% if gallery_click_to_zoom %}100vw{% else %}auto{% endif %}"
@@ -178,7 +182,6 @@
         >
       {% if product.media.size > 1 %}
         {% for media in product.media %}
-
           {% if media.media_type contains 'video' %}
             {% assign thumbnail_badge = 'video-thumbnail' %}
           {% elsif media.media_type contains 'model' %}
@@ -187,8 +190,8 @@
             {% assign thumbnail_badge = '' %}
           {% endif %}
 
-          <div tabindex="0" class="gallery-cell product-gallery__thumbnail" data-title="{{ image_alt | escape }}">
-            <img src="{{ media | img_url: '300x' }}" alt="">
+          <div tabindex="0" class="gallery-cell product-gallery__thumbnail" data-title="{{ media.alt | escape }}">
+            <img src="{{ media | img_url: '300x' }}" alt="{{ media.alt | escape }}">
             {% if thumbnail_badge == 'video-thumbnail' %}
               <svg class="media-badge" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 25H25V1H1V25Z" fill="white"/><path class="media-badge__outline" d="M0.5 25V25.5H1H25H25.5V25V1V0.5H25H1H0.5V1V25Z" stroke="black" stroke-opacity="0.05"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.19995 5.8V20.2L19.3999 12.5858L8.19995 5.8Z" fill="#3A3A3A" fill-opacity="0.6"/></svg>
             {% elsif thumbnail_badge == '3d-thumbnail' %}

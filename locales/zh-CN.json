@@ -34,6 +34,10 @@
       "subtext": "抱歉，我们找不到你要求的页面",
       "continue_shopping_html": "试试看其他搜寻或<a href=\"/collections/all\">继续购物</a>"
     },
+    "accessibility": {
+      "total_reviews": "总评",
+      "star_reviews_info": "{{ rating_value }} {{ rating_max }}星"
+    },
     "meta": {
       "tagged_html": "标签语法",
       "page": "页面"
@@ -166,21 +170,15 @@
       "cancel": "不接受邀请",
       "clear": "清除",
       "apply_filter": "申请",
-      "clear_all": "清除所有"
+      "clear_all": "清除所有",
+      "from": "从",
+      "to": "到"
     },
     "sorting": {
       "title": "排序依据",
       "sort_collection": "排序",
       "filter": "过滤",
-      "filter_collection": "过滤{{ title }}",
-      "featured": "注目商品",
-      "best_selling": "热销商品",
-      "az": "字母顺序：A－Z",
-      "za": "字母顺序：Z－A",
-      "price_ascending": "价格顺序：由低到高",
-      "price_descending": "价格顺序：由高到低",
-      "date_descending": "上架顺序：最新到最旧",
-      "date_ascending": "上架顺序：最旧到最新"
+      "filter_collection": "过滤{{ title }}"
     }
   },
   "products": {
@@ -222,6 +220,10 @@
       "price": {
         "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} / {{ unit_measure }}"
       }
+    },
+    "onboarding": {
+      "tab_title": "描述",
+      "tab_content": "添加产品描述以共享有关您产品的信息。"
     }
   },
   "contact": {
@@ -397,7 +399,7 @@
       "item": "商品",
       "uploaded_file": "已上传的档案",
       "continue_browsing_html": "您的购物车内没有任何商品 。",
-      "continue_shopping_link_html": "继续购物！",
+      "continue_shopping": "继续购物！",
       "excluding_tax_shipping": "不包含税金和邮资",
       "tax_and_shipping": "结账时计算的税金和运费",
       "taxes_and_shipping_policy_at_checkout_html": "结账时计算的税金和<a href=\"{{ link }}\">运费</a>",

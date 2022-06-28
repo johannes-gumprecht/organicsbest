@@ -8,10 +8,14 @@
 {%- assign images_per_row = section.settings.grid-size -%}
 
 <section class="section">
-  <a name="pagecontent" id="pagecontent"></a>
   <div class="container content">
-    <div class="one-whole column page">
-
+    <div
+      class="
+        one-whole
+        column
+        page
+      "
+    >
       <h1>{{ page.title }}</h1>
 
       {% if section.settings.show_divider %}
@@ -20,7 +24,7 @@
 
       {%
         render 'page-multi-column',
-        content: page.content
+        content: page.content,
       %}
     </div>
    </div>
@@ -59,13 +63,9 @@
                   back_to_basics: use_basic
                 %}
 
-                {% if section.settings.enable_lightbox  and block.settings.image_link == nil %}
-                  <div class="overlay">
-                    <div class="display-table">
-                      <div class="display-table-cell">
-                        <span class="icon-zoom"></span>
-                      </div>
-                    </div>
+                {% if section.settings.enable_lightbox and block.settings.image_link == blank %}
+                  <div class="gallery-overlay">
+                    <span class="icon-zoom"></span>
                   </div>
                 {% endif %}
 

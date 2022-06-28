@@ -2,6 +2,7 @@
   <div class="thumbnail-overlay">
     <a href="{{ product.url | within: collection }}" itemprop="url" class="hidden-product-link">
       {{ product.title }}
+      {{ collection_handles }}
     </a>
 
     <div class="info">
@@ -9,14 +10,14 @@
         {%
           render 'product-info',
           product: product,
-          collection_handles: collection_handles
+          collection_handles: collection_handles,
         %}
       {% endif %}
 
       {% if settings.quick_shop_enabled and settings.quick_shop_style == 'popup' %}
         {%
           render 'quick-shop-button',
-          product: product
+          product: product,
         %}
       {% endif %}
     </div>
@@ -26,5 +27,5 @@
 {%
   render 'price-ui-badges',
   product: product,
-  collection_handles: collection_handles
+  collection_handles: collection_handles,
 %}

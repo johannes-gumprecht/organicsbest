@@ -88,7 +88,7 @@ window.usePageDots = window.PXUTheme.theme_settings.page_dots_enabled;
         //image attributes added
         $image.attr({
           alt: alt,
-          class: 'lazyload {{ settings.image_loading_style }}',
+          class: 'lazyload blur-up',
           src: src,
           dataSizes: 'auto'
         });

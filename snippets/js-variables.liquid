@@ -1,6 +1,6 @@
 {% capture js_variables %}
 
-window.PXUTheme = window.Shopify || {};
+window.PXUTheme = window.PXUTheme || {};
 
 {% comment %} /* # Theme settings
 ================================================== */ {% endcomment %}
@@ -46,10 +46,8 @@ window.PXUTheme.theme_settings.newsletter_popup_seconds = {{ settings.newsletter
 
 {% comment %} Pagination {% endcomment %}
 window.PXUTheme.theme_settings.pagination_type = {{ settings.pagination_type | json }};
-window.PXUTheme.theme_settings.search_pagination_type = {{ settings.search_pagination_type | json }};
 
 {% comment %} Product {% endcomment %}
-window.PXUTheme.theme_settings.enable_shopify_review_comments = {{ settings.enable_shopify_review_comments | json }};
 window.PXUTheme.theme_settings.enable_shopify_collection_badges = {{ settings.enable_shopify_collection_badges | json }};
 window.PXUTheme.theme_settings.quick_shop_thumbnail_position = {{ settings.quick_shop_thumbnail_position | json }};
 window.PXUTheme.theme_settings.product_form_style = {{ settings.product_form_style | json }};
@@ -66,6 +64,7 @@ window.PXUTheme.theme_settings.hover_enabled = {{ settings.thumbnail_hover_enabl
 window.PXUTheme.routes.cart_url = "{{ routes.cart_url }}";
 window.PXUTheme.routes.root_url = "{{ routes.root_url }}";
 window.PXUTheme.routes.search_url = "{{ routes.search_url }}";
+window.PXUTheme.routes.all_products_collection_url = "{{ routes.all_products_collection_url }}";
 
 {% comment %} Images {% endcomment %}
 window.PXUTheme.theme_settings.image_loading_style = {{ settings.image_loading_style | json }};

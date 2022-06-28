@@ -5,50 +5,55 @@
 >
 </script>
 
-{%- assign image = section.settings.image -%}
-{%- assign mobile_image = section.settings.mobile_image -%}
-{%- assign background_style = section.settings.caption_content_background -%}
-{%- assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop -%}
-{%- assign wide_display = section.settings.wide_display -%}
-{%- assign banner_pretext = section.settings.pretext -%}
-{%- assign banner_title = section.settings.title -%}
-{%- assign banner_subheading = section.settings.subtitle -%}
-{%- assign banner_button1 = section.settings.button1 -%}
-{%- assign banner_button1_link = section.settings.button1_link -%}
-{%- assign banner_button1_style = section.settings.button1_style -%}
-{%- assign banner_button2 = section.settings.button2 -%}
-{%- assign banner_button2_link = section.settings.button2_link -%}
-{%- assign banner_button2_style = section.settings.button2_style -%}
-{%- assign banner_text_align = section.settings.text_align -%}
-{%- assign banner_text_position = section.settings.text_position -%}
+{% liquid
+  assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop
+
+  if section.settings.title != blank
+    assign banner_title = section.settings.title
+  else
+    assign banner_title = page.title
+  endif
+%}
 
 {%
   render 'template-banner',
-  image: image,
-  mobile_image: mobile_image
-  background_style: background_style,
+  image: section.settings.image,
+  mobile_image: section.settings.mobile_image,
+  background_style: section.settings.caption_content_background,
   mobile_crop: mobile_crop,
-  wide_display: wide_display,
-  banner_pretext: banner_pretext,
+  wide_display: section.settings.wide_display,
+  banner_pretext: section.settings.pretext,
   banner_title: banner_title,
-  banner_subheading: banner_subheading,
-  banner_button1: banner_button1,
-  banner_button1_link: banner_button1_link,
-  banner_button1_style: banner_button1_style,
-  banner_button2: banner_button2,
-  banner_button2_link: banner_button2_link,
-  banner_button2_style: banner_button2_style,
-  banner_text_align: banner_text_align,
-  banner_text_position: banner_text_position,
-  show_caption: true
+  banner_subheading: section.settings.subtitle,
+  banner_button1: section.settings.button1,
+  banner_button1_link: section.settings.button1_link,
+  banner_button1_style: section.settings.button1_style,
+  banner_button2: section.settings.button2,
+  banner_button2_link: section.settings.button2_link,
+  banner_button2_style: section.settings.button2_style,
+  banner_text_align: section.settings.text_align,
+  banner_text_position: section.settings.text_position,
+  show_caption: true,
 %}
 
 <section class="section">
-  <div class="container main content">
-    <div class="one-whole column page">
+  <div
+    class="
+      container
+      main
+      content
+    "
+  >
+    <div
+      class="
+        one-whole
+        column
+        page
+      "
+    >
       {%
         render 'page-multi-column',
-        content: page.content
+        content: page.content,
       %}
     </div>
   </div>
@@ -57,7 +62,7 @@
 {% schema %}
 {
   "name": "Page | banner",
-  "class": "shopify-section--page-banner-template",
+  "class": "shopify-section--page-banner-template under-menu",
   "settings": [
     {
       "type": "checkbox",
@@ -142,7 +147,8 @@
     {
       "type": "text",
       "id": "title",
-      "label": "Heading"
+      "label": "Heading",
+      "info": "Leave this field blank to use the page title."
     },
     {
       "type": "richtext",

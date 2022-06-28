@@ -5,23 +5,12 @@
 >
 </script>
 
-{%- assign id = section.id -%}
-
-{% comment %} Content settings {% endcomment %}
-{%- assign blocks = section.blocks -%}
-{%- assign title = section.settings.title | escape -%}
-{% comment %} End content settings {% endcomment %}
-
-{% comment %} Advanced {% endcomment %}
-{%- assign css_class = section.settings.css_class -%}
-{%- assign custom_css = section.settings.custom_css -%}
-
 {% comment %} Section specific CSS {% endcomment %}
 {% style %}
   {%
     render 'css-loop',
-    css: custom_css,
-    id: id
+    css: section.settings.custom_css,
+    id: section.id
   %}
 {% endstyle %}
 
@@ -32,7 +21,7 @@
       is-width-wide
       has-no-side-gutter
     {% endif %}
-    {{ css_class }}
+    {{ section.settings.css_class }}
   "
 >
   <div
@@ -46,46 +35,81 @@
     "
     id="gallery_section-{{ section.id }}"
   >
-    {% if title != blank %}
+    {% if section.settings.title != blank %}
       <div class="one-whole column">
-        <h2 class="title center">{{ title }}</h2>
+        <h2 class="title center">
+          {{ section.settings.title | escape }}
+        </h2>
         <div class="feature_divider"></div>
       </div>
     {% endif %}
 
-    {% if blocks.size > 0 %}
-
+    {% if section.blocks.size > 0 %}
       {% if section.settings.gallery_type == 'masonry' %}
-          <div class="masonry {% if section.settings.wide_display %}adjust-columns{% endif %} {% if section.settings.grid-size == 2 %}two-per-row{% elsif section.settings.grid-size == 3 %}three-per-row{% elsif section.settings.grid-size == 4 %}four-per-row{% else %}five-per-row{% endif %}">
-        {% endif %}
+        <div
+          class="
+            masonry
+            {% if section.settings.wide_display %}
+              adjust-columns
+            {% endif %}
+            {% if section.settings.grid-size == 2 %}
+              two-per-row
+            {% elsif section.settings.grid-size == 3 %}
+              three-per-row
+            {% elsif section.settings.grid-size == 4 %}
+              four-per-row
+            {% else %}
+              five-per-row
+            {% endif %}
+          "
+        >
+      {% endif %}
 
-      {% for block in blocks %}
-        {% comment %} Content settings {% endcomment %}
-        {%- assign image = block.settings.image -%}
-        {% comment %} End content settings {% endcomment %}
-
-        {% if image != blank %}
-          <div class="gallery-image-wrapper {% unless section.settings.gallery_type == 'horizontal' or section.settings.gallery_type == 'masonry' %}{% render 'column-width', value: section.settings.grid-size %} column medium-down--one-whole{% endunless %} {% unless section.settings.wide_display %}add-padding{% endunless %}" {{ block.shopify_attributes }}>
+      {% for block in section.blocks %}
+        {% if block.settings.image != blank %}
+          <div
+            class="
+              gallery-image-wrapper
+              {% unless section.settings.gallery_type == 'horizontal' or section.settings.gallery_type == 'masonry' %}
+                {%
+                  render 'column-width',
+                  value: section.settings.grid-size
+                %}
+                column
+                medium-down--one-whole
+              {% endunless %}
+              {% unless section.settings.wide_display %}
+                add-padding
+              {% endunless %}
+            "
+            {{ block.shopify_attributes }}
+          >
             <div class="gallery-cell">
               {% if section.settings.enable_lightbox %}
-                <a href="javascript:;" class="gallery gallery-{{ section.id }}" data-fancybox="{{ section.id }}" data-src="{{ image |  img_url: '2000x' }}" rel="gallery">
+                <a
+                  class="
+                    gallery
+                    gallery-{{ section.id }}
+                  "
+                  href="javascript:;"
+                  data-fancybox="{{ section.id }}"
+                  data-src="{{ block.settings.image |  img_url: '2000x' }}"
+                  rel="gallery"
+                >
               {% endif %}
 
               <i class="image-{{ block.id }}"></i>
 
               {%
                 render 'image-element',
-                image: image,
-                alt: image.alt
+                image: block.settings.image,
+                alt: block.settings.image.alt,
+                additional_classes: 'gallery__image',
               %}
 
               {% if section.settings.enable_lightbox and image_link == blank %}
-                <div class="overlay">
-                  <div class="display-table">
-                    <div class="display-table-cell">
-                      <span class="icon-zoom"></span>
-                    </div>
-                  </div>
+                <div class="gallery-overlay">
+                  <span class="icon-zoom"></span>
                 </div>
               {% endif %}
 
@@ -247,11 +271,6 @@
         }
       ]
     }
-  ],
-  "templates": [
-    "index",
-    "product",
-    "page"
   ]
 }
 

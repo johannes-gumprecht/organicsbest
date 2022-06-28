@@ -8,37 +8,30 @@
 {% paginate article.comments by 100 %}
   {% comment %} Check to see if sidebar should be enabled {% endcomment %}
   {% if section.blocks.size > 0 %}
-    {%- assign sidebar = true -%}
+    {% assign sidebar = true %}
   {% else %}
-    {%- assign sidebar = false -%}
+    {% assign sidebar = false %}
   {% endif %}
 
-  {%- assign article_image = article.image -%}
-  {%- assign background_style = section.settings.caption_content_background -%}
-  {%- assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop -%}
-  {%- assign wide_display = section.settings.wide_display -%}
-  {%- assign banner_title = article.title -%}
+  {% assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop %}
+
   {% if section.settings.featured_image == 'banner' %}
-    {%- assign show_caption = true -%}
+    {% assign show_caption = true %}
   {% endif %}
 
-  {% if article_image and section.settings.featured_image == 'banner' %}
+  {% if article.image and section.settings.featured_image == 'banner' %}
     {%
       render 'template-banner',
-      image: article_image,
-      background_style: background_style,
+      image: article.image,
+      background_style: section.settings.caption_content_background,
       mobile_crop: mobile_crop,
-      wide_display: wide_display,
-      banner_title: banner_title,
-      show_caption: show_caption
+      wide_display: section.settings.wide_display,
+      banner_title: article.title,
+      show_caption: show_caption,
     %}
   {% endif %}
 
   <section class="section">
-    {% if article.image == blank or section.settings.featured_image != 'banner' %}
-      <a name="pagecontent" id="pagecontent"></a>
-    {% endif %}
-
     <div class="blog-article__main sidebar-enabled--{{ sidebar }} container content">
       <div class="has-sidebar-option">
         <div class="container">
@@ -150,7 +143,9 @@
               %}
             {% endif %}
 
-            <p class="has-padding-top">{{ article.content }}</p>
+            <div class="rte has-padding-top">
+              {{ article.content }}
+            </div>
           </div>
 
           {% if section.settings.blog_author or section.settings.display_social_buttons %}
@@ -177,10 +172,7 @@
             </div>
           {% endif %}
 
-          <div class="one-whole column">
-            <div id="comments"></div>
-            <br />
-          </div>
+          <div id="comments"></div>
 
           {% if settings.disqus_enabled %}
             <div class="one-whole column">
@@ -209,20 +201,25 @@
               </div>
 
               {% for comment in article.comments %}
-                <div id="comment-{{ comment.id }}" class="blog__comment">
-                  <div class="one-whole column is-flex is-flex-wrap">
-                    <div class="blog__comment-author is-flex">
-                      <div class="blog__comment-author-image">
-                        <img src="//1.gravatar.com/avatar/{{ comment.email | md5 }}?s=80&r=G" alt="{{ comment.author }}" />
-                      </div>
+                <div
+                  class="
+                    one-whole
+                    column
+                    blog__comment
+                  "
+                  id="comment-{{ comment.id }}"
+                >
+                  <div class="blog__comment-author">
+                    <div class="blog__comment-author-image">
+                      <img src="//1.gravatar.com/avatar/{{ comment.email | md5 }}?s=80&r=G" alt="{{ comment.author }}" />
+                    </div>
 
-                      <div class="blog__comment-author-bio">
-                        <h6>{{ comment.author }}</h6>
-                        <p class="meta">
-                          <span class="label">{{ comment.created_at | date: format: "month_day_year" }}</span>
-                        </p>
-                        {{ comment.content }}
-                      </div>
+                    <div class="blog__comment-author-bio">
+                      <h6>{{ comment.author }}</h6>
+                      <p class="meta">
+                        <span class="label">{{ comment.created_at | date: format: "month_day_year" }}</span>
+                      </p>
+                      {{ comment.content }}
                     </div>
                   </div>
                 </div>
@@ -232,7 +229,7 @@
             <div class="one-whole column">
               {%
                 render 'pagination',
-                paginate: paginate
+                paginate: paginate,
               %}
 
               <div id="new-comment"></div>
@@ -274,7 +271,7 @@
                       {%
                         render 'image-element',
                         image: a.image,
-                        alt: a.image.alt
+                        alt: a.image.alt,
                       %}
                     </a>
                   {% endif %}
@@ -295,7 +292,7 @@
                     {% if section.settings.read_time %}
                       {%
                         render 'include-read-time',
-                        article: a
+                        article: a,
                       %}
                     {% endif %}
 
@@ -345,7 +342,7 @@
       </div>
     {%
       render 'blog-sidebar',
-      blog_handle: blog.handle
+      blog_handle: blog.handle,
     %}
   </section>
 {% endpaginate %}
@@ -393,7 +390,7 @@
 {% schema %}
 {
   "name": "Blog post",
-  "class": "shopify-section--article-template",
+  "class": "shopify-section--article-template under-menu",
   "settings": [
     {
       "type": "select",

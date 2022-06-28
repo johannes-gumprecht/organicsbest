@@ -1,8 +1,56 @@
-{% if featured %}
-  {%- assign collection = collections[featured_collection] -%}
-{% endif %}
+{% comment %}
+  @param context {String}
+    The name of the template
 
-{% if section.blocks.size > 0 %}
+  @param results {Object}
+    The object used to determine faceted search results
+
+  @param has_faceted_filtering_block {Boolean}
+    If true, a "Faceted filtering" block is present in the sidebar
+{% endcomment %}
+
+{% liquid
+  if featured
+    assign collection = collections[featured_collection]
+  endif
+
+  assign sort_by = results.sort_by | default: results.default_sort_by
+
+  if results.url
+    assign results_url = results.url
+  else
+    assign results_url = '?q=' | append: results.terms | url_params_escape | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+  endif
+
+  assign legacy_filter_block_types = 'filter,filter_by_tag,filter_by_type,filter_by_vendor' | split: ','
+
+  assign show_sidebar = false
+
+  for block in section.blocks
+    if block.type == 'faceted_filtering'
+      if results.filters.size > 0
+        comment
+          Has filters
+        endcomment
+        assign show_sidebar = true
+        break
+      endif
+    elsif has_faceted_filtering_block and legacy_filter_block_types contains block.type
+      comment
+        This is a legacy filtering block and will not be rendered, so ignore it
+      endcomment
+      continue
+    else
+      comment
+        Any other blocks are always rendered, so we need a sidebar
+      endcomment
+      assign show_sidebar = true
+      break
+    endif
+  endfor
+%}
+
+{% if show_sidebar %}
   <div
     class="
       sidebar
@@ -13,15 +61,6 @@
     {% if context == 'product' %}data-product-sidebar{% endif %}
   >
     <div class="sidebar-wrap">
-      {% liquid
-        assign has_faceted_filtering_block = false
-        assign faceted_filtering_blocks_count = section.blocks | where: "type", "faceted_filtering" | size
-        if faceted_filtering_blocks_count > 0
-          assign has_faceted_filtering_block = true
-        endif
-        assign legacy_filter_block_types = 'filter,filter_by_tag,filter_by_type,filter_by_vendor' | split: ','
-      %}
-
       {% assign first_block = true %}
       {% for block in section.blocks %}
         {% if has_faceted_filtering_block and legacy_filter_block_types contains block.type %}
@@ -29,9 +68,23 @@
         {% endif %}
         {% if block.type == 'faceted_filtering' %}
           <form class="faceted-filter-form" data-faceted-filter-form>
+            {% if results.terms %}
+              <input
+                name="q"
+                type="hidden"
+                value="{{ results.terms | escape }}"
+              >
+              <input
+                name="options[prefix]"
+                type="hidden"
+                value="last"
+              >
+            {% endif %}
+
             {% assign has_active_filters = false %}
+
             {% capture faceted_active_filters %}
-              {%- for filter in collection.filters -%}
+              {%- for filter in results.filters -%}
                 {% if filter.type == "price_range"  %}
                   {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
                     {% assign has_active_filters = true %}
@@ -60,14 +113,23 @@
                 "
               >
                 <div class="faceted-active-filters">
-                  <a href="{{ collection.url }}" class="faceted-active-filters__clear global-button global-button--text">{{ 'collections.sidebar.clear_all' | t }}</a>
+                  <a
+                    class="
+                      faceted-active-filters__clear
+                      global-button
+                      global-button--text
+                    "
+                    href="{{ results_url }}"
+                  >
+                    {{ 'collections.sidebar.clear_all' | t }}
+                  </a>
                   {{ faceted_active_filters }}
                 </div>
               </div>
               {% assign first_block = false %}
             {% endif %}
 
-            {%- for filter in collection.filters -%}
+            {%- for filter in results.filters -%}
               <details
                 class="
                   sidebar-block
@@ -125,7 +187,7 @@
                               <svg class="faceted-filter-group-display__checkmark" aria-hidden="true" focusable="false" role="presentation" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
                                 <path class="faceted-filter-group-display__checkmark-check" fill="none" d="M2.5 7L5.5 10L11.5 4"></path>
                               </svg>
-                              <span class="faceted-filter-group-display__list-item-label-text">{{ filter_value.label }}</span>
+                              <span class="faceted-filter-group-display__list-item-label-text">{{ filter_value.label }} {% if block.settings.show_filter_product_count %}({{ filter_value.count }}){% endif %}</span>
                             </label>
                           </li>
                         {%- endfor -%}
@@ -145,7 +207,7 @@
                             class="faceted-filter-group-display__price-range-label"
                             for="Filter-{{ filter.label }}-{{ forloop.index }}"
                           >
-                            From
+                            {{ 'collections.sidebar.from' | t }}
                           </label>
                           <span>{{ cart.currency.symbol }}</span>
                           <input
@@ -166,7 +228,7 @@
                             class="faceted-filter-group-display__price-range-label"
                             for="Filter-{{ filter.label }}-{{ forloop.index }}"
                           >
-                            To
+                          {{ 'collections.sidebar.to' | t }}
                           </label>
                           <span>{{ cart.currency.symbol }}</span>
                           <input
@@ -324,7 +386,9 @@
                   <h4 class="sidebar-block__heading">{{ pages[block.settings.content_page].title }}<span class="right icon-down-arrow sidebar-block-toggle-icon"></span></h4>
                 </summary>
                 <ul class="toggle_list content_block">
-                  <li>{{ pages[block.settings.content_page].content }}</li>
+                  <li class="rte">
+                    {{ pages[block.settings.content_page].content }}
+                  </li>
                 </ul>
               {% else %}
                 <summary>
@@ -484,15 +548,20 @@
               </ul>
             {% elsif block.type == 'recently_viewed'%}
               <summary>
-                <h4 class="sidebar-block__heading">{{ block.settings.sidebar_rv_title }}<span class="right icon-down-arrow sidebar-block-toggle-icon"></span></h4>
+                <h4 class="sidebar-block__heading">
+                  {{ block.settings.sidebar_rv_title }}
+                  <span class="right icon-down-arrow sidebar-block-toggle-icon"></span>
+                </h4>
               </summary>
-              <div  class="js-sidebar-recently-viewed"
-                    data-rv-handle="{{ product.handle }}"
-                    data-visible-products="{{ block.settings.sidebar_rv_per | plus: 1 }}"
+              <div
+                class="js-sidebar-recently-viewed"
+                data-rv-handle="{{ product.handle }}"
+                data-visible-products="{{ block.settings.sidebar_rv_per | plus: 1 }}"
               >
-                <ul class="toggle_list">
-                  <li>{% render 'sidebar-recently-viewed', products_limit: block.settings.sidebar_rv_per %}</li>
-                </ul>
+                {%
+                  render 'sidebar-recently-viewed',
+                  products_limit: block.settings.sidebar_rv_per,
+                %}
               </div>
             {% endif %}
           </details>
@@ -510,6 +579,12 @@
 
       #shopify-section-{{ section.id }} + .is-product-main {
         width: 75%;
+      }
+
+      @media only screen and (max-width: 798px) {
+        #shopify-section-{{ section.id }} + .is-product-main {
+          padding-top: 0;
+        }
       }
     {% endstyle %}
   {% else %}

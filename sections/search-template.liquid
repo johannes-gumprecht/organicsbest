@@ -5,32 +5,32 @@
 >
 </script>
 
-{%- assign search_pagination = section.settings.pagination_limit -%}
-{%- assign image = section.settings.image -%}
-{%- assign mobile_image = section.settings.mobile_image -%}
-{%- assign background_style = section.settings.caption_content_background -%}
-{%- assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop -%}
-{%- assign wide_display = section.settings.wide_display -%}
-{%- assign banner_title = 'general.search.title' | t -%}
+{% liquid
+  assign banner_title = 'general.search.title' | t
+  assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop
 
-{% paginate search.results by search_pagination %}
-  {% if image != blank %}
+  assign has_faceted_filtering_block = false
+  assign faceted_filtering_blocks_count = section.blocks | where: "type", "faceted_filtering" | size
+  if faceted_filtering_blocks_count > 0
+    assign has_faceted_filtering_block = true
+  endif
+%}
+
+{% paginate search.results by section.settings.pagination_limit %}
+  {% if section.settings.image != blank %}
     {%
       render 'template-banner',
-      image: image,
-      mobile_image: mobile_image,
-      background_style: background_style,
+      image: section.settings.image,
+      mobile_image: section.settings.mobile_image,
+      background_style: section.settings.caption_content_background,
       mobile_crop: mobile_crop,
-      wide_display: wide_display,
+      wide_display: section.settings.wide_display,
       banner_title: banner_title,
       show_caption: true
     %}
   {% endif %}
 
   <section class="section">
-    {% if image == blank %}
-      <a name="pagecontent" id="pagecontent"></a>
-    {% endif %}
     <div class="container content">
       <div class="one-whole column">
         <div class="breadcrumb-collection">
@@ -71,7 +71,7 @@
               <span>{{ 'general.search.title' | t }}</span>
             </a>
 
-            {% if paginate.pages != 0 and settings.search_pagination_type == 'basic_pagination' %}
+            {% if paginate.pages != 0 and settings.pagination_type == 'basic_pagination' %}
               <span class="breadcrumb-divider">/</span> {{ 'general.breadcrumbs.page' | t: current_page: paginate.current_page, pages: paginate.pages }}
             {% endif %}
           </div>
@@ -79,7 +79,7 @@
         </div>
       </div>
 
-      {% if image == blank %}
+      {% if section.settings.image == blank %}
         <div class="one-whole column">
           <h1>{{ 'general.search.title' | t }}</h1>
           <div class="feature_divider"></div>
@@ -88,13 +88,23 @@
 
       {% comment %} Check to see if sidebar should be enabled {% endcomment %}
       {% if section.blocks.size > 0 %}
-        {%- assign sidebar = true -%}
+        {% assign sidebar = true %}
       {% else %}
-        {%- assign sidebar = false -%}
+        {% assign sidebar = false %}
       {% endif %}
 
-      <div class="content-wrapper is-flex is-flex-wrap">
-        {% render 'sidebar' %}
+      <div
+        class="
+          content-wrapper
+          is-flex
+          is-flex-wrap
+        "
+      >
+        {%
+          render 'sidebar',
+          results: search,
+          has_faceted_filtering_block: has_faceted_filtering_block,
+        %}
 
         <div class="has-sidebar-option sidebar-enabled--{{ sidebar }}">
           <div class="container">
@@ -117,9 +127,9 @@
               {% else %}
                 {% if settings.search_option == 'product,page,article' or search.results.first.price == blank %}
                   <div class="one-whole column">
-                    <div class="search-matrix" {% if settings.search_pagination_type == 'load_more_button' %}data-load-more--grid{% endif %}>
+                    <div class="product-list product-list--search" {% if settings.pagination_type == 'load_more_button' %}data-load-more--grid{% endif %}>
                       {% for item in search.results %}
-                        <div class="product_row is-flex is-flex-wrap equal-columns--outside-trim" {% if settings.search_pagination_type == 'load_more_button' %}data-load-more--grid-item{% endif %}>
+                        <div class="product_row is-flex is-flex-wrap equal-columns--outside-trim" {% if settings.pagination_type == 'load_more_button' %}data-load-more--grid-item{% endif %}>
                           {%- assign featured_image = false -%}
 
                           {% if item.object_type == 'article' and item.image %}
@@ -226,7 +236,7 @@
                         </div>
                       {% endfor %}
 
-                      {% if settings.search_pagination_type != 'basic_pagination' %}
+                      {% if settings.pagination_type != 'basic_pagination' %}
                         {% if paginate.next.url %}
                           <span class="js-load-more load-more">
                             <a href="{{ paginate.next.url }}" data-no-instant data-load-more class="global-button global-button--text">{{ 'general.search.load_more' | t }}</a>
@@ -241,14 +251,13 @@
               {% else %}
                 <div class="one-whole column">
                   {%- assign products = search.results -%}
-                  {%- assign products_per_row = section.settings.products_per_row -%}
-
                   {%
                     render 'product-loop',
                     products: products,
-                    products_per_row: products_per_row,
+                    skip_product: product,
+                    products_per_row: section.settings.products_per_row,
                     sidebar: sidebar,
-                    paginate: paginate
+                    paginate: paginate,
                   %}
                 </div>
               {% endif %}
@@ -265,7 +274,7 @@
             </div>
           {% endif %}
 
-          {% unless settings.search_pagination_type != 'basic_pagination' %}
+          {% unless settings.pagination_type != 'basic_pagination' %}
             {%
               render 'pagination',
               paginate: paginate
@@ -280,7 +289,7 @@
 {% schema %}
 {
   "name": "Search",
-  "class": "shopify-section--search-template",
+  "class": "shopify-section--search-template under-menu",
   "settings": [
     {
       "type": "header",
@@ -428,6 +437,27 @@
       "type": "filter_by_collection",
       "name": "Collection list",
       "limit": 1
+    },
+    {
+      "type": "faceted_filtering",
+      "name": "Faceted filtering",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "[Learn how](https://help.shopify.com/en/manual/online-store/themes/os20/customize/filters) to configure filters."
+        },
+        {
+          "type": "paragraph",
+          "content": "Using this block will hide any tag filter, tag list, type list, and vendor list blocks."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_filter_product_count",
+          "label": "Show product counts",
+          "default": true
+        }
+      ]
     },
     {
       "type": "menu",

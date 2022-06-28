@@ -7,11 +7,24 @@
       {{ product.vendor }}
     </span>
   {% endif %}
-  {% if settings.enable_shopify_collection_badges %}
-    <div class="shopify-reviews">
-      <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+
+  {% if settings.show_star_ratings and product.metafields.reviews.rating.value != blank %}
+    <div class="product-rating">
+      {%
+        render 'rating-stars',
+        value: product.metafields.reviews.rating.value.rating,
+        scale_max: product.metafields.reviews.rating.value.scale_max,
+      %}
+      <p class="rating__text">
+        <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+      </p>
+      <p class="rating__count">
+        <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+        <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "general.accessibility.total_reviews" | t }}</span>
+      </p>
     </div>
   {% endif %}
+
   {% if collection_handles contains 'coming-soon' %}
     <span class="coming-soon">{{ 'collections.general.coming_soon' | t }}</span>
   {% else %}

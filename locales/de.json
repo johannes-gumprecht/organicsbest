@@ -37,6 +37,10 @@
       "subtext": "Es tut uns Leid, aber die von Ihnen angeforderte Seite existiert nicht.",
       "continue_shopping_html": "Suchen Sie oder <a href=\"/collections/all\">kaufen Sie weiter ein →</a>"
     },
+    "accessibility": {
+      "total_reviews": "Bewertungen insgesamt",
+      "star_reviews_info": "{{ rating_value }} von {{ rating_max }} Sternen"
+    },
     "password_page": {
       "opening_soon": "Eröffnet demnächst",
       "spread_the_word": "Weitersagen",
@@ -168,21 +172,15 @@
       "tags": "Kategorie",
       "clear": "Opnieuw zetten",
       "apply_filter": "Anwenden",
-      "clear_all": "Alles löschen"
+      "clear_all": "Alles löschen",
+      "from": "Von",
+      "to": "Zu"
     },
     "sorting": {
       "title": "Sortieren nach",
       "sort_collection": "Sortieren {{ title }}",
       "filter": "Filtern nach",
-      "filter_collection": "Filtern {{ title }}",
-      "featured": "Ausgewählt",
-      "best_selling": "Bestseller",
-      "az": "Alphabetisch: A-Z",
-      "za": "Alphabetisch: Z-A",
-      "price_ascending": "Preis: ansteigend",
-      "price_descending": "Preis: absteigend",
-      "date_descending": "Datum: Neu bis alt",
-      "date_ascending": "Datum: Alt bis neu"
+      "filter_collection": "Filtern {{ title }}"
     }
   },
   "products": {
@@ -224,6 +222,10 @@
       "price": {
         "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} / {{ unit_measure }}"
       }
+    },
+    "onboarding": {
+      "tab_title": "Beschreibung",
+      "tab_content": "Fügen Sie eine Produktbeschreibung hinzu, um Informationen zu Ihrem Produkt zu teilen."
     }
   },
   "contact": {
@@ -399,7 +401,7 @@
       "item": "Artikel",
       "uploaded_file": "hochgeladene Datei",
       "continue_browsing_html": "Es befinden sich keine Artikel in Ihrem Warenkorb.",
-      "continue_shopping_link_html": "Kaufen Sie weiter ein →",
+      "continue_shopping": "Kaufen Sie weiter ein →",
       "excluding_tax_shipping": "Ohne MwSt und Versandkosten",
       "orders_processed_in_currency_html": "Bestellungen werden in {{ currency }} bearbeitet.",
       "tax_and_shipping": "Steuern und Versandkosten werden beim Checkout berechnet",

@@ -57,18 +57,20 @@
             <a href="{{ product.url | within: collection }}">
               <div class="image__container">
                 {% if settings.quick_shop_enabled and settings.quick_shop_style == 'inline' and product.selected_or_first_available_variant.image %}
-                  {% render 'image-element',
-                          image: product.selected_or_first_available_variant.image,
-                          alt: alt_text,
-                          object_fit: settings.align_height,
-                          max_height: settings.collection_height
+                  {%
+                    render 'image-element',
+                    image: product.selected_or_first_available_variant.image,
+                    alt: alt_text,
+                    object_fit: settings.align_height,
+                    max_height: settings.collection_height,
                   %}
                 {% else %}
-                  {% render 'image-element',
-                          image: product.featured_media.preview_image,
-                          alt: alt_text,
-                          object_fit: settings.align_height,
-                          max_height: settings.collection_height
+                  {%
+                    render 'image-element',
+                    image: product.featured_media.preview_image,
+                    alt: alt_text,
+                    object_fit: settings.align_height,
+                    max_height: settings.collection_height,
                   %}
                 {% endif %}
                 {% if settings.collection_secondary_image != blank and product.media[1] != blank %}
@@ -95,8 +97,9 @@
 
             {%
               render 'product-details',
-              product: product
-              collection_handles: collection_handles
+              product: product,
+              collection: collection,
+              collection_handles: collection_handles,
             %}
 
             {% if settings.quick_shop_style == 'inline' %}
@@ -123,11 +126,17 @@
 
         {% if settings.quick_shop_style == 'inline' and settings.quick_shop_enabled %}
           {% unless collection_handles contains 'coming-soon' %}
-            <div class="inline-quickshop js-product_section product-{{ product.id }}">
+            <div
+              class="
+                inline-quickshop
+                js-product-section
+                product-{{ product.id }}
+              "
+            >
               {%
                 render 'product-form',
                 product: product,
-                show_payment_button: settings.show_payment_button,
+                show_payment_button: settings.show_dynamic_checkout_button,
                 collection_handles: collection_handles
               %}
             </div>

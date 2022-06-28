@@ -46,9 +46,6 @@
 
   @param show_dynamic_checkout_button {Boolean}
     If true, show dynamic checkout button
-
-  @param enable_shopify_review_comments {Boolean}
-    If true, enable product reviews and ratings
 {% endcomment %}
 
 {% comment %} HTML markup {% endcomment %}
@@ -64,7 +61,8 @@
   <div
     class="
       product_section
-      js-product_section
+      js-product-section
+      js-product-section--{{ context }}
       container
       is-flex
       {{ media_position }}
@@ -137,7 +135,7 @@
       {%
         render 'price-ui-badges',
         product: product,
-        collection_handles: collection_handles
+        collection_handles: collection_handles,
       %}
 
       {% for block in section.blocks %}
@@ -158,7 +156,9 @@
                   {% if onboarding %}
                     {{ 'homepage.onboarding.product_vendor' | t }}
                   {% else %}
-                    {{ product.vendor | link_to_vendor }}
+                    <a href="{% if collection %}{{ collection.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}?filter.p.vendor={{ product.vendor | url_param_escape }}">
+                      {{ product.vendor }}
+                    </a>
                   {% endif %}
                 </span>
               </p>
@@ -181,9 +181,6 @@
                     {% endif %}
                   </a>
                 </h2>
-              {% endif %}
-              {% if enable_shopify_review_comments and settings.enable_shopify_product_badges %}
-                <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
               {% endif %}
               <div class="feature_divider"></div>
             {% when 'price' %}
@@ -282,17 +279,24 @@
                   </div>
                 {% endif %}
               {% endif %}
+            {% when 'custom-liquid' %}
+              {{ block.settings.custom_liquid }}
             {% when 'description' %}
               <div class="description">
                 {% if onboarding %}
                   <p>{{ 'homepage.onboarding.product_description' | t }}</p>
                 {% else %}
                   {% if context == 'quickshop' %}
-                    {% if block.settings.truncate_description %}
-                      {{ product.description | truncatewords: block.settings.truncated_words }}
-                    {% else %}
-                      {{ product.description }}
+                    {% if product.description != blank %}
+                      <div class="rte">
+                        {% if block.settings.truncate_description %}
+                          {{ product.description | truncatewords: block.settings.truncated_words }}
+                        {% else %}
+                          {{ product.description | split: '<!-- split -->' | first }}
+                        {% endif %}
+                      </div>
                     {% endif %}
+
                     <a
                       class="secondary_button"
                       href="{{ product.url | within: collection }}"
@@ -301,7 +305,11 @@
                       {{ 'collections.general.view_product_details_html' | t }}
                     </a>
                   {% else %}
-                    {{ product.description }}
+                    {% if product.description != blank %}
+                      <div class="rte">
+                        {{ product.description | split: '<!-- split -->' | first }}
+                      </div>
+                    {% endif %}
                   {% endif %}
                 {% endif %}
               </div>
@@ -357,7 +365,9 @@
                   {% if block.settings.show_types %}
                     <p>
                       <span class="label">{{ 'products.product.product_types' | t }}:</span>
-                      <span>{{ product.type | link_to_type }}</span>
+                      <a href="{% if collection %}{{ collection.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}?filter.p.product_type={{ product.type | url_param_escape }}">
+                        {{ product.type }}
+                      </a>
                     </p>
                   {% endif %}
 
@@ -385,75 +395,167 @@
                   context: 'product'
                 %}
               </div>
-            {% when '@app' %}
-              <div class="product-app">
-                {% render block %}
-              </div>
-            {% when 'size-chart' %}
-              {%- assign product_tags = product.tags | join: ' ' -%}
+            {% when 'collapsible-tab' %}
+              {% if block.settings.collapsible_tab_heading != blank %}
+                <details class="collapsible-tab">
+                  <summary class="collapsible-tab__heading">
+                    <span>{{ block.settings.collapsible_tab_heading | escape }}</span>
+                  </summary>
 
-              {% if product_tags contains 'meta-size-chart-' %}
-                {% for tag in product.tags %}
-                  {% if tag contains 'meta-size-chart-' %}
-                    <a
-                      class="size_chart"
-                      href="javascript:;"
-                      data-fancybox
-                      data-src="#size-chart{{product.id}}"
-                      data-type="inline"
-                      data-no-instant
-                    >
-                      {{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span>
-                    </a>
-                    {%
-                      render 'popup-size-chart',
-                      product: product
-                    %}
+                  {% if block.settings.collapsible_tab_text != blank %}
+                    <div class="collapsible-tab__text">
+                      {{ block.settings.collapsible_tab_text }}
+                    </div>
                   {% endif %}
-                {% endfor %}
-              {% elsif block.settings.size_chart != blank %}
-                <a
-                  class="size_chart"
-                  href="javascript:;"
-                  data-fancybox
-                  data-src="#size-chart{{product.id}}"
-                  data-type="inline"
-                  data-no-instant
+                </details>
+              {% endif %}
+            {% when 'tabs' %}
+              {% assign tabs_below_product_gallery = false %}
+
+              {% if block.settings.show_tabs_below_product_gallery %}
+                {% assign tabs_below_product_gallery = true %}
+              {% endif %}
+
+              {% capture product_tabs %}
+                {% assign tab_counter = 1 %}
+
+                <div class="product-tabs">
+                  {% if block.settings.show_product_description %}
+                    <input
+                      class="product-tabs__radio"
+                      id="product-tabs__radio-{{ section.id }}"
+                      name="{{ section.id }}"
+                      tabindex="0"
+                      type="radio"
+                      checked="checked"
+                    >
+
+                    <label class="product-tabs__label" for="product-tabs__radio-{{ section.id }}">
+                      {{ 'products.onboarding.tab_title'| t }}
+                    </label>
+
+                    <div class="product-tabs__panel" tabindex="0">
+                      {% if onboarding %}
+                        {{ 'products.onboarding.tab_content'| t }}
+                      {% else %}
+                        {% if product.description != blank %}
+                          <div class="rte">
+                            {{ product.description | split: '<!-- split -->' | first }}
+                          </div>
+                        {% else %}
+                          {{ 'products.onboarding.tab_content'| t }}
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  {% for i in (1..3) %}
+                    {% assign tab_text_key = 'tab_text_' | append: i %}
+                    {% assign tab_heading_key = 'tab_heading_' | append: i %}
+                    {% assign tab_heading_value = block.settings[tab_heading_key] %}
+                    {% assign tab_text_value = block.settings[tab_text_key] %}
+
+                    {% if tab_heading_value != blank %}
+                      <input
+                        class="product-tabs__radio"
+                        id="product-tabs__radio-{{ i }}-{{ section.id }}"
+                        name="{{ section.id }}"
+                        tabindex="0"
+                        type="radio"
+                        {% if tab_counter == 1 and block.settings.show_product_description == false %}
+                          checked
+                        {% endif %}
+                      >
+
+                      <label class="product-tabs__label" for="product-tabs__radio-{{ i }}-{{ section.id }}">
+                        {{ tab_heading_value | escape }}
+                      </label>
+
+                      <div class="product-tabs__panel" tabindex="0">
+                        {{ tab_text_value }}
+                      </div>
+
+                      {% assign tab_counter = tab_counter | plus: 1 %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endcapture %}
+
+              {% unless block.settings.show_tabs_below_product_gallery %}
+                {{ product_tabs }}
+              {% endunless %}
+            {% when '@app' %}
+              {% render block %}
+            {% when 'rating' %}
+              {% if product.metafields.reviews.rating.value != blank %}
+                <div class="product-rating">
+                  {%
+                    render 'rating-stars',
+                    value: product.metafields.reviews.rating.value.rating,
+                    scale_max: product.metafields.reviews.rating.value.scale_max,
+                  %}
+                  <p class="rating__text">
+                    <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+                  </p>
+                  <p class="rating__count">
+                    <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+                    <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "general.accessibility.total_reviews" | t }}</span>
+                  </p>
+                </div>
+              {% endif %}
+            {% when 'popup' %}
+              {% if block.settings.page != blank %}
+                <div
+                  class="
+                    product-popup
+                    product-popup--{{ block.settings.text_alignment }}
+                  "
                 >
-                  {{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span>
-                </a>
-                {%
-                  render 'popup-size-chart',
-                  product: product,
-                  size_chart: block.settings.size_chart
-                %}
+                  <a
+                    class="product-popup__link"
+                    href="javascript:;"
+                    data-fancybox
+                    data-src="#product-popup__lightbox-{{ product.id }}"
+                    data-type="inline"
+                    data-no-instant
+                  >
+                    <span class="product-popup__text">
+                      {{ block.settings.text | escape }}
+                    </span>
+                  </a>
+                </div>
+
+                <div
+                  class="product-popup__lightbox"
+                  id="product-popup__lightbox-{{ product.id }}"
+                  style="display: none;"
+                >
+                  <div class="product-popup__lightbox-wrapper">
+                    <h5 class="center">{{ pages[block.settings.page].title }}</h5>
+                    <div class="feature_divider"></div>
+                    <div class="rte">
+                      {{ pages[block.settings.page].content }}
+                    </div>
+                  </div>
+                </div>
               {% endif %}
           {% endcase %}
         </div>
       {% endfor %}
+    </div>
 
-      {% if enable_shopify_review_comments
-        and context == 'product'
-        and settings.shopify_review_position == 'right'
-      %}
-        <div class="shopify-reviews">
-          <div id="shopify-product-reviews" data-id="{{ product.id }}">
-            {{ product.metafields.spr.reviews }}
-          </div>
-        </div>
-      {% endif %}
-    </div>
-  </div>
-  {% if enable_shopify_review_comments
-    and context == 'product'
-    and settings.shopify_review_position == 'below'
-  %}
-    <div class="shopify-reviews">
-      <div id="shopify-product-reviews" data-id="{{ product.id }}">
-        {{ product.metafields.spr.reviews }}
+    {% if product.description != blank and product.description contains "<!-- split -->" %}
+      <div class="sixteen columns rte">
+        {{ product.description | split: '<!-- split -->' | last }}
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
+
+    {% if tabs_below_product_gallery == true %}
+      <div class="sixteen columns">
+        {{ product_tabs }}
+      </div>
+    {% endif %}
+  </div>
 </div>
 
 {% if set_product_height %}

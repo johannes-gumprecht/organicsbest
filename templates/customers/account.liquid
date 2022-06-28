@@ -1,14 +1,30 @@
 {% paginate customer.orders by 20 %}
   <section class="section">
-    <a name="pagecontent" id="pagecontent"></a>
-    <div class="container has-padding-top has-padding-bottom">
-      <div class="one-half column medium-down--one-whole">
-        <h1>{{ 'customer.account.details' | t }}</h1>
+    <div class="container content">
+      <div
+        class="
+          one-half
+          column
+          medium-down--one-whole
+        "
+      >
+        <h1>
+          {{ 'customer.account.details' | t }}
+        </h1>
       </div>
 
-      <div class="one-half column medium-down--one-whole account-header-logout">
+      <div
+        class="
+          one-half
+          column
+          medium-down--one-whole
+          account-header-logout
+        "
+      >
         <span>
-          <a href="{{ routes.account_logout_url }}" id="customer_logout_link">{{ 'layout.customer.log_out' | t }}</a>
+          <a href="{{ routes.account_logout_url }}" id="customer_logout_link">
+            {{ 'layout.customer.log_out' | t }}
+          </a>
         </span>
       </div>
 
@@ -16,12 +32,23 @@
         <div class="feature_divider"></div>
       </div>
 
-      <aside class="one-third column medium-down--one-whole account-sidebar">
+      <aside
+        class="
+          one-third
+          column
+          medium-down--one-whole
+          account-sidebar
+        "
+      >
         <h4 class="name">
-          <a href="{{ routes.account_url }}" title="{{ 'layout.customer.my_account' | t }}">{{ customer.name }}</a>
+          <a href="{{ routes.account_url }}" title="{{ 'layout.customer.my_account' | t }}">
+            {{ customer.name }}
+          </a>
         </h4>
 
-        <p class="email note">{{ customer.email }}</p>
+        <p class="email note">
+          {{ customer.email }}
+        </p>
 
         <h4>{{ 'customer.addresses.primary' | t }}</h4>
 
@@ -50,7 +77,14 @@
         </div>
       </aside>
 
-      <main class="two-thirds columns medium-down--one-whole account-main">
+      <main
+        class="
+          two-thirds
+          columns
+          medium-down--one-whole
+          account-main
+        "
+      >
         <h4>{{ 'customer.orders.title' | t }}</h4>
 
         {% if customer.orders.size != 0 %}
@@ -83,8 +117,13 @@
           <p>{{ 'customer.orders.none' | t }}</p>
         {% endif %}
 
-        {% render 'pagination', paginate: paginate %}
+        {%
+          render 'pagination',
+          paginate: paginate,
+        %}
       </main>
     </div>
   </section>
 {% endpaginate %}
+
+{% section 'newsletter' %}

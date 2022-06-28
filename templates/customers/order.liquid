@@ -1,14 +1,28 @@
 <section class="section">
-  <a name="pagecontent" id="pagecontent"></a>
-  <div class="container has-padding-top has-padding-bottom">
-
-    <div class="one-half column medium-down--one-whole">
+  <div class="container content">
+    <div
+      class="
+        one-half
+        column
+        medium-down--one-whole
+      "
+    >
       <h1>
-        <a href="{{ routes.account_url }}">{{ 'customer.account.details' | t }}</a>
+        <a href="{{ routes.account_url }}">
+          {{ 'customer.account.details' | t }}
+        </a>
       </h1>
     </div>
 
-    <div class="one-half column medium-down--one-whole account-header-logout">
+    <div
+      class="
+        one-half
+        column
+        medium-down--one-whole
+        account-header-logout
+        has-padding-bottom
+      "
+    >
       <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a> / <span><a href="{{ routes.account_logout_url }}" id="customer_logout_link">{{ 'layout.customer.log_out' | t }}</a></span>
     </div>
 
@@ -265,3 +279,5 @@
     </div>
   </div>
 </section>
+
+{% section 'newsletter' %}

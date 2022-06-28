@@ -162,13 +162,15 @@
               {% assign field_type = block.settings.field_type %}
 
               {% assign contact_label = '' %}
+
               {% if block.settings.label != blank %}
-                {% assign contact_label = block.settings.label | strip_html %}
+                {% assign contact_label = block.settings.label | strip_html | escape %}
               {% elsif block.settings.placeholder != blank %}
-                {% assign contact_label =  block.settings.placeholder | strip_html %}
+                {% assign contact_label =  block.settings.placeholder | strip_html | escape %}
               {% endif %}
 
               {% assign required = '' %}
+
               {% if block.settings.required %}
                 {% assign required = ' *' %}
               {% endif %}
@@ -177,7 +179,6 @@
                 class="
                   contact-block
                   contact-block--{{ block.id }}
-                  contact-block--{{ block.type }}
                   contact-block--{{ block.type }}
                 "
                 {{ block.shopify_attributes }}
@@ -314,12 +315,12 @@
                         {% if forloop.index0 == 0 %}
                           {% if block.settings.placeholder != blank %}
                             <option value="">
-                              {{ block.settings.placeholder | strip_html | append: required }}
+                              {{ block.settings.placeholder | strip_html | append: required | escape }}
                             </option>
                           {% endif %}
                         {% else %}
                           {% if block.settings[option] != blank %}
-                            <option value="{{ block.settings[option] }}">
+                            <option value="{{ block.settings[option] | escape }}">
                               {{ block.settings[option] }}
                             </option>
                           {% endif %}
@@ -353,7 +354,7 @@
                               id="radio-{{ forloop.index }}"
                               name="contact[{{ contact_label }}]"
                               type="radio"
-                              value="{{ block.settings[option] }}"
+                              value="{{ block.settings[option] | escape }}"
                               {% if forloop.first %}
                                 checked
                               {% endif %}
@@ -389,10 +390,11 @@
                         {% if block.settings[option] != blank %}
                           <li>
                             <input
+                              class="custom-contact__checkbox"
                               id="checkbox-{{ forloop.index }}"
-                              name="contact[{{ checkbox_option }}]"
+                              name="contact[{{ contact_label }}-{{ index }}]"
                               type="checkbox"
-                              value="true"
+                              value="{{ checkbox_option }}"
                             >
                             <label for="checkbox{{ forloop.index }}">
                               {{ block.settings[option] }}

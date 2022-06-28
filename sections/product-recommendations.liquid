@@ -43,7 +43,7 @@
 
   {% comment %} HTML markup {% endcomment %}
   {% capture product_collections_markup %}
-    <div class="recommended-products__title {% unless section.settings.product_recommendations_style == 'slider' %}one-whole column{% endunless %}" data-recommended-product-count="{% if show_dynamic_collection == true %}{{ recommendations.products_count }}{% else %}{{ collection_size }}{% endif %}">
+    <div class="recommended-products__title" data-recommended-product-count="{% if show_dynamic_collection == true %}{{ recommendations.products_count }}{% else %}{{ collection_size }}{% endif %}">
       <h2 class="title center">{{ section.settings.product_recommendations_heading }}</h2>
       <div class="feature_divider"></div>
     </div>
@@ -56,36 +56,66 @@
           limit: section.settings.recommended_products_limit,
           products: products,
           per_slide: section.settings.products_per_row - 1,
-          skip_product: product
+          skip_product: product,
         %}
       </div>
     {% else %}
       {% comment %} Recommended Products Grid {% endcomment %}
       <div class="recommended-products--grid">
         <div class="container">
-          <div class="one-whole column">
-            {%
-              render 'product-loop',
-              limit: section.settings.recommended_products_limit,
-              products: products,
-              products_per_row: section.settings.products_per_row,
-              skip_product: product
-            %}
-          </div>
+          {%
+            render 'product-loop',
+            limit: section.settings.recommended_products_limit,
+            products: products,
+            skip_product: product,
+            products_per_row: section.settings.products_per_row,
+          %}
         </div>
       </div>
     {% endif %}
   {% endcapture %}
 
-  {% if show_custom_collection %}
-    <div class="product-recommendations product-recommendations--{% if template contains 'details' %}details{% else %}{{ template | replace: '.', '-' | handle }}{% endif %} meta-related-recommended-collection" data-enabled="{{ section.settings.show_product_recommendations }}">
-      {{ product_collections_markup }}
+  <section
+    class="
+      section
+      {% if section.settings.wide_display == true %}
+        is-width-wide
+      {% endif %}
+    "
+  >
+    <div class="container">
+      <div class="one-whole column">
+        {% if show_custom_collection %}
+          <div
+            class="
+              product-recommendations
+              product-recommendations--{{ template | replace: '.', '-' | handle }}
+              meta-related-recommended-collection
+            "
+            data-product-recommendations
+            data-enabled="{{ section.settings.show_product_recommendations }}"
+          >
+            {{ product_collections_markup }}
+          </div>
+        {% elsif show_dynamic_collection %}
+          <div
+            class="
+              product-recommendations
+              product-recommendations--{{ template | replace: '.', '-' | handle }}
+            "
+            data-product-recommendations
+            data-section-id="{{ section.id }}"
+            data-recommendations-url="{{ routes.product_recommendations_url }}"
+            data-product-id="{{ product.id }}"
+            data-limit="{{ section.settings.recommended_products_limit }}"
+            data-enabled="{{ section.settings.show_product_recommendations }}"
+          >
+            {{ product_collections_markup }}
+          </div>
+        {% endif %}
+      </div>
     </div>
-  {% elsif show_dynamic_collection %}
-    <div class="product-recommendations product-recommendations--{% if template contains 'details' %}details{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}" data-recommendations-url="{{ routes.product_recommendations_url }}" data-product-id="{{ product.id }}" data-limit="{{ section.settings.recommended_products_limit }}" data-enabled="{{ section.settings.show_product_recommendations }}">
-      {{ product_collections_markup }}
-    </div>
-  {% endif %}
+  </section>
 {% endif %}
 
 {% schema %}
@@ -98,15 +128,17 @@
       "content": "Product recommendations"
     },
     {
-      "type":"paragraph",
-      "content": "The settings configured in this section will remain consistent across all product templates. If using the product.details template, adding the Recommended Products content block is also required. [Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360034424013)"
-    },
-    {
       "type": "checkbox",
       "id": "show_product_recommendations",
       "label": "Show dynamic recommendations",
       "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "wide_display",
+      "label": "Wide display",
+      "default": false
     },
     {
       "type": "radio",
@@ -148,11 +180,6 @@
       "step": 1,
       "default": 4
     }
-  ],
-  "templates": [
-    "index",
-    "product",
-    "page"
   ]
 }
 

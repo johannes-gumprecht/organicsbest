@@ -37,6 +37,10 @@
       "subtext": "Pedimos desculpas, mas a página solicitada não existe.",
       "continue_shopping_html": "Experimente pesquisar ou <a href=\"/collections/all\">continuar comprando →</a>"
     },
+    "accessibility": {
+      "total_reviews": "total de avaliações",
+      "star_reviews_info": "{{ rating_value }} de {{ rating_max }} estrelas"
+    },
     "password_page": {
       "opening_soon": "Abertura em Breve",
       "spread_the_word": "Espalhe a novidade",
@@ -168,21 +172,15 @@
       "tags": "Marcas",
       "clear": "Cancelar",
       "apply_filter": "Aplicar",
-      "clear_all": "Limpar tudo"
+      "clear_all": "Limpar tudo",
+      "from": "A partir de",
+      "to": "Para"
     },
     "sorting": {
       "title": "Ordenar por",
       "sort_collection": "Ordenar {{ title }}",
       "filter": "Filtrar por",
-      "filter_collection": "Filtrar {{ title }}",
-      "featured": "Em destaque",
-      "best_selling": "Mais vendidos",
-      "az": "Ordem alfabética: A-Z",
-      "za": "Ordem alfabética: Z-A",
-      "price_ascending": "Preço: menor para maior",
-      "price_descending": "Preço: maior para menor",
-      "date_descending": "Data: novo para antigo",
-      "date_ascending": "Data: antigo para novo"
+      "filter_collection": "Filtrar {{ title }}"
     }
   },
   "products": {
@@ -224,6 +222,10 @@
       "price": {
         "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} / {{ unit_measure }}"
       }
+    },
+    "onboarding": {
+      "tab_title": "Descrição",
+      "tab_content": "Adicione uma descrição do produto para compartilhar informações sobre o seu produto."
     }
   },
   "contact": {
@@ -399,7 +401,7 @@
       "item": "Item",
       "uploaded_file": "arquivo carregado",
       "continue_browsing_html": "Não há itens no seu carrinho.",
-      "continue_shopping_link_html": "Continuar comprando →",
+      "continue_shopping": "Continuar comprando →",
       "excluding_tax_shipping": "Excluindo tarifa e frete",
       "tax_and_shipping": "Tributos e frete calculados no checkout",
       "taxes_and_shipping_policy_at_checkout_html": "Tributos e <a href=\"{{ link }}\">frete</a> calculados no checkout",

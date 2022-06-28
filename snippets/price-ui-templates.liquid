@@ -98,7 +98,7 @@
   {%- if compare_at_price != false -%}<span class="compare-at-price" data-compare-at-price>{%- if compare_at_price != blank -%}{{- compare_at_price -}}{%- endif -%}</span>{%- endif -%}
   {%- if unit_pricing != false -%}<span class="unit-pricing" data-unit-pricing>{%- if unit_pricing != blank -%}{{- unit_pricing -}}{%- endif -%}</span>{%- endif -%}
 {%- elsif template == 'price-ui-badge' -%}
-  <div class="price-ui-badge__sticker">
+  <div class="price-ui-badge__sticker price-ui-badge__sticker--{{ badge | handleize }}">
     <span class="price-ui-badge__sticker-text" data-badge>{%- if badge != blank -%}{{- badge -}}{%- endif -%}</span>
   </div>
 {%- endif -%}
