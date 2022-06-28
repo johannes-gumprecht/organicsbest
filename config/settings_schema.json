@@ -1232,7 +1232,7 @@
         "id": "show_dynamic_checkout_button",
         "label": "Show dynamic checkout button",
         "default": true,
-        "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
       },
       {
         "type": "checkbox",
@@ -1266,13 +1266,13 @@
         "type": "checkbox",
         "id": "notify_me_form",
         "label": "Enable \"Back in stock request\" form",
-        "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/115013035567-How-does-the-back-in-stock-notification-form-work-)"
+        "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115013035567-How-does-the-back-in-stock-notification-form-work-)"
       },
       {
         "type": "richtext",
         "id": "notify_me_richtext",
         "label": "Text",
-        "default": "<p>Notify me when this product is available:</p>"
+        "default": "<p>Notify me when this product is available:<\/p>"
       }
     ]
   },
@@ -1298,7 +1298,7 @@
         "type": "checkbox",
         "id": "show_star_ratings",
         "label": "Show star ratings",
-        "info": "To display a rating, add a product rating app. [Learn more](https://apps.shopify.com/product-reviews)",
+        "info": "To display a rating, add a product rating app. [Learn more](https:\/\/apps.shopify.com\/product-reviews)",
         "default": false
       },
       {
@@ -1540,7 +1540,7 @@
       {
         "type": "header",
         "content": "Custom theme currency converter",
-        "info": "If custom converter is enabled, the native multi-country selector will be disabled. [Learn more](https://help.shopify.com/en/manual/payments/shopify-payments/multi-currency/setup)"
+        "info": "If custom converter is enabled, the native multi-country selector will be disabled. [Learn more](https:\/\/help.shopify.com\/en\/manual\/payments\/shopify-payments\/multi-currency\/setup)"
       },
       {
         "type": "checkbox",
@@ -1631,7 +1631,7 @@
         "id": "image_crop",
         "label": "Image cropping",
         "default": "none",
-        "info": "Only applied when image is larger/wider than recommended",
+        "info": "Only applied when image is larger\/wider than recommended",
         "options": [
           {
             "value": "left",
@@ -1871,7 +1871,7 @@
       {
         "type": "text",
         "id": "disqus_shortname",
-        "label": "[DISQUS](http:\/\/help.disqus.com/en/articles/1717111-what-s-a-shortname\/) shortname"
+        "label": "[DISQUS](http:\/\/help.disqus.com\/en\/articles\/1717111-what-s-a-shortname\/) shortname"
       }
     ]
   }
