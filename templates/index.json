@@ -140,6 +140,237 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "16565123011b680b4b": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656512303b9db77f0": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best-Selling Baby Formula",
+        "collection_description": true,
+        "collection": "best-seller",
+        "collection_style": "grid",
+        "products_per": 3,
+        "products_limit": 6,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16565124289436ac68": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656512435834a0fc0": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best-Selling Baby Food",
+        "collection_description": false,
+        "collection": "organic-baby-food",
+        "collection_style": "grid",
+        "products_per": 3,
+        "products_limit": 6,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656512495be3544eb": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656512514db95af05": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Why Our Work Is Important",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16565125186487f68a": {
+      "type": "image-text",
+      "blocks": {
+        "1656512518e2731666-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/heavy-metals_d4253f94-0fd4-450f-a869-ea81ab3f9112_1400x_1.webp",
+            "image_crop": "none",
+            "title": "Should You Be Concerned About Heavy Metals in Baby Formula?",
+            "text": "<p>\"Ingredients in many baby foods, including some organic fare, are <strong>contaminated with heavy metals  <\/strong>like arsenic, lead and cadmium at levels that are far <strong>higher than those allowed in products like bottled water...<\/strong>\" <\/p><p><em> - New York Times, Feb 2022 <\/em><\/p>",
+            "button_label": "Read more",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/should-you-be-concerned-about-heavy-metals-in-baby-formula",
+            "bg_color": "#f9f9f9",
+            "text_color": ""
+          }
+        },
+        "1656512518e2731666-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/additives_1400x_99a2c83e-629c-4762-959d-4d2d2069c09a.webp",
+            "image_crop": "none",
+            "title": "Should You Be Concerned About Heavy Metals in Baby Formula?",
+            "text": "<p>\"Ingredients in many baby foods, including some organic fare, are <strong>contaminated with heavy metals  <\/strong>like arsenic, lead and cadmium at levels that are far <strong>higher than those allowed in products like bottled water...<\/strong>\" <\/p><p><em> - New York Times, Feb 2022 <\/em><\/p>",
+            "button_label": "Read more",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/should-you-be-concerned-about-heavy-metals-in-baby-formula",
+            "bg_color": "#f9f9f9",
+            "text_color": ""
+          }
+        },
+        "ceb2d542-b638-430f-b3da-440e389daac3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aluminum_1400x_cf655a44-40dc-4f20-9ac0-467552eb7738.webp",
+            "image_crop": "none",
+            "title": "Read more",
+            "text": "<p>\"Ingredients in many baby foods, including some organic fare, are <strong>contaminated with heavy metals  <\/strong>like arsenic, lead and cadmium at levels that are far <strong>higher than those allowed in products like bottled water...<\/strong>\" <\/p><p><em> - New York Times, Feb 2022 <\/em><\/p>",
+            "button_label": "Read more",
+            "link": "https:\/\/organicsbestshop.com\/blogs\/organicsbestclub\/should-you-be-concerned-about-heavy-metals-in-baby-formula",
+            "bg_color": "#f9f9f9",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656512518e2731666-0",
+        "1656512518e2731666-1",
+        "ceb2d542-b638-430f-b3da-440e389daac3"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165651274812543397": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656512772483dd24d": {
+      "type": "featured-text",
+      "settings": {
+        "title": "How to Prepare European Formula",
+        "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16565127750bfdeab7": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div style=\"position: relative; width: 100%;height: 0; padding-bottom: 56.25%;\"><iframe style=\"position: absolute;  width: 100%; height: 100%; left: 0; top: 0;\" src=\"https:\/\/killerplayer.com\/start\/video\/4eedf01b-7a94-4910-ac1e-90a153771b36\" width=\"1280\" height=\"720\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe><\/div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656512814e1a02da5": {
+      "type": "faq",
+      "blocks": {
+        "165651281454a03739-0": {
+          "type": "heading",
+          "settings": {
+            "faq_title": "Section heading"
+          }
+        },
+        "165651281454a03739-1": {
+          "type": "content",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Provide the answer to the question here.<\/p>"
+          }
+        },
+        "165651281454a03739-2": {
+          "type": "content",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Provide the answer to the question here.<\/p>"
+          }
+        },
+        "165651281454a03739-3": {
+          "type": "content",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Provide the answer to the question here.<\/p>"
+          }
+        },
+        "165651281454a03739-4": {
+          "type": "heading",
+          "settings": {
+            "faq_title": "Section heading"
+          }
+        },
+        "165651281454a03739-5": {
+          "type": "content",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Provide the answer to the question here.<\/p>"
+          }
+        },
+        "165651281454a03739-6": {
+          "type": "content",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Provide the answer to the question here.<\/p>"
+          }
+        },
+        "165651281454a03739-7": {
+          "type": "content",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Provide the answer to the question here.<\/p>"
+          }
+        },
+        "165651281454a03739-8": {
+          "type": "image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "165651281454a03739-0",
+        "165651281454a03739-1",
+        "165651281454a03739-2",
+        "165651281454a03739-3",
+        "165651281454a03739-4",
+        "165651281454a03739-5",
+        "165651281454a03739-6",
+        "165651281454a03739-7",
+        "165651281454a03739-8"
+      ],
+      "settings": {
+        "title": "FAQ"
+      }
     }
   },
   "order": [
@@ -150,6 +381,17 @@
     "165651031188dd6d8c",
     "165651057357b37ab7",
     "165651057734afef05",
-    "1656510664eed1fbb1"
+    "1656510664eed1fbb1",
+    "16565123011b680b4b",
+    "1656512303b9db77f0",
+    "16565124289436ac68",
+    "1656512435834a0fc0",
+    "1656512495be3544eb",
+    "1656512514db95af05",
+    "16565125186487f68a",
+    "165651274812543397",
+    "1656512772483dd24d",
+    "16565127750bfdeab7",
+    "1656512814e1a02da5"
   ]
 }
