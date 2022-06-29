@@ -45,12 +45,6 @@
           "type": "form",
           "settings": {
           }
-        },
-        "5400f911-c9f8-4216-bd0e-7168eae94618": {
-          "type": "shopify:\/\/apps\/shop\/blocks\/shop-pay-installments-banner\/7cab7c4a-1dfc-4b7e-8e53-31f104f2fa4e",
-          "settings": {
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -58,8 +52,7 @@
         "b4a272bd-da84-4ae3-bca0-b5e5896cdfbf",
         "description",
         "price",
-        "form",
-        "5400f911-c9f8-4216-bd0e-7168eae94618"
+        "form"
       ],
       "settings": {
         "product_breadcrumb": false,
