@@ -2,7 +2,29 @@
   "sections": {
     "main": {
       "type": "collection-template",
+      "blocks": {
+        "9073e4b3-bf2b-4a83-b373-b9c7b7e46a3b": {
+          "type": "faceted_filtering",
+          "settings": {
+            "show_filter_product_count": true
+          }
+        }
+      },
+      "block_order": [
+        "9073e4b3-bf2b-4a83-b373-b9c7b7e46a3b"
+      ],
       "settings": {
+        "featured_collection_image": false,
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "display_collection_title": false,
+        "collection_breadcrumb": true,
+        "collection_tags": false,
+        "collection_sort": false,
+        "products_per_row": 4,
+        "pagination_limit": 16,
+        "toggle": false
       }
     }
   },
