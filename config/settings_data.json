@@ -240,10 +240,10 @@
           "footer-3"
         ],
         "settings": {
-          "copyright_text": "",
-          "display_designed_by": true,
+          "copyright_text": "All rights reserved.",
+          "display_designed_by": false,
           "display_payment_methods": true,
-          "show_locale_selector": true,
+          "show_locale_selector": false,
           "show_currency_selector": true
         }
       },
