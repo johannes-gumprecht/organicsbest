@@ -15,11 +15,11 @@
       ],
       "settings": {
         "featured_collection_image": false,
-        "wide_display": true,
+        "wide_display": false,
         "mobile_image_crop": "none",
         "caption_content_background": "original",
         "display_collection_title": false,
-        "collection_breadcrumb": true,
+        "collection_breadcrumb": false,
         "collection_tags": false,
         "collection_sort": false,
         "products_per_row": 4,
