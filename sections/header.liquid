@@ -70,6 +70,7 @@
   {% endif %}
 
   <div class="top-bar">
+  {% unless template contains 'cart' %}
     <details data-mobile-menu>
       <summary class="mobile_nav dropdown_link" data-mobile-menu-trigger>
         <div data-mobile-menu-icon>
@@ -131,7 +132,7 @@
         </ul>
       </div>
     </details>
-
+{% endunless %}
     <a href="{{ routes.root_url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
       {% if section.settings.logo_mobile != blank %}
         <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
