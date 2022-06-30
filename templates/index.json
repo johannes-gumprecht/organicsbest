@@ -351,6 +351,36 @@
       "settings": {
         "title": "Frequently Asked Question"
       }
+    },
+    "165657173873f78986": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656571746e085eb28": {
+      "type": "featured-text",
+      "settings": {
+        "title": "Customer Reviews",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656571748516aea8a": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<div id=\"stamped-reviews-widget\" data-widget-type=\"wall-photos\" data-review-ids=\"67900857,65750216,65698718,65706983,66394260,67880053,67630136,67615974,67599352,66632059,66571810\" data-limit-words=\"15\" data-min-rating=\"5\" data-random=\"true\" data-with-photos=\"true\"><\/div>",
+        "css_class": "one-whole",
+        "custom_css": ""
+      }
     }
   },
   "order": [
@@ -372,6 +402,9 @@
     "165651274812543397",
     "1656512772483dd24d",
     "16565127750bfdeab7",
-    "1656512814e1a02da5"
+    "1656512814e1a02da5",
+    "165657173873f78986",
+    "1656571746e085eb28",
+    "1656571748516aea8a"
   ]
 }
