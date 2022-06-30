@@ -575,7 +575,7 @@
             {{ search }}
           {% else %}
             <div class="nav nav--left {{ section.settings.menu_alignment }}">
-              {{ menu_left }}
+              {% unless template contains 'cart' %}{{ menu_left }}{% endunless %}
             </div>
 
             {{ logo }}
@@ -592,10 +592,11 @@
                 {% endif %}
               "
             >
-              {{ menu_right }}
+              {% unless template contains 'cart' %}{{ menu_right }}{% endunless %}
             </div>
-
+{% unless template contains 'cart' %}
             {{ search }}
+  {% endunless %}
           {% endif %}
         {% else %}
           {{ logo }}
