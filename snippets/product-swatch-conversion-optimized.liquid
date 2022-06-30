@@ -66,52 +66,27 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
         
         
      {% if product.tags contains 'multipack' %} 
-    
-        
-       
-        
-             <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}">
-           
-         <div class="variantname">{{ value }}</div>
-               
-         <div class="boxprice"><span class="money" data-price>{{- variant.price | divided_by: getvariantnumber | money -}}</span> each</div>
-
-               
-               
-            {% if absolutesavings > 0 %}
-               <div class="flexbreak"></div> <!-- break -->
-                <div class="flexitem"></div>
-                  {% comment %}  <div class="swatchsavings">Save {{ firstvariantsprice | minus: boxprice | times: 100 | divided_by: firstvariantsprice }}%</div>{% endcomment %}
-            		<div class="swatchsavings">Save <span class="money" data-price>{{- firstvariantsprice | times: getvariantnumber | minus: variant.price | money -}}</span></div>
-               
-               
-           			{% else %}
-            <div class="flexbreak"></div> <!-- break -->
-                <div class="flexitem"></div>
-             		<div class="swatchsavings">Single pack</div>
-          
-                    {% endif %}
+              <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}">
+                     <div class="variantname">{{ value }}</div>
+                     <div class="boxprice"><span class="money" data-price>{{- variant.price | divided_by: getvariantnumber | money -}}</span> each</div>
+                     {% if absolutesavings > 0 %}
+                                   <div class="flexbreak"></div> <!-- break -->
+                                    <div class="flexitem"></div>
+                                    {% comment %}  <div class="swatchsavings">Save {{ firstvariantsprice | minus: boxprice | times: 100 | divided_by: firstvariantsprice }}%</div>{% endcomment %}
+                            		<div class="swatchsavings">Save <span class="money" data-price>{{- firstvariantsprice | times: getvariantnumber | minus: variant.price | money -}}</span></div>
+                                 			{% else %}
+                                                  <div class="flexbreak"></div> <!-- break -->
+                                                  <div class="flexitem"></div>
+                                             	  <div class="swatchsavings">Single pack</div>
+                     {% endif %}
             
-                   
-					
-                    
-
-               
-                      {% if variant.price < 19000.00 %}
-        
-        <div class="shippingpolicy" style="width:100%">Express Delivery</div>
-        
-        {% else %}
-        
-        <div class="shippingpolicy" style="width:100%">Free Express Delivery</div> 
-        
-         	{% endif %}
-               
-               
-         			<img alt="sold out" aria-label="sold out" class="crossed-out" src="{{ 'soldout.png' | asset_url }}"/>
-        	 
-                   
-        	</label>
+                    {% if variant.price < 19000.00 %}
+                              <div class="shippingpolicy" style="width:100%">Express Delivery</div>
+                              {% else %}
+                                           <div class="shippingpolicy" style="width:100%">Free Express Delivery</div> 
+                   	{% endif %}
+                    <img alt="sold out" aria-label="sold out" class="crossed-out" src="{{ 'soldout.png' | asset_url }}"/>
+        	 </label>
 
        
          
