@@ -191,7 +191,7 @@
           <div class="container">
             <div class="one-whole column">
               <div class="collection_description rte">
-                {{ collection.description }}
+                {{ collection.description | split: '<!-- split -->' | first }}
               </div>
             </div>
           </div>
@@ -224,6 +224,13 @@
           %}
         {% endif %}
       </div>
+        <div class="container">
+            <div class="one-whole column">
+              <div class="collection_description rte">
+                {{ collection.description | split: '<!-- split -->' | last }}
+              </div>
+            </div>
+          </div>
     </div>
   {% endpaginate %}
   </div>
