@@ -332,7 +332,7 @@
               {% else %}
 
                 {% unless collection_handles contains 'coming-soon' %}
-                  {% unless product.variants[0].inventory_quantity <= 12 and product.variants[0].available == false  %}
+                  {% unless product.variants[0].available == false  %}
                   {%
                     render 'product-form-conversion-optimized',
                     product: product,
