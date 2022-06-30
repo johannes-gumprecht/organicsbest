@@ -134,6 +134,15 @@
       "settings": {
       }
     },
+    "1656585309ee3b5025": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -143,6 +152,15 @@
         "product_recommendations_heading": "Love this? Then you also may enjoy:",
         "products_per_row": 3,
         "recommended_products_limit": 3
+      }
+    },
+    "16565852962c04d578": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
       }
     }
   },
@@ -156,6 +174,8 @@
     "1656508860c066b768",
     "165650887116b5bfdd",
     "16565088778a1701aa",
-    "recommendations"
+    "1656585309ee3b5025",
+    "recommendations",
+    "16565852962c04d578"
   ]
 }
