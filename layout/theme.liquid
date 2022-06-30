@@ -4,7 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
-    <meta name="robots" content="index,follow">
+  
+      {% unless template contains 'product' and product.tags contains 'noindex' %}  
+    
+    {% if template contains 'collection' and collection.title contains 'IGNORE' %}
+    			<meta name = "robots" content = "noindex,nofollow">
+    
+                  {% else %}
+    
+   
+                  <meta name="robots" content="index,follow">
+   
+    {% endif %}
+    {% endunless %}
+    
+ 
+   
+    
+    <meta name="google-site-verification" content="l8wI6Ozao4QuGPtvtd5pf1ZGTEFmjQSLawHtIKgRNpo" />
+    <meta name="ahrefs-site-verification" content="3d6fd47af7d58d72fbc938a4d796509d62d8c8e463b80344c03ef3e6aedffcc9">
+  
+    {% comment %}
+       <meta name="robots" content="index,follow">
+    {% endcomment %}
 
     <!-- Mobile Specific Metas -->
     <meta name="HandheldFriendly" content="True">
