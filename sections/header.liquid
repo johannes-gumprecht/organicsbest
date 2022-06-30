@@ -612,8 +612,9 @@
               {{ menu_left }}
               {{ menu_right }}
             </div>
-
+{% unless template contains 'cart' %}
             {{ search }}
+  {% endunless %}
           </div>
         {% endif %}
       </div>
