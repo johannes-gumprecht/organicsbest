@@ -144,10 +144,11 @@
     </a>
 
     <div class="top-bar--right">
+  {% unless template contains 'cart' %}
       {% if section.settings.search_enabled %}
         <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search"></a>
       {% endif %}
-
+{% endunless %}
       {% if section.settings.show_cart %}
         <div class="cart-container">
           <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant> <span class="cart_count">{{ cart.item_count }}</span></a>
