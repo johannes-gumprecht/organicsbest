@@ -544,11 +544,7 @@
       {% endfor %}
     </div>
 
-    {% if product.description != blank and product.description contains "<!-- split -->" %}
-      <div class="sixteen columns rte">
-        {{ product.description | split: '<!-- split -->' | last }}
-      </div>
-    {% endif %}
+    
 
     {% if tabs_below_product_gallery == true %}
       <div class="sixteen columns">
