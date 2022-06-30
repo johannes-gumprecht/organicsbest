@@ -12,7 +12,7 @@
       "settings": {
         "custom_liquid": "<h1 class=\"product_name center\">{{ product.title }}<\/h1><!-- Stamped - Begin Star Rating Badge -->\n<span \nclass=\"stamped-product-reviews-badge stamped-main-badge\" \ndata-id=\"{{ product.id }}\" \ndata-product-sku=\"{{ product.handle }}\" \ndata-product-title=\"{{product.title}}\" \ndata-product-type=\"{{product.type}}\" \nstyle=\"display: block;margin:auto;text-align:center;\">\n{{product.metafields.stamped.badge}}\n<\/span>\n<!-- Stamped - End Star Rating Badge -->\n    <div class=\"feature_divider\"><\/div>",
         "css_class": "",
-        "custom_css": ""
+        "custom_css": ".feature_divider {margin-top:15px;}"
       }
     },
     "main": {
