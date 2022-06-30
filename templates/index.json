@@ -297,79 +297,59 @@
     "1656512814e1a02da5": {
       "type": "faq",
       "blocks": {
-        "165651281454a03739-0": {
-          "type": "heading",
-          "settings": {
-            "faq_title": "Section heading"
-          }
-        },
         "165651281454a03739-1": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "Where do you buy the products?",
+            "answer": "<p>We buy all products directly from the manufacturers or their official wholesale distributors.<\/p><p>All our products are always 100% authentic and originally meant for the European market.<\/p>"
           }
         },
         "165651281454a03739-2": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "What expiry date can I expect?",
+            "answer": "<p>All our baby products have a guaranteed expiry date of 6 months into the future or more.<\/p><p>Due to the nature of the products, you will usually find a longer expiry date with our non-baby-formula products.<\/p>"
           }
         },
         "165651281454a03739-3": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
-          }
-        },
-        "165651281454a03739-4": {
-          "type": "heading",
-          "settings": {
-            "faq_title": "Section heading"
+            "title": "Do you ship internationally?",
+            "answer": "<p>Yes, we do!<\/p><p>We exclusively use express shipping with all carriers to ensure your orders <strong>arrive within 1-5 business days.<\/strong><\/p><p><em>Please note, that we do not ship to Russia, Ukraine and Mexico.<\/em><\/p>"
           }
         },
         "165651281454a03739-5": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "What happens when my order is lost?",
+            "answer": "<p>Around 99.9% of all orders arrive within 1-5 business days.<\/p><p>If you experience issues with the arrrival of your order, we will find  a solution or offer you a free resend or full refund.<\/p><p>No questions asked!<\/p>"
           }
         },
         "165651281454a03739-6": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
+            "title": "What if this baby formula is not working for my baby?",
+            "answer": "<p>We want you to find the best baby formula for your little one. That is why we have our <strong>Right Formula Guarantee!<\/strong><\/p><p><strong>Let us help and send you one box or can of any baby formula free. We will pay for it.<\/strong><\/p><p>Please contact our customer service to help you within 24 hours (Mo-Fr): <a href=\"mailto:support@organicsbestshop.com\" target=\"_blank\" title=\"mailto:support@organicsbestshop.com\">support@organicsbestshop.com<\/a><\/p><p><em>Please note, we do not offer refunds due to safety reasons. Refunds with food products in general are not legal.<\/em><\/p>"
           }
         },
         "165651281454a03739-7": {
           "type": "content",
           "settings": {
-            "title": "Question",
-            "answer": "<p>Provide the answer to the question here.<\/p>"
-          }
-        },
-        "165651281454a03739-8": {
-          "type": "image",
-          "settings": {
+            "title": "Will I be able to read the preparation instructions on the packaging?",
+            "answer": "<p><em>Sometimes yes, sometimes no!<\/em><\/p><p>Some of the brands we sell include English instructions on the packaging - but not all.<\/p><p>Don't worry! It is fine.<\/p><p>All <strong>translated preparation instructions<\/strong> can be found on our products pages and in our support center here <a href=\"https:\/\/organicsbestshop.com\/pages\/support-center\" title=\"https:\/\/organicsbestshop.com\/pages\/support-center\">https:\/\/organicsbestshop.com\/pages\/support-center<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "165651281454a03739-0",
         "165651281454a03739-1",
         "165651281454a03739-2",
         "165651281454a03739-3",
-        "165651281454a03739-4",
         "165651281454a03739-5",
         "165651281454a03739-6",
-        "165651281454a03739-7",
-        "165651281454a03739-8"
+        "165651281454a03739-7"
       ],
       "settings": {
-        "title": "FAQ"
+        "title": "Frequently Asked Question"
       }
     }
   },
