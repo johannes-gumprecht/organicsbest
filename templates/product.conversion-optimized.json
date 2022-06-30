@@ -16,7 +16,7 @@
       }
     },
     "main": {
-      "type": "product-template",
+      "type": "product-template-conversion-optimized",
       "blocks": {
         "dd92854e-2842-4773-afcb-1f91bd79c61d": {
           "type": "text",
