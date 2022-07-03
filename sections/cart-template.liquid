@@ -16,7 +16,7 @@
 <section class="section">
   <div class="container content">
     <div class="one-whole column">
-{% if cart.item_count == 0 %} 
+{% if cart.item_count > 0 %} 
    <form class="is-hidden-desktop-only" action="{{ routes.cart_url }}" method="post" id="cart_form" data-cart-form="cart-template" data-total-discount="{{ cart.total_discount }}">
 
       <p class="tos_warning checkout_button">
