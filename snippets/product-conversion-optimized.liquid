@@ -570,7 +570,7 @@
 
  {% if product.variants[0].inventory_quantity < 0 and product.variants[0].available == false  %}
 {% style %}
-.product_section .product_form {display:none;}
+.product_section .product_form {display:none!important;}
 {% endstyle %}
  {% endif %}
    
