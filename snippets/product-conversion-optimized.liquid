@@ -324,19 +324,18 @@
               {% else %}
 
                 {% unless collection_handles contains 'coming-soon' %}
-                  
+                  {% unless product.variants[0].inventory_quantity < 0 %}
                   {%
                     render 'product-form-conversion-optimized',
                     product: product,
                     show_payment_button: show_dynamic_checkout_button,
                     collection_handles: collection_handles
                   %}
-                   {% unless product.variants[0].inventory_quantity < 0 %}
+                    {% endunless %}
                   {%
                     render 'product-notify-me',
                     product: product
                   %}
-                      {% endunless %}
                 {% endunless %}
               {% endif %}
             {% when 'text' %}
