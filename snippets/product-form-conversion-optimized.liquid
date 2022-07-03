@@ -221,7 +221,7 @@
 
 
   
-  {% unless product.variants[0].inventory_quantity < 0 %}
+  {% if product.variants[0].inventory_quantity < 0 and product.variants[0].available == true%}
 
   
   {% if product.tags contains 'multipack' %}
@@ -282,7 +282,7 @@
   
   {% endif %}
   
-   {% endunless %}
+{% endif %}
   
     
   
