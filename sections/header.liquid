@@ -146,7 +146,7 @@
     <div class="top-bar--right">
   {% unless template contains 'cart' %}
       {% if section.settings.search_enabled %}
-        <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search"></a>
+        <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search"><span class="menu_title">Search</span></a>
       {% endif %}
 {% endunless %}
       {% if section.settings.show_cart %}
