@@ -238,7 +238,7 @@
             <a href="tel:{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '-', '' }}">{{ section.settings.phone_number }}</a>
           </li>
         {% endif %}
-          <a class="topbarshipping" style="display:inline;font-family: Roboto, sans-serif;font-weight:600; text-transform:uppercase;font-size:14px;line-height:44px;">Free shipping from $190 to<span style="font-family: Roboto, sans-serif;font-weight:600; text-transform:uppercase;font-size:14px;line-height:43px;" class="topbarlocation">your country</span></a>
+          <a class="topbarshipping" style="display:inline;font-family: Roboto, sans-serif;font-weight:600; text-transform:uppercase;font-size:14px;line-height:44px;">Free shipping from $190 to<span style="font-family: Roboto, sans-serif;font-weight:600; text-transform:uppercase;font-size:14px;line-height:43px;display:inline;" class="topbarlocation">your country</span></a>
         {% if section.settings.top_bar_menu != blank %}
           {% for link in linklists[section.settings.top_bar_menu].links %}
             <li>
