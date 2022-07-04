@@ -109,7 +109,7 @@
               %}
             {% endif %}
           </div>
-          <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url | within: collection }}">
+          <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url }}">
             {%
               render 'product-info',
               product: product,
