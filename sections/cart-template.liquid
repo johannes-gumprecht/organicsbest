@@ -338,7 +338,11 @@
 </section>
 
 {% render 'cart-shipping-calculator' %}
-
+{% style %}
+.logo-position--center.search-enabled--true .nav--right {
+    width: 45%;
+}
+{% endstyle %}
 {% schema %}
 {
   "name": "Cart page",
