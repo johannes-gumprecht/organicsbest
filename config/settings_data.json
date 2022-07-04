@@ -192,7 +192,7 @@
           "main_linklist2": "right-main-menu",
           "vertical_menu": true,
           "dropdown_click": false,
-          "search_enabled": false,
+          "search_enabled": true,
           "fixed_header": false,
           "logo_position": "center",
           "logo_alignment": "center",
