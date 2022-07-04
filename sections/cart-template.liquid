@@ -267,9 +267,9 @@
                 {{ 'cart.general.tax_and_shipping' | t }}
               {%- endif -%}
             {%- endcapture -%}
-
+{%  comment %}
             <p class="cart-message meta">{{ taxes_shipping_checkout }}</p>
-
+{% endcomment %}
             {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 %}
               <p class="cart_savings js-cart_savings sale">
                 <span class="right">
@@ -284,13 +284,13 @@
                 <span>{{ 'layout.general.savings' | t }}</span>
               </p>
             {% endif %}
-
+{%  comment %}
             {% unless shop.enabled_currencies.size > 1 %}
               <p>
                 <small>{{ 'cart.general.orders_processed_in_currency_html' | t: currency: shop.currency }}</small>
               </p>
             {% endunless %}
-
+{% endcomment %}
             {% if section.settings.display_special_instructions %}
               <label for="note">{{ 'cart.general.note' | t: shop_name: shop.name }}:</label>
               <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>
