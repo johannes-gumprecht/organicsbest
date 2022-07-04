@@ -80,7 +80,6 @@
     },
     "16565088531d96678a": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
         "custom_liquid": "{% unless product.title contains \"Formula\" %}{{ product.description | split: '<!-- split -->' | last }}{% endunless %}",
         "css_class": "",
