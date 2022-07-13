@@ -20,6 +20,13 @@ Shopify.getCart = function(r) {
     })
 }
    window.onload = function() {
+
+
+ 
+var newprice =  $('.js-product-section .price-ui .price .money').text().replace(/[^\d.-]/g, '');
+
+
+     
 var l = $(".js-free-shipping"),
     d = $(".js-free-shipping-text-product"),
     h = l.attr("data-start"),
