@@ -39,7 +39,8 @@ Shopify.getCart = function(r) {
              
             }
         }
-        return minOrderValue = parseInt(l.data("value")) || 0;
+  minOrderValue = parseInt(l.data("value")) || 0;
+        return minOrderValue;
         $percentClass = $(".js-free-shipping .progress-bar1");
   
         Shopify.getCart(function(t) {
