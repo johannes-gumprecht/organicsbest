@@ -35,7 +35,7 @@ Shopify.getCart = function(r) {
                 let t = e / minOrderValue * 100
                   , i = window.Shopify.formatMoney(minOrderValue - e, $('body').data('money-format'));
                 $percentClass.css("width", t + "%").addClass("progress-bar-striped primary"),
-                d.html(h + " " + i + " " + u),
+                d.html(h + " " + i + " " + u);
              
             }
         }
