@@ -393,6 +393,7 @@ window.dataLayer.push({
 <script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
   {% if product.tags contains 'multipack' %}
 <script>
+  $(document).ready(function(){
 $('#quantity').change(function(){
 var priceText = $('.js-product-section .price-ui .price .money').text().replace(/\D/g,'');
 
@@ -402,7 +403,8 @@ var priceText = $('.js-product-section .price-ui .price .money').text().replace(
 console.log(newText);
   
 })
-  
+
+    })
 </script>
   {% endif %}
   </body>
