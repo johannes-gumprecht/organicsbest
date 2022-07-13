@@ -393,22 +393,15 @@ window.dataLayer.push({
 <script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
   {% if product.tags contains 'multipack' %}
 <script>
-
 window.addEventListener("variant:changed", function(evt) {
     window.variant_base_price = evt.detail.price;
 
   $('#quantity').val(1).change();
 }, false);
-
-
-  
- window.addEventListener("DOMContentLoaded",function(){
+window.addEventListener("DOMContentLoaded",function(){
 $('#quantity').change(function(){
-
   var prc = parseInt(window.variant_base_price) * parseInt($(this).val());
-  var newText = window.Shopify.formatMoney(prc, $('body').data('money-format'));
-console.log(newText);
-  $('.js-product-section .price-ui .price .money').text(newText);
+  $('.js-product-section .price-ui .price .money').text(window.Shopify.formatMoney(prc, $('body').data('money-format')));
 })
 
     })
