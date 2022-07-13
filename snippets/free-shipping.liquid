@@ -26,10 +26,10 @@ Shopify.getCart = function(r) {
           , u = l.attr("data-end");
         function p(t) {
             var e = t.total_price;
-            if (newprice = 100 * parseFloat(newprice),
-            (e = e = parseFloat(e) + newprice) >= minOrderValue)
-                $percentClass.css("width", "100%").removeClass("progress-bar-striped bg-primary"),
+            if (newprice = 100 * parseFloat(newprice),(e = e = parseFloat(e) + newprice) >= minOrderValue){
+                $percentClass.css("width", "100%").removeClass("progress-bar-striped bg-primary");
                 d.text("CONGRATS! Free 1-6 Biz-Day Shipping!");
+            }
             else {
                 let t = e / minOrderValue * 100
                   , i = window.Shopify.formatMoney(minOrderValue - e, $('body').data('money-format'));
