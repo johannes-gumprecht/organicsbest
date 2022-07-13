@@ -21,6 +21,17 @@ Shopify.getCart = function(r) {
 }
    window.onload = function() {
 
+updateShipping();
+     $('#quantity').change(function(){
+
+       updateShipping();
+     });
+
+   }
+
+
+  function updateShipping(){
+
 
  
 var newprice =  $('.js-product-section .price-ui .price .money').text().replace(/[^\d.-]/g, '');
@@ -50,8 +61,8 @@ return (
         load: p,
     }
 );
-
-   }
+    
+  }
 </script>
 <style>
   .tooltip1 {
