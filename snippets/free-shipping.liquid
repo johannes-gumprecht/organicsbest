@@ -20,32 +20,30 @@ Shopify.getCart = function(r) {
     })
 }
   
-        var l = $(".js-free-shipping")
-          , d = $(".js-free-shipping-text-product")
-          , h = l.attr("data-start")
-          , u = l.attr("data-end");
-        function p(t) {
-            var e = t.total_price;
-            if (newprice = 100 * parseFloat(newprice),
-            (e = e = parseFloat(e) + newprice) >= minOrderValue)
-                $percentClass.css("width", "100%").removeClass("progress-bar-striped bg-primary"),
-                d.text("CONGRATS! Free 1-6 Biz-Day Shipping!");
-            else {
-                let t = e / minOrderValue * 100
-                  , i = window.Shopify.formatMoney(minOrderValue - e, $('body').data('money-format'));
-                $percentClass.css("width", t + "%").addClass("progress-bar-striped primary"),
-                d.html(h + " " + i + " " + u);
-             
-            }
-        }
-        return minOrderValue = parseInt(l.data("value")) || 0,
-        $percentClass = $(".js-free-shipping .progress-bar1"),
-        Shopify.getCart(function(t) {
-            p(t)
-        }),
-        {
-            load: p
-        }
+var l = $(".js-free-shipping"),
+    d = $(".js-free-shipping-text-product"),
+    h = l.attr("data-start"),
+    u = l.attr("data-end");
+function p(t) {
+    var e = t.total_price;
+    if (((newprice = 100 * parseFloat(newprice)), (e = e = parseFloat(e) + newprice) >= minOrderValue)) $percentClass.css("width", "100%").removeClass("progress-bar-striped bg-primary"), d.text("CONGRATS! Free 1-6 Biz-Day Shipping!");
+    else {
+        let t = (e / minOrderValue) * 100,
+            i = window.Shopify.formatMoney(minOrderValue - e, $("body").data("money-format"));
+        $percentClass.css("width", t + "%").addClass("progress-bar-striped primary"), d.html(h + " " + i + " " + u);
+    }
+}
+return (
+    (minOrderValue = parseInt(l.data("value")) || 0),
+    ($percentClass = $(".js-free-shipping .progress-bar1")),
+    Shopify.getCart(function (t) {
+        p(t);
+    }),
+    {
+        load: p,
+    }
+);
+
   
 </script>
 <style>
