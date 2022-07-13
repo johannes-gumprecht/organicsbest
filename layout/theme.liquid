@@ -401,7 +401,7 @@ var priceText = $('.js-product-section .price-ui .price .money').text().replace(
   var prc = parseInt(priceText) * parseInt(qty);
   var newText = window.Shopify.formatMoney(prc, $('body').data('money-format'));
 console.log(newText);
-  
+  $('.js-product-section .price-ui .price .money').text(newText);
 })
 
     })
