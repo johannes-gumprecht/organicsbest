@@ -1,0 +1,185 @@
+<div class="custom-shipping">
+<div class="  progress js-free-shipping mt-2" data-value="10000" data-start="Add" data-end="for <b>FREE &amp; FAST SHIPPING</b>">
+  <div class=" progress-bar progress-bar1 progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+  <span class="tooltip1 free-shipping-content">  
+    <span class="tooltiptext1">This amount takes into account your basket total + the value of this product.</span>
+    {% render 'shipping-svg' %}
+
+  <span class=" js-free-shipping-text-product">
+     
+    </span>
+  </span>
+</div>
+</div>
+<style>
+  .tooltip1 {
+  display: inline-block;
+  
+}
+
+.tooltip1 .tooltiptext1 {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 0%;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+  .tooltip1 .tooltiptext1::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 12%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+}
+
+  /*custom styles */
+
+div.custom-shipping b {
+  font-weight: bolder;
+}
+div.custom-shipping svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+@media all {
+  div.custom-shipping *, div.custom-shipping *:before, div.custom-shipping *:after {
+    box-sizing: border-box;
+  }
+  div.custom-shipping *:focus {
+    outline: none;
+  }
+  div.custom-shipping svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    fill: currentColor;
+  }
+  div.custom-shipping svg:not(:root) {
+    overflow: hidden;
+  }
+  div.custom-shipping ::-webkit-input-placeholder {
+    font-size: var(--g-font-size);
+    color: #193a43;
+    opacity: 0.6;
+  }
+  div.custom-shipping :-moz-placeholder {
+    font-size: var(--g-font-size);
+    color: #193a43;
+    opacity: 0.6;
+  }
+  div.custom-shipping :-ms-input-placeholder {
+    font-size: var(--g-font-size);
+    color: #193a43;
+    opacity: 0.6;
+  }
+  div.custom-shipping ::-ms-input-placeholder {
+    font-size: var(--g-font-size);
+    color: #193a43;
+    opacity: 0.6;
+    opacity: 1;
+  }
+  div.custom-shipping .js-free-shipping {
+    position: relative;
+    height: 30px;
+    margin: 0 0 15px;
+    background: #343a40;
+    border-radius: 0;
+    font-size: val(--g-font-size);
+  }
+  div.custom-shipping .free-shipping-content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 700;
+    left: 0;
+  }
+  div.custom-shipping .free-shipping-content [class^=svg-] {
+    margin: -2px 10px 0 0;
+  }
+  div.custom-shipping .progress {
+    overflow: visible !important;
+  }
+}
+@media all {
+  div.custom-shipping .cls-2 {
+    opacity: 0.2;
+  }
+  div.custom-shipping .cls-3 {
+    opacity: 0.35;
+  }
+}
+@media all {
+  div.custom-shipping .cls-2 {
+    opacity: 0.2;
+  }
+  div.custom-shipping .cls-3 {
+    opacity: 0.35;
+  }
+}
+div.custom-shipping .tooltip1 {
+  display: inline-block;
+}
+div.custom-shipping .tooltip1 .tooltiptext1 {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 0%;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+div.custom-shipping .tooltip1 .tooltiptext1::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 12%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+div.custom-shipping .tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+}
+@media all {
+  div.custom-shipping .cls-2 {
+    opacity: 0.6;
+  }
+  div.custom-shipping .cls-3 {
+    fill: #567458;
+  }
+}
+@media all {
+  div.custom-shipping .cls-2 {
+    opacity: 0.2;
+  }
+  div.custom-shipping .cls-3 {
+    opacity: 0.35;
+  }
+}
+</style>
