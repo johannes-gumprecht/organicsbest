@@ -27,10 +27,9 @@ Shopify.getCart = function(r) {
         function p(t) {
             var e = t.total_price;
             if (newprice = 100 * parseFloat(newprice),
-            (e = e = parseFloat(e) + newprice) >= minOrderValue){
-                $percentClass.css("width", "100%").removeClass("progress-bar-striped bg-primary");
+            (e = e = parseFloat(e) + newprice) >= minOrderValue)
+                $percentClass.css("width", "100%").removeClass("progress-bar-striped bg-primary"),
                 d.text("CONGRATS! Free 1-6 Biz-Day Shipping!");
-            }
             else {
                 let t = e / minOrderValue * 100
                   , i = window.Shopify.formatMoney(minOrderValue - e, $('body').data('money-format'));
@@ -39,10 +38,8 @@ Shopify.getCart = function(r) {
              
             }
         }
-  minOrderValue = parseInt(l.data("value")) || 0;
-        return minOrderValue;
-        $percentClass = $(".js-free-shipping .progress-bar1");
-  
+        return minOrderValue = parseInt(l.data("value")) || 0,
+        $percentClass = $(".js-free-shipping .progress-bar1"),
         Shopify.getCart(function(t) {
             p(t)
         }),
