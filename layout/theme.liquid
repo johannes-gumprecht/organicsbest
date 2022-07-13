@@ -396,6 +396,8 @@ window.dataLayer.push({
 
 window.addEventListener("variant:changed", function(evt) {
     window.variant_base_price = evt.detail.price;
+
+  $('#quantity').val(1).change();
 }, false);
 
 
