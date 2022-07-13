@@ -395,17 +395,15 @@ window.dataLayer.push({
 <script>
 
 window.addEventListener("variant:changed", function(evt) {
-    console.log(evt.detail);
+    window.variant_base_price = evt.detail.price;
 }, false);
 
 
   
  window.addEventListener("DOMContentLoaded",function(){
 $('#quantity').change(function(){
-var priceText = $('.js-product-section .price-ui .price .money').text().replace(/\D/g,'');
 
-  var qty = $(this).val();
-  var prc = parseInt(priceText) * parseInt(qty);
+  var prc = parseInt(window.variant_base_price) * parseInt($(this).val());
   var newText = window.Shopify.formatMoney(prc, $('body').data('money-format'));
 console.log(newText);
   $('.js-product-section .price-ui .price .money').text(newText);
