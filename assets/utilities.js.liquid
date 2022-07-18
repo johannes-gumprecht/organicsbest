@@ -1199,7 +1199,7 @@ window.utils = {
     });
 
     $(container).find(tab + '.active').next().slideToggle();
-    $('body').on('click', specificTab, function(e){
+    $(specificTab).on('click', function(e){
       e.preventDefault();
       $(this).toggleClass('active');
       $(this).next().slideToggle();
@@ -1212,7 +1212,7 @@ window.utils = {
 
     $(tab + '.active').next().slideToggle();
 
-    $('body').on('click', tab, function(e){
+    $('body').off('click').on('click', tab, function(e){
       e.preventDefault();
       $(this).toggleClass('active');
       $(this).next().slideToggle();
