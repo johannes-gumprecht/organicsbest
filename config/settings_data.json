@@ -139,7 +139,7 @@
     "show_shipping_calculator": false,
     "shipping_calculator_default_country": "United States",
     "currency_format": "money_with_currency_format",
-    "show_multiple_currencies": true,
+    "show_multiple_currencies": false,
     "supported_currencies": "USD CAD AUD GBP EUR JPY AED",
     "default_currency": "USD",
     "mailchimp_link": "",
@@ -255,7 +255,7 @@
           "display_designed_by": false,
           "display_payment_methods": true,
           "show_locale_selector": false,
-          "show_currency_selector": true
+          "show_currency_selector": false
         }
       },
       "mega-menu-1": {
