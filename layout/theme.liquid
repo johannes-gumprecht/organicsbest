@@ -403,7 +403,7 @@ $('#quantity').change(function(){
   var prc = parseInt(window.variant_base_price) * parseInt($(this).val());
   $('.js-product-section .price-ui .price .money').text(window.Shopify.formatMoney(prc, $('body').data('money-format')));
 })
-
+  window.productPage.initializeQuantityBox();
     })
 </script>
   {% endif %}
