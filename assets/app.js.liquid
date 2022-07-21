@@ -324,6 +324,7 @@ $(() => {
   window.utils.createAccordion('.product_section .accordion-tabs', '.tabs li > a', '.tabs-content li');
   window.utils.mobileParentActiveAccordion('#mobile_menu', 'li.sublink > a.parent-link--true span', 'li.sublink ul');
   window.utils.mobileAccordion('#mobile_menu', 'li.sublink > a.parent-link--false', 'li.sublink ul');
+  window.utils.mobileAccordion('#mobile_menu', 'li.sublink > a[href$="#"]', 'li.sublink ul');
 
   window.utils.initializeTabs();
   window.accordion.init();

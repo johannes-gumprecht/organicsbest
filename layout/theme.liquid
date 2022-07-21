@@ -107,7 +107,7 @@
       <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
     {% endif %}
 
-    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'jquery.min.js' | asset_url }}" ></script>
 
     <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NRJ853F"></script>
 <!-- TrustBox script -->
@@ -391,7 +391,28 @@ window.dataLayer.push({
   
   <!--Gorgias Chat Widget Start--><noscript class="hs-load-onaction"><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=10103"></script></noscript>
 <script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
+  {% if product.tags contains 'multipack' %}
+<script>
+window.addEventListener("variant:changed", function(evt) {
+    window.variant_base_price = evt.detail.price;
+
+  $('#quantity').val(1).change();
+}, false);
+window.addEventListener("DOMContentLoaded",function(){
+$('#quantity').change(function(){
+  var prc = parseInt(window.variant_base_price) * parseInt($(this).val());
+  $('.js-product-section .price-ui .price .money').text(window.Shopify.formatMoney(prc, $('body').data('money-format')));
+})
+  window.productPage.initializeQuantityBox();
+    })
+
+window.addEventListener("load",function(){
+
+ window.productPage.initializeQuantityBox();  
+});
   
+</script>
+  {% endif %}
   </body>
 </html>
 {% endcapture %}

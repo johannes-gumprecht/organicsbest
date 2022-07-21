@@ -990,6 +990,7 @@ window.productPage = {
         product: $options.data('product'),
         onVariantSelected: (variant, selector) => {
           currentVariant = variant;
+          window.dispatchEvent(new CustomEvent("variant:changed", {detail: variant}));
 
           paymentTerms.update(variant ? variant.id : null);
 
