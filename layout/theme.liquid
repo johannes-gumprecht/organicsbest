@@ -389,9 +389,7 @@ window.dataLayer.push({
 </script> 
 
   
-  <!--Gorgias Chat Widget Start--><noscript class="hs-load-onaction"><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=10103"></script></noscript>
-<script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
-  {% if product.tags contains 'multipack' %}
+    {% if product.tags contains 'multipack' %}
 <script>
 window.addEventListener("variant:changed", function(evt) {
     window.variant_base_price = evt.detail.price;
@@ -413,7 +411,9 @@ window.addEventListener("load",function(){
   
 </script>
   {% endif %}
-  </body>
+  <!--Gorgias Chat Widget Start--><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=10103"></script>
+<script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
+</body>
 </html>
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
