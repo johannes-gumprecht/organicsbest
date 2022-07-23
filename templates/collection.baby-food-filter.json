@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-template",
+      "blocks": {
+        "f688b20a-b19a-4a16-92b2-aae72e198931": {
+          "type": "faceted_filtering",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "f688b20a-b19a-4a16-92b2-aae72e198931"
+      ],
+      "settings": {
+        "featured_collection_image": false,
+        "wide_display": false,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "display_collection_title": false,
+        "collection_breadcrumb": false,
+        "collection_tags": false,
+        "collection_sort": false,
+        "products_per_row": 4,
+        "pagination_limit": 16,
+        "toggle": false
+      }
+    },
+    "1651432956743e6b64": {
+      "type": "apps",
+      "blocks": {
+        "fce00149-be5c-479c-8b41-9f859c1192e7": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/wall-photos\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
+          "settings": {
+            "feed_type": "feed",
+            "auto_play": false,
+            "color_star": "",
+            "color_hover": "",
+            "color_hover_opacity": 50,
+            "review_ids": "",
+            "product_ids": "",
+            "category": "",
+            "product_brand": "",
+            "tags": "",
+            "min_rating": "none",
+            "fill_empty": false,
+            "random": false,
+            "with_photos": false
+          }
+        }
+      },
+      "block_order": [
+        "fce00149-be5c-479c-8b41-9f859c1192e7"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651432956743e6b64"
+  ]
+}
