@@ -3,8 +3,18 @@
   "sections": {
     "sidebar": {
       "type": "product-sidebar",
+      "disabled": true,
       "settings": {
         "toggle": false
+      }
+    },
+    "1658652281b8db1e29": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 10,
+        "divider_border": false,
+        "css_class": "is-hidden-mobile-only",
+        "custom_css": ""
       }
     },
     "165650860304d4052a": {
@@ -165,6 +175,7 @@
   },
   "order": [
     "sidebar",
+    "1658652281b8db1e29",
     "165650860304d4052a",
     "main",
     "1656508834b69d3726",
