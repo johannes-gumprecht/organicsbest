@@ -6,7 +6,7 @@
         "display_special_instructions": true,
         "display_savings": true,
         "cart_message": "",
-        "continue_shopping_url": ""
+        "continue_shopping_url": "\/"
       }
     }
   },
