@@ -39,7 +39,7 @@
                   srcset="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='{{ media.width }}'%20height='{{ media.height }}'></svg>"
                   />
           {% else %}
-            <img class="lazyload hs-lazyload hs-id-61856630" data-src="{{ image | img_url: 'master' }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="{{ image | img_url: 'master' }}">
           {% endif %}
         </div>
       {% else %}

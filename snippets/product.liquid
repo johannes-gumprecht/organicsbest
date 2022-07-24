@@ -1,4 +1,3 @@
-{% assign hs_product_description = product.description | replace: ' src="', ' loading="lazy" class="lazyload" data-src="' %}
 {% comment %}
   @param product {Object}
     The product object
@@ -288,12 +287,12 @@
                   <p>{{ 'homepage.onboarding.product_description' | t }}</p>
                 {% else %}
                   {% if context == 'quickshop' %}
-                    {% if hs_product_description != blank %}
+                    {% if product.description != blank %}
                       <div class="rte">
                         {% if block.settings.truncate_description %}
-                          {{ hs_product_description | truncatewords: block.settings.truncated_words }}
+                          {{ product.description | truncatewords: block.settings.truncated_words }}
                         {% else %}
-                          {{ hs_product_description | split: '<!-- split -->' | first }}
+                          {{ product.description | split: '<!-- split -->' | first }}
                         {% endif %}
                       </div>
                     {% endif %}
@@ -306,9 +305,9 @@
                       {{ 'collections.general.view_product_details_html' | t }}
                     </a>
                   {% else %}
-                    {% if hs_product_description != blank %}
+                    {% if product.description != blank %}
                       <div class="rte">
-                        {{ hs_product_description | split: '<!-- split -->' | first }}
+                        {{ product.description | split: '<!-- split -->' | first }}
                       </div>
                     {% endif %}
                   {% endif %}
@@ -439,9 +438,9 @@
                       {% if onboarding %}
                         {{ 'products.onboarding.tab_content'| t }}
                       {% else %}
-                        {% if hs_product_description != blank %}
+                        {% if product.description != blank %}
                           <div class="rte">
-                            {{ hs_product_description | split: '<!-- split -->' | first }}
+                            {{ product.description | split: '<!-- split -->' | first }}
                           </div>
                         {% else %}
                           {{ 'products.onboarding.tab_content'| t }}
@@ -545,9 +544,9 @@
       {% endfor %}
     </div>
 
-    {% if hs_product_description != blank and hs_product_description contains "<!-- split -->" %}
+    {% if product.description != blank and product.description contains "<!-- split -->" %}
       <div class="sixteen columns rte">
-        {{ hs_product_description | split: '<!-- split -->' | last }}
+        {{ product.description | split: '<!-- split -->' | last }}
       </div>
     {% endif %}
 
