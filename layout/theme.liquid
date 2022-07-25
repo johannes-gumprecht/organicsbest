@@ -406,13 +406,17 @@ $('#quantity').change(function(){
   window.productPage.initializeQuantityBox();
     })
 
-window.addEventListener("load",function(){
 
- window.productPage.initializeQuantityBox();  
-});
   
 </script>
   {% endif %}
+
+<script>
+          window.addEventListener("load",function(){
+
+ window.productPage.initializeQuantityBox();  
+});
+  </script>
   </body>
 </html>
 {% endcapture %}
