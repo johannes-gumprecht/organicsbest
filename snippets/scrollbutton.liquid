@@ -10,7 +10,7 @@
 <a href="#" title="Back to the top" class="back-to-top">
   <i class="fa fa-arrow-circle-o-up fa-2x"></i> <span>Scroll Up</span>
 </a>
-{{ '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' | stylesheet_tag }}
+{% render 'hs-defer-css' with filename: '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', pages: 'collection,index,product' | split: ',', minify: false, local: false %}
 <style>
 .back-to-top {
   position: fixed;

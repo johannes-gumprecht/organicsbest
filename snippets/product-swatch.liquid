@@ -42,12 +42,12 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 
         {% if is_color %}
           <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}" style="background-image: url({{ value | handle | append: '.' | append: file_extension | asset_img_url: '50x' | prepend: 'https:' }}); background-color: {{ value | split: ' ' | last | handle }};">
-            <img alt="sold out" aria-label="sold out" class="crossed-out" src="{{ 'soldout.png' | asset_url }}">
+            <img alt="sold out" aria-label="sold out" class="crossed-out lazyload hs-lazyload hs-id-e6922bc7" data-src="{{ 'soldout.png' | asset_url }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
           </label>
         {% else %}
           <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}">
             {{ value }}
-            <img alt="sold out" aria-label="sold out" class="crossed-out" src="{{ 'soldout.png' | asset_url }}">
+            <img alt="sold out" aria-label="sold out" class="crossed-out lazyload hs-lazyload hs-id-e6922bc7" data-src="{{ 'soldout.png' | asset_url }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
           </label>
         {% endif %}
       </div>
