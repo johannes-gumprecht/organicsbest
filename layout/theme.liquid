@@ -469,8 +469,33 @@ window.addEventListener("load",function(){
     
 <style>
   
- 
+  span.stamped-badge-caption::before {
+
+  content: attr(data-rating) ' (' !important;
   
+}
+
+
+.stamped-badge-caption[data-reviews][data-label][data-version="2"]>span::after {
+  content: ')'!important;
+}
+
+
+
+.stamped-badge[data-rating="0"], .stamped-badge[data-rating="0,0"], .stamped-badge[data-rating="0.0"] { display: none !important; }
+
+
+  #stamped-main-widget .stamped-container[data-count="0"],
+#stamped-main-widget .stamped-container[data-count="1"],
+#stamped-main-widget .stamped-container[data-count="2"],
+#stamped-main-widget .stamped-container[data-count="3"],
+#stamped-main-widget .stamped-container[data-count="4"],
+#stamped-main-widget .stamped-container[data-count="5"],
+#stamped-main-widget .stamped-container[data-count="6"]
+{
+  
+  display: none !important;}
+ 
   
 </style>
     
